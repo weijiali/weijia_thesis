@@ -1,0 +1,110 @@
+\BOOKMARK [0][]{prelim.0}{TITLE PAGE}{}
+\BOOKMARK [0][]{prelim.1}{COMMITTEE MEMBERSHIP PAGE}{}
+\BOOKMARK [0][]{prelim.2}{ABSTRACT}{}
+\BOOKMARK [0][]{prelim.4}{TABLE OF CONTENTS}{}
+\BOOKMARK [0][]{chapter.1}{1.0 INTRODUCTION}{}
+\BOOKMARK [1][]{section.1.1}{1.1 Problem statement}{chapter.1}
+\BOOKMARK [1][]{section.1.2}{1.2 Challenges}{chapter.1}
+\BOOKMARK [1][]{section.1.3}{1.3 Proposed software update framework}{chapter.1}
+\BOOKMARK [1][]{section.1.4}{1.4 Design goals}{chapter.1}
+\BOOKMARK [1][]{section.1.5}{1.5 Assumptions}{chapter.1}
+\BOOKMARK [0][]{chapter.2}{2.0 BACKGROUND AND RELATED WORK}{}
+\BOOKMARK [1][]{section.2.1}{2.1 Software update in WSNs}{chapter.2}
+\BOOKMARK [1][]{section.2.2}{2.2 Compiler}{chapter.2}
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Register allocation}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Data allocation}{section.2.2}
+\BOOKMARK [1][]{section.2.3}{2.3 Patch generator}{chapter.2}
+\BOOKMARK [1][]{section.2.4}{2.4 Distribution protocol}{chapter.2}
+\BOOKMARK [0][]{chapter.3}{3.0 GOALS AND APPROACHES}{}
+\BOOKMARK [0][]{chapter.4}{4.0 \040UPDATE-CONSCIOUS COMPILATION \(UCC\) TECHNIQUES}{}
+\BOOKMARK [1][]{section.4.1}{4.1 Update-conscious compilation for general purpose applications}{chapter.4}
+\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 UCC data allocation \(UCC-DA\) for general purpose applications}{section.4.1}
+\BOOKMARK [3][]{subsubsection.4.1.1.1}{4.1.1.1 Data allocation problem for general purpose applications}{subsection.4.1.1}
+\BOOKMARK [3][]{subsubsection.4.1.1.2}{4.1.1.2 UCC data allocation for general purpose applications}{subsection.4.1.1}
+\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Update-conscious register allocation \(UCC-RA\) for general purpose applications}{section.4.1}
+\BOOKMARK [3][]{subsubsection.4.1.2.1}{4.1.2.1 Register allocation problem for general purpose applications}{subsection.4.1.2}
+\BOOKMARK [3][]{subsubsection.4.1.2.2}{4.1.2.2 UCC register allocation for general purpose applications}{subsection.4.1.2}
+\BOOKMARK [2][]{subsection.4.1.3}{4.1.3 Integration of the UCC data allocation and register allocation}{section.4.1}
+\BOOKMARK [3][]{subsubsection.4.1.3.1}{4.1.3.1 ILP based integration}{subsection.4.1.3}
+\BOOKMARK [3][]{subsubsection.4.1.3.2}{4.1.3.2 Heuristic based integration}{subsection.4.1.3}
+\BOOKMARK [1][]{section.4.2}{4.2 Update-conscious compilation for DSP applications}{chapter.4}
+\BOOKMARK [2][]{subsection.4.2.1}{4.2.1 Data allocation problem for DSP applications}{section.4.2}
+\BOOKMARK [2][]{subsection.4.2.2}{4.2.2 Update-conscious compilation data allocation \(UCC-DA\) for DSP applications}{section.4.2}
+\BOOKMARK [3][]{subsubsection.4.2.2.1}{4.2.2.1 Incremental coalescing single offset assignment \(ICSOA\)}{subsection.4.2.2}
+\BOOKMARK [2][]{subsection.4.2.3}{4.2.3 Register allocation problem for DSP applications}{section.4.2}
+\BOOKMARK [3][]{subsubsection.4.2.3.1}{4.2.3.1 Incremental coalescing general offset assignment \(ICGOA\)}{subsection.4.2.3}
+\BOOKMARK [0][]{chapter.5}{5.0 SOFTWARE DIFFERENTIAL PATCHING}{}
+\BOOKMARK [1][]{section.5.1}{5.1 Instruction based patching}{chapter.5}
+\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Simple primitives}{section.5.1}
+\BOOKMARK [2][]{subsection.5.1.2}{5.1.2 Advanced primitives}{section.5.1}
+\BOOKMARK [3][]{subsubsection.5.1.2.1}{5.1.2.1 Shift}{subsection.5.1.2}
+\BOOKMARK [3][]{subsubsection.5.1.2.2}{5.1.2.2 Clone}{subsection.5.1.2}
+\BOOKMARK [3][]{subsubsection.5.1.2.3}{5.1.2.3 Insert\137access}{subsection.5.1.2}
+\BOOKMARK [2][]{subsection.5.1.3}{5.1.3 Sensor-side primitive interpretation}{section.5.1}
+\BOOKMARK [1][]{section.5.2}{5.2 Data based patching}{chapter.5}
+\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 Data update primitives}{section.5.2}
+\BOOKMARK [3][]{subsubsection.5.2.1.1}{5.2.1.1 copy\137slot.}{subsection.5.2.1}
+\BOOKMARK [3][]{subsubsection.5.2.1.2}{5.2.1.2 insert\137var.}{subsection.5.2.1}
+\BOOKMARK [3][]{subsubsection.5.2.1.3}{5.2.1.3 shift\137slot.}{subsection.5.2.1}
+\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 Sensor-side primitive interpretation}{section.5.2}
+\BOOKMARK [3][]{subsubsection.5.2.2.1}{5.2.2.1 Auxiliary data structures}{subsection.5.2.2}
+\BOOKMARK [0][]{chapter.6}{6.0 DISTRIBUTION PROTOCOL}{}
+\BOOKMARK [1][]{section.6.1}{6.1 Broadcast based code distribution protocol \(Deluge\)}{chapter.6}
+\BOOKMARK [1][]{section.6.2}{6.2 Multicast-based code redistribution protocol \(MCP\)}{chapter.6}
+\BOOKMARK [2][]{subsection.6.2.1}{6.2.1 Motivation}{section.6.2}
+\BOOKMARK [2][]{subsection.6.2.2}{6.2.2 Overview}{section.6.2}
+\BOOKMARK [2][]{subsection.6.2.3}{6.2.3 ADV message and application information table \(AIT\)}{section.6.2}
+\BOOKMARK [2][]{subsection.6.2.4}{6.2.4 Request multicasting}{section.6.2}
+\BOOKMARK [2][]{subsection.6.2.5}{6.2.5 Caching}{section.6.2}
+\BOOKMARK [1][]{section.6.3}{6.3 Simultaneous code dissemination}{chapter.6}
+\BOOKMARK [2][]{subsection.6.3.1}{6.3.1 Protocol augmentation}{section.6.3}
+\BOOKMARK [2][]{subsection.6.3.2}{6.3.2 Simultaneous requesting both types of packets}{section.6.3}
+\BOOKMARK [1][]{section.6.4}{6.4 Adaptive memory management}{chapter.6}
+\BOOKMARK [0][]{chapter.7}{7.0 EXPERIMENT RESULTS}{}
+\BOOKMARK [1][]{section.7.1}{7.1 Benchmarks}{chapter.7}
+\BOOKMARK [2][]{subsection.7.1.1}{7.1.1 Update levels}{section.7.1}
+\BOOKMARK [2][]{subsection.7.1.2}{7.1.2 Real update benchmarks}{section.7.1}
+\BOOKMARK [3][]{subsubsection.7.1.2.1}{7.1.2.1 Real general purpose application update benchmark}{subsection.7.1.2}
+\BOOKMARK [3][]{subsubsection.7.1.2.2}{7.1.2.2 Real DSP application update benchmark}{subsection.7.1.2}
+\BOOKMARK [2][]{subsection.7.1.3}{7.1.3 Manually generated update benchmarks}{section.7.1}
+\BOOKMARK [3][]{subsubsection.7.1.3.1}{7.1.3.1 Manually generated general purpose application update benchmark}{subsection.7.1.3}
+\BOOKMARK [3][]{subsubsection.7.1.3.2}{7.1.3.2 Manually DSP application update benchmark}{subsection.7.1.3}
+\BOOKMARK [2][]{subsection.7.1.4}{7.1.4 Automatically generated update benchmarks}{section.7.1}
+\BOOKMARK [3][]{subsubsection.7.1.4.1}{7.1.4.1 Automatically generated general purpose application update benchmark}{subsection.7.1.4}
+\BOOKMARK [3][]{subsubsection.7.1.4.2}{7.1.4.2 Automatically generated DSP application update benchmark}{subsection.7.1.4}
+\BOOKMARK [1][]{section.7.2}{7.2 Pre-dissemination performance evaluation}{chapter.7}
+\BOOKMARK [2][]{subsection.7.2.1}{7.2.1 General purpose software update pre-dissemination 1}{section.7.2}
+\BOOKMARK [3][]{subsubsection.7.2.1.1}{7.2.1.1 Settings}{subsection.7.2.1}
+\BOOKMARK [3][]{subsubsection.7.2.1.2}{7.2.1.2 The generate script size}{subsection.7.2.1}
+\BOOKMARK [3][]{subsubsection.7.2.1.3}{7.2.1.3 The generated code quality}{subsection.7.2.1}
+\BOOKMARK [3][]{subsubsection.7.2.1.4}{7.2.1.4 The energy savings}{subsection.7.2.1}
+\BOOKMARK [3][]{subsubsection.7.2.1.5}{7.2.1.5 The problem complexity and compilation time}{subsection.7.2.1}
+\BOOKMARK [2][]{subsection.7.2.2}{7.2.2 General purpose software update pre-dissemination 2}{section.7.2}
+\BOOKMARK [3][]{subsubsection.7.2.2.1}{7.2.2.1 Settings}{subsection.7.2.2}
+\BOOKMARK [3][]{subsubsection.7.2.2.2}{7.2.2.2 The generated script size}{subsection.7.2.2}
+\BOOKMARK [3][]{subsubsection.7.2.2.3}{7.2.2.3 The wasted memory space}{subsection.7.2.2}
+\BOOKMARK [3][]{subsubsection.7.2.2.4}{7.2.2.4 Tradeoff between the wasted space and the instruction updates}{subsection.7.2.2}
+\BOOKMARK [2][]{subsection.7.2.3}{7.2.3 General purpose software update pre-dissemination 3}{section.7.2}
+\BOOKMARK [2][]{subsection.7.2.4}{7.2.4 DSP software update pre-dissemination}{section.7.2}
+\BOOKMARK [3][]{subsubsection.7.2.4.1}{7.2.4.1 Settings}{subsection.7.2.4}
+\BOOKMARK [3][]{subsubsection.7.2.4.2}{7.2.4.2 The generated script size}{subsection.7.2.4}
+\BOOKMARK [3][]{subsubsection.7.2.4.3}{7.2.4.3 The generated code quality}{subsection.7.2.4}
+\BOOKMARK [3][]{subsubsection.7.2.4.4}{7.2.4.4 The energy savings}{subsection.7.2.4}
+\BOOKMARK [3][]{subsubsection.7.2.4.5}{7.2.4.5 Performance evaluation using automatically generated benchmarks}{subsection.7.2.4}
+\BOOKMARK [1][]{section.7.3}{7.3 Patch dissemination}{chapter.7}
+\BOOKMARK [2][]{subsection.7.3.1}{7.3.1 Settings}{section.7.3}
+\BOOKMARK [2][]{subsection.7.3.2}{7.3.2 Message overhead}{section.7.3}
+\BOOKMARK [2][]{subsection.7.3.3}{7.3.3 Completion time}{section.7.3}
+\BOOKMARK [2][]{subsection.7.3.4}{7.3.4 Sensitivity to Node Distribution}{section.7.3}
+\BOOKMARK [2][]{subsection.7.3.5}{7.3.5 Sensitivity to Application Sizes}{section.7.3}
+\BOOKMARK [2][]{subsection.7.3.6}{7.3.6 Sensitivity to Cache Sizes}{section.7.3}
+\BOOKMARK [1][]{section.7.4}{7.4 Case study}{chapter.7}
+\BOOKMARK [2][]{subsection.7.4.1}{7.4.1 General purpose software update}{section.7.4}
+\BOOKMARK [3][]{subsubsection.7.4.1.1}{7.4.1.1 The generated script size}{subsection.7.4.1}
+\BOOKMARK [3][]{subsubsection.7.4.1.2}{7.4.1.2 Network traffic and transmission duration savings}{subsection.7.4.1}
+\BOOKMARK [3][]{subsubsection.7.4.1.3}{7.4.1.3 Energy saving analysis}{subsection.7.4.1}
+\BOOKMARK [2][]{subsection.7.4.2}{7.4.2 DSP software update}{section.7.4}
+\BOOKMARK [3][]{subsubsection.7.4.2.1}{7.4.2.1 The generated script size}{subsection.7.4.2}
+\BOOKMARK [3][]{subsubsection.7.4.2.2}{7.4.2.2 Network traffic and transmission duration savings}{subsection.7.4.2}
+\BOOKMARK [3][]{subsubsection.7.4.2.3}{7.4.2.3 Energy saving analysis}{subsection.7.4.2}
+\BOOKMARK [0][]{section*.1}{BIBLIOGRAPHY}{}

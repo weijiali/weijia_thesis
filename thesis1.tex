@@ -1,0 +1,88 @@
+%\documentclass{article}
+\documentclass[final]{pittetd}
+\usepackage[square,numbers,sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{calc}
+\usepackage{color}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{afterpage}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+%% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+\makeatletter  %% this is crucial
+ \renewcommand\subsubsection{\@startsection{subsubsection}%
+    {3}{\z@}{-1\@singleline\@plus -1ex \@minus -.2ex}%
+    {.5\@singleline \@plus .2ex}%
+    {\@withperiod\@withgobble\normalfont\expandafter\bfseries}}
+\makeatother   %% this is crucial 
+
+
+\title[]{Software Update Management in Wireless Sensor Networks}
+\author{Weijia Li}
+\degree{B.S., Nanjing University, 1999}
+%\date{July 20th 1967}%             This date is the date of the thesis defense. Default is \today
+%\year{1967}                        pittetd will use the current year unless otherwise indicated. So this command is not
+%                                   necessary.
+\keywords{compiler optimization, code generation, wireless sensor networks, software update}
+\subject{Weijia Li PhD thesis}%             
+\school{Department of Computer Science}%  
+
+
+%\includeonly{compiler}
+
+\begin{document}
+
+\maketitle
+\committeemember{Dr. Youtao Zhang, Department of Computer Science}
+\committeemember{Dr. Daniel Moss\'{e}, Department of Computer Science}
+\committeemember{Dr. Bruce Childers, Department of Computer Science}
+\committeemember{Dr. Daqing He, School of Information Sciences and Intelligent System Program}
+\school{Computer Science Department}
+\makecommittee
+%
+%
+%
+%%\copyrightpage                     Uncomment this to get a copyright page.
+%
+%
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+%
+\tableofcontents
+%\listoftables                      Pittetd will complain if you tell it to create a list of tables when there are no
+%                                   tables (as in this sample file). Uncomment this command if you have tables.
+%\listoffigures                     Obvious analogous for figures.
+%\preface
+% This is the text of the preface, with acknowledgments, dedication, etc. It is optional, and you create, as shown, by 
+% just saying \preface and starting the preface's actual text. Note that 'foreword' is no longer acceptable as title
+% for this preliminary.
+%
+%Conventions, such as notation (nomenclature) and abbreviations, don't receive their own preliminary page. They can be included as an appendix, or as part of the introduction.
+%
+
+\include{intro}
+\include{related}
+\include{goals}
+\include{compiler}
+\include{patch}
+\include{protocol}
+\include{experiment}
+
+\appendix
+\bibliographystyle{abbrvnat}
+\safebibliography{thesis1}
+
+\end{document}

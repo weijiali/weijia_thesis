@@ -1,0 +1,33 @@
+load exe.dat;
+
+y1 = exe(:,1);
+y2 = exe(:,2);
+
+x = [1;
+	2;
+	3;
+	4;
+	5;
+	6;
+	7;
+	8];
+y = [y1,y2];
+
+figure1 = figure('XVisual',...
+    '0x23 (TrueColor, depth 24, RGB mask 0xff0000 0xff00 0x00ff)');
+axes1 = axes('Parent',figure1,'XTick',[1 2 3 4 5 6 7 8],'XGrid','on','FontSize',16);
+box('on');
+hold('all');
+
+bar1 = bar(x,y,'Parent',axes1);
+set(bar1(1),'DisplayName','CSOA');
+set(bar1(2),'FaceColor',[1 1 0],'DisplayName','ICSOA');
+
+
+xlabel({'Test Case Number'},'fontsize',18);
+ylabel({'Execution Overhead (# of instructions)'},'fontsize',18);
+legend1 = legend(axes1,'show');
+set(legend1,'Location','NorthWest','FontSize',18);
+
+%title({'Code Quality Comparison between',' recompile and incremental-compile','(Single address register)'},'fontsize',16, 'FontWeight','bold');
+saveas(gcf,'../graphs/exe.eps','eps');

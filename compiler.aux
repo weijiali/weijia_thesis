@@ -1,0 +1,119 @@
+\relax 
+\@writefile{toc}{\contentsline {chapter}{{\bfseries  \numberline {4.0} UPDATE-CONSCIOUS COMPILATION (UCC) TECHNIQUES}}{21}{chapter.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The sink-side update-aware compilation.}}{21}{figure.4.10}}
+\newlabel{fover.sink}{{10}{21}{ Update-conscious compilation (UCC) techniques\relax }{figure.4.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The sensor-side code update and execution.}}{22}{figure.4.11}}
+\newlabel{fover.sensor}{{11}{22}{ Update-conscious compilation (UCC) techniques\relax }{figure.4.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Update-conscious compilation for general purpose applications}{22}{section.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}UCC data allocation (UCC-DA) for general purpose applications}{22}{subsection.4.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1.1}Data allocation problem for general purpose applications}{23}{subsubsection.4.1.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces An incremental data allocation example. (a)original source and assembly code; (b)new code and the update script; (c)incrementally generated new code with a smaller update script.}}{23}{figure.4.12}}
+\newlabel{fdata.0}{{12}{23}{Data allocation problem for general purpose applications\relax }{figure.4.12}{}}
+\citation{ucc}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Sensor memory model.}}{24}{figure.4.13}}
+\newlabel{ram}{{13}{24}{Data allocation problem for general purpose applications\relax }{figure.4.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1.2}UCC data allocation for general purpose applications}{24}{subsubsection.4.1.1.2}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces UCC-Data allocation for general purpose applications.}}{25}{algorithm.1}}
+\newlabel{alg-data}{{1}{25}{UCC data allocation for general purpose applications\relax }{algorithm.1}{}}
+\newlabel{spacet}{{4.2}{26}{UCC data allocation for general purpose applications\relax }{equation.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces RAM usage example.}}{27}{figure.4.14}}
+\newlabel{stack}{{14}{27}{UCC data allocation for general purpose applications\relax }{figure.4.14}{}}
+\newlabel{factor}{{4.3}{27}{UCC data allocation for general purpose applications\relax }{equation.4.3}{}}
+\citation{ucc}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Update-conscious register allocation (UCC-RA) for general purpose applications}{28}{subsection.4.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.1}Register allocation problem for general purpose applications}{28}{subsubsection.4.1.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.2}UCC register allocation for general purpose applications}{28}{subsubsection.4.1.2.2}}
+\newlabel{secra}{{4.1.2.2}{28}{UCC register allocation for general purpose applications\relax }{subsubsection.4.1.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Allocating different registers for improved energy efficiency. (a). Variable {\tt  a} and {\tt  b} are assigned with register {\tt  R1}; (b). The live ranges of {\tt  a} and {\tt  b} overlap with each other after the code update; (c). Split {\tt  b}'s live range and assign a new register to it.}}{29}{figure.4.15}}
+\newlabel{freg0}{{15}{29}{Register allocation problem for general purpose applications\relax }{figure.4.15}{}}
+\citation{related:ilp}
+\citation{ucc}
+\newlabel{decision_vars}{{4.4}{30}{UCC register allocation for general purpose applications\relax }{equation.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Decision variables used in UCC-RA.}}{32}{figure.4.16}}
+\citation{related:ilp}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Notations used in the objective function.}}{36}{figure.4.17}}
+\newlabel{notation.obj}{{17}{36}{UCC register allocation for general purpose applications\relax }{figure.4.17}{}}
+\newlabel{totalE}{{4.19}{37}{UCC register allocation for general purpose applications\relax }{equation.4.19}{}}
+\newlabel{cE}{{4.20}{37}{UCC register allocation for general purpose applications\relax }{equation.4.20}{}}
+\newlabel{uE}{{4.21}{37}{UCC register allocation for general purpose applications\relax }{equation.4.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces The objective function.}}{37}{figure.4.18}}
+\newlabel{feqn}{{18}{37}{UCC register allocation for general purpose applications\relax }{figure.4.18}{}}
+\citation{bonmin}
+\citation{bonmin}
+\citation{lpsolve}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Integration of the UCC data allocation and register allocation}{39}{subsection.4.1.3}}
+\newlabel{integration}{{4.1.3}{39}{Integration of the UCC data allocation and register allocation\relax }{subsection.4.1.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.1}ILP based integration}{40}{subsubsection.4.1.3.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Notations used in the ILP based integration.}}{41}{figure.4.19}}
+\newlabel{notation3}{{19}{41}{ILP based integration\relax }{figure.4.19}{}}
+\newlabel{wastes}{{4.25}{41}{ILP based integration\relax }{equation.4.25}{}}
+\newlabel{last}{{4.27}{41}{ILP based integration\relax }{equation.4.27}{}}
+\newlabel{newspill}{{4.28}{42}{ILP based integration\relax }{equation.4.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Objective function used in the heuristic based integration.}}{42}{figure.4.20}}
+\newlabel{newObj2}{{20}{42}{ILP based integration\relax }{figure.4.20}{}}
+\newlabel{newspill2}{{4.29}{43}{ILP based integration\relax }{equation.4.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Converted objective function used in the heuristic based integration.}}{43}{figure.4.21}}
+\newlabel{newObj2}{{21}{43}{ILP based integration\relax }{figure.4.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3.2}Heuristic based integration}{43}{subsubsection.4.1.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces  Notation used in the heuristic based integration.}}{44}{figure.4.22}}
+\newlabel{notation2}{{22}{44}{Heuristic based integration\relax }{figure.4.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Objective function used in the heuristic based integration.}}{44}{figure.4.23}}
+\newlabel{newObj}{{23}{44}{Heuristic based integration\relax }{figure.4.23}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Update-conscious compilation for DSP applications}{45}{section.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Data allocation problem for DSP applications}{45}{subsection.4.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces DSP data allocation: overview. (a) IR code; (b) access graph; (c) interference graph; (d) data allocation result.}}{46}{figure.4.24}}
+\newlabel{csoa}{{24}{46}{Data allocation problem for DSP applications\relax }{figure.4.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Update-conscious compilation data allocation (UCC-DA) for DSP applications}{46}{subsection.4.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces A motivational example for the need of UCC data allocation. (a) the C code after a simple update over Figure\nobreakspace  {}\ref  {csoa}; (b) the new interference graph; (c) the new access graph; (d) the new data allocation using CSOA, showing significantly different layout from the original assignment shown in Figure\nobreakspace  {}\ref  {csoa}(d).}}{47}{figure.4.25}}
+\newlabel{updcsoa}{{25}{47}{Data allocation problem for DSP applications\relax }{figure.4.25}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.1}Incremental coalescing single offset assignment (ICSOA)}{47}{subsubsection.4.2.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Update script comparison between two versions using CSOA.}}{48}{figure.4.26}}
+\newlabel{recomdiff}{{26}{48}{Data allocation problem for DSP applications\relax }{figure.4.26}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Incremental Coalescing-Based SOA (ICSOA)}}{48}{algorithm.2}}
+\newlabel{icsoaalg}{{2}{48}{Incremental coalescing single offset assignment (ICSOA)\relax }{algorithm.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces An overview of Incremental Coalescing Offset Assignment (ICSOA) -based code update scheme.}}{49}{figure.4.27}}
+\newlabel{ioverview}{{27}{49}{Incremental coalescing single offset assignment (ICSOA)\relax }{figure.4.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces An example of ICSOA scheme: (a) $\textit  {AG}_\textit  {NEW}$, the updated access graph; (b) $\textit  {IG}_2$, the new interference graph; (c) the final offset assignment.}}{50}{figure.4.28}}
+\newlabel{icsoa}{{28}{50}{Incremental coalescing single offset assignment (ICSOA)\relax }{figure.4.28}{}}
+\citation{related:ottoni}
+\citation{related:ottoni}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Register allocation problem for DSP applications}{51}{subsection.4.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3.1}Incremental coalescing general offset assignment (ICGOA)}{51}{subsubsection.4.2.3.1}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Incremental coalescing based GOA (ICGOA).}}{51}{algorithm.3}}
+\newlabel{icgoaalg}{{3}{51}{Incremental coalescing general offset assignment (ICGOA)\relax }{algorithm.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Objective function used in the heuristic based integration.}}{52}{figure.4.29}}
+\newlabel{newObj2}{{29}{52}{Incremental coalescing general offset assignment (ICGOA)\relax }{figure.4.29}{}}
+\@setckpt{compiler}{
+\setcounter{page}{53}
+\setcounter{equation}{33}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{@members}{4}
+\setcounter{@addprel}{8}
+\setcounter{@appno}{0}
+\setcounter{chapter}{4}
+\setcounter{section}{2}
+\setcounter{subsection}{3}
+\setcounter{subsubsection}{1}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{29}
+\setcounter{table}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{1}
+\setcounter{NAT@ctr}{0}
+\setcounter{parentequation}{0}
+\setcounter{subfigure}{0}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{lotdepth}{1}
+\setcounter{float@type}{8}
+\setcounter{ALC@line}{6}
+\setcounter{ALC@rem}{0}
+\setcounter{algorithm}{3}
+\setcounter{section@level}{3}
+}

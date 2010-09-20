@@ -1,0 +1,84 @@
+\relax 
+\citation{related:script}
+\citation{related:script}
+\@writefile{toc}{\contentsline {chapter}{{\bfseries  \numberline {5.0}SOFTWARE DIFFERENTIAL PATCHING}}{53}{chapter.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Patch generation and binary construction.}}{53}{figure.5.30}}
+\newlabel{patch}{{30}{53}{Software differential patching\relax }{figure.5.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Instruction based patching}{54}{section.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces The patch script primitives -- code part.}}{54}{figure.5.31}}
+\newlabel{fscript}{{31}{54}{Instruction based patching\relax }{figure.5.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Simple primitives}{54}{subsection.5.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces An example of update script involving the simple primitives. New code {\tt  [112,130]} is inserted. {\tt  [112,120]} in the original code is now moved to {\tt  [130,140]} in the new version. }}{55}{figure.5.32}}
+\newlabel{fsother}{{32}{55}{Simple primitives\relax }{figure.5.32}{}}
+\citation{related:script}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Advanced primitives}{56}{subsection.5.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.1}Shift}{56}{subsubsection.5.1.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces An example of update script involving {\tt  shift} primitive. New code {\tt  [112,130]} is inserted. {\tt  [112,120]} in the old code is now moved to {\tt  [132,140]} in the new version. Some control flow instructions are affected due to this address change. }}{57}{figure.5.33}}
+\newlabel{fshift}{{33}{57}{Shift\relax }{figure.5.33}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.2}Clone}{57}{subsubsection.5.1.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces An example of update script involving {\tt  clone} primitive. New code {\tt  [200,206]}, which is compiled from the same {\tt  inline} function as code {\tt  [100,106]} is inserted.}}{59}{figure.5.34}}
+\newlabel{fclone}{{34}{59}{Clone\relax }{figure.5.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.3}Insert\_access}{59}{subsubsection.5.1.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces An example showing the use of {\tt  insert\_access} primitive: (a) data allocation for both versions; (b) the original code; (c) the modified code; (d) update script using simple primitives; (e) update script using advanced primitives. }}{60}{figure.5.35}}
+\newlabel{insacc}{{35}{60}{Insert\_access\relax }{figure.5.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces An example of the {\tt  insert\_access} primitive interpretation procedure.}}{61}{figure.5.36}}
+\newlabel{insertaccess}{{36}{61}{Insert\_access\relax }{figure.5.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Sensor-side primitive interpretation}{61}{subsection.5.1.3}}
+\citation{mica2-power}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Primitive interpretation and code reconstruction.}}{63}{algorithm.4}}
+\newlabel{decode}{{4}{63}{Sensor-side primitive interpretation\relax }{algorithm.4}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces {\bf  write\_code\_buffer} \/\/write the constructed code into code buffer}}{64}{algorithm.5}}
+\newlabel{copycode}{{5}{64}{Sensor-side primitive interpretation\relax }{algorithm.5}{}}
+\citation{related:ottoni}
+\citation{related:zhuang}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Data based patching}{65}{section.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Data update primitives}{65}{subsection.5.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces The patch script primitives -- data part.}}{66}{figure.5.37}}
+\newlabel{fdatascript}{{37}{66}{Data update primitives\relax }{figure.5.37}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1.1}copy\_slot.}{66}{subsubsection.5.2.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1.2}insert\_var.}{66}{subsubsection.5.2.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1.3}shift\_slot.}{66}{subsubsection.5.2.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Sensor-side primitive interpretation}{67}{subsection.5.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces The code construction procedure of the data primitives (The left shows the server side, and the right shows the mobile device side updates).}}{67}{figure.5.38}}
+\newlabel{codecorrection}{{38}{67}{Sensor-side primitive interpretation\relax }{figure.5.38}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2.1}Auxiliary data structures}{68}{subsubsection.5.2.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Coalesced variable list.}}{69}{figure.5.39}}
+\newlabel{memvar}{{39}{69}{Auxiliary data structures\relax }{figure.5.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces The AR in/out value list.}}{69}{figure.5.40}}
+\newlabel{bbtable}{{40}{69}{Auxiliary data structures\relax }{figure.5.40}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces {\bf  addr\_mode\_correction} /*Correct the addressing mode of an instruction*/}}{71}{algorithm.6}}
+\newlabel{datadecode}{{6}{71}{Auxiliary data structures\relax }{algorithm.6}{}}
+\@setckpt{patch}{
+\setcounter{page}{72}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{@members}{4}
+\setcounter{@addprel}{8}
+\setcounter{@appno}{0}
+\setcounter{chapter}{5}
+\setcounter{section}{2}
+\setcounter{subsection}{2}
+\setcounter{subsubsection}{1}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{40}
+\setcounter{table}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{1}
+\setcounter{NAT@ctr}{0}
+\setcounter{parentequation}{0}
+\setcounter{subfigure}{0}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{lotdepth}{1}
+\setcounter{float@type}{8}
+\setcounter{ALC@line}{21}
+\setcounter{ALC@rem}{0}
+\setcounter{algorithm}{6}
+\setcounter{section@level}{3}
+}

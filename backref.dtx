@@ -1,0 +1,269 @@
+\def\fileversion{1.20}
+\def\filedate{2002/06/09}
+%
+% \iffalse
+%% File: backref.dtx Copyright (C) 1995-2002 David Carlisle, Sebastian Rahtz, Heiko Oberdiek
+%
+%% This file is part of the `Hyperref Bundle'.
+%% -------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX 
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the `Hyperref Bundle' is
+%% given in the file `manifest.txt'.
+%<*driver>
+\documentclass{ltxdoc}
+\begin{document}
+  \title{%
+    Back referencing from bibliographical citations%
+    \thanks{%
+      This file has version number \fileversion,
+      last revised \filedate.%
+    }%
+  }
+  \author{David Carlisle and Sebastian Rahtz}
+  \date{\filedate}
+  \maketitle
+  \tableofcontents
+  \DocInput{backref.dtx}
+\end{document}
+%</driver>
+% \fi
+% \CheckSum{240}
+% \MakeShortVerb{|}
+% \section{Introduction}
+%
+% \section{Usage}
+%
+% \StopEventually{}
+%
+% \section{The macros}
+%    Internal command names of this package start with |\BR@|,
+%    commands, that store the original meaning of commands, which
+%    will be redefined, are prefixed with |\BRorg@|.
+%
+% \subsection{Package identification}
+%    \begin{macrocode}
+%<*package>
+\ProvidesPackage{backref}%
+  [\filedate\space v\fileversion\space Bibliographical back referencing]
+%    \end{macrocode}
+%
+% \subsection{Options}
+%
+% \subsubsection{Option verbose}
+%    If package hyperref is loaded, then its setting is used as
+%    default for the verbose switch.
+%    \begin{macrocode}
+\newif\ifBR@verbose
+\@ifundefined{ifHy@verbose}{%
+  \BR@verbosefalse
+}{%
+  \let\ifBR@verbose\ifHy@verbose
+}
+\DeclareOption{verbose}{\BR@verbosetrue}
+%    \end{macrocode}
+%
+% \subsubsection{Options for way of working}
+%
+%    What is printed depends on how the 3 available items of
+%    information are used (page number, section number, label).
+%    \begin{macrocode}
+\long\def\page@backref#1#2#3{#1}
+\long\def\section@backref#1#2#3{#2}
+\long\def\hyper@section@backref#1#2#3{\hyperlink{#3}{#2}}
+\long\def\hyper@page@backref#1#2#3{\hyperlink{page.#1}{#1}}
+%    \end{macrocode}
+%    \begin{macro}{\backrefpagesname}
+%    \begin{macro}{\backrefsectionsname}
+%    Text strings are implemented via \cmd{\...name} commands for
+%    language independence.
+%    \begin{macrocode}
+\def\backrefpagesname{pages}
+\def\backrefsectionsname{sections}
+%    \end{macrocode}
+%    \end{macro}
+%    \end{macro}
+%    Now the options follows, that can be used without
+%    package hyperref.
+%    \begin{macrocode}
+\DeclareOption{pageref}{%
+  \def\backref{\backrefpagesname\ }%
+  \let\backrefxxx\page@backref
+}
+\DeclareOption{ref}{%
+  \def\backref{\backrefsectionsname\ }%
+  \let\backrefxxx\section@backref
+}
+%    \end{macrocode}
+%    Set up back-referencing to be hyper links, by page or section.
+%    \begin{macrocode}
+\DeclareOption{hyperref}{%
+  \def\backref{}\let\backrefxxx\hyper@section@backref
+}
+\DeclareOption{hyperpageref}{%
+  \def\backref{}\let\backrefxxx\hyper@page@backref
+}
+%    \end{macrocode}
+%
+% \subsubsection{Process options}
+%
+%    \begin{macrocode}
+\ExecuteOptions{pageref}
+\ProcessOptions
+%    \end{macrocode}
+%
+% \subsection{The bibliography}
+%
+%    \begin{macro}{\BR@bibitem}
+%    \begin{macrocode}
+\def\BR@bibitem{\@ifnextchar[\BR@@lbibitem\BR@@bibitem}
+%    \end{macrocode}
+%    \end{macro}
+%    \begin{macrocode}
+\def\BR@@lbibitem[#1]#2#3\par{%
+  \BRorg@bibitem[#1]{#2}#3
+  \newblock
+  \begingroup
+    \csname @safe@activestrue\endcsname
+    \backref{\csname br@#2\endcsname}%
+  \endgroup
+  \par
+}%
+\def\BR@@bibitem#1#2\par{%
+  \BRorg@bibitem{#1}#2
+  \newblock
+  \begingroup
+    \csname @safe@activestrue\endcsname
+    \backref{\csname br@#1\endcsname}%
+  \endgroup
+  \par
+}
+\@ifundefined{newblock}{\def\newblock{\par}}{}
+%    \end{macrocode}
+%
+% \subsection{Reading .brf file}
+%
+%    \begin{macro}{\backcite}
+%    The file |\jobname.brf| collects the back cite informations
+%    as calls of \cmd{\backcite} with the informations
+%    in the arguments.
+%
+%    To avoid same entries, it is checked before, whether the entry
+%    already exists. Only the information needed by \cmd{\backrefxxx}
+%    is compared.
+%    \begin{macrocode}
+\def\backcite#1#2{%
+  \@for\x:=#1\do{%
+    \edef\x{\expandafter\@firstofone\x\@empty}%
+    \expandafter\ifx\csname br@\x\endcsname\relax
+      \expandafter\protected@xdef\csname br@\x\endcsname{%
+        \protect\backrefxxx#2%
+      }%
+    \else
+      \begingroup
+        \expandafter\def\expandafter\reserved@a\expandafter{%
+          \backrefxxx#2%
+        }%
+        \let\BRorg@backrefxxx\backrefxxx
+        \global\let\BR@found=N%
+        \long\def\backrefxxx##1##2##3{%
+          \expandafter\def\expandafter\reserved@b\expandafter{%
+            \BRorg@backrefxxx{##1}{##2}{##3}%
+          }%
+          \ifx\reserved@a\reserved@b
+            \global\let\BR@found=Y%
+          \fi
+        }%
+        \setbox\@tempboxa\hbox{\csname br@\x\endcsname}%
+      \endgroup
+      \if N\BR@found
+        \expandafter\protected@xdef\csname br@\x\endcsname{%
+          \csname br@\x\endcsname, %
+          \protect\backrefxxx#2%
+        }%
+      \fi
+    \fi
+  }%
+}
+%    \end{macrocode}
+%    \end{macro}
+%
+% \subsection{Initialization}
+%
+%    \begin{macrocode}
+\def\@currentHref{}
+\AtBeginDocument{%
+  \let\BRorg@bibitem\bibitem
+  \let\bibitem\BR@bibitem
+  \let\BRorg@thebibliography\thebibliography
+  \def\thebibliography{%
+    \@starttoc{brf}{}%
+    \BRorg@thebibliography
+  }%
+  \@ifundefined{NAT@parse}{%
+    \global\let\BRorg@citex\@citex
+    \global\let\@citex\BR@citex
+  }{%
+    \PackageInfo{backref}{** backref set up for natbib **}%
+  }%
+}
+%    \end{macrocode}
+%
+% \subsection{Collecting back cite informations}
+%
+%    \begin{macro}{\BR@citex}
+%    \begin{macrocode}
+\def\BR@citex[#1]#2{%
+  \BRorg@citex[#1]{#2}%
+  \ifBR@verbose
+    \PackageInfo{backref}{back cite \string`#2\string'}%
+  \fi
+  \Hy@backout{#2}%
+}
+%    \end{macrocode}
+%    \end{macro}
+%
+% Grr. for chicago.sty
+%    \begin{macrocode}
+\@ifpackageloaded{chicago}{%
+  \let\BRorg@citedatax\@citedatax
+  \def\@citedatax[#1]#2{%
+    \BRorg@citedatax[#1]{#2}%
+    \Hy@backout{#2}%
+  }%
+}{}
+%    \end{macrocode}
+%    \begin{macro}{\Hy@backout}
+%    \begin{macrocode}
+\def\Hy@backout#1{%
+  \@bsphack
+  \ifx\@empty\@currentlabel
+    \protected@write\@auxout{}{%
+      \string\@writefile{brf}{%
+        \string\backcite{#1}{{\thepage}{(document)}{Doc-Start}}%
+      }%
+    }%
+  \else
+   \protected@write\@auxout{}{%
+     \string\@writefile{brf}{%
+       \string\backcite{#1}{{\thepage}{\@currentlabel}{\@currentHref}}%
+     }%
+   }%
+  \fi
+  \@esphack
+}
+%    \end{macrocode}
+%    \end{macro}
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+% \Finale
+%
+\endinput

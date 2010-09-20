@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99c (Web2C 7.4.5)
+The top-level auxiliary file: thesis1.aux
+A level-1 auxiliary file: intro.aux
+A level-1 auxiliary file: related.aux
+A level-1 auxiliary file: goals.aux
+A level-1 auxiliary file: compiler.aux
+A level-1 auxiliary file: patch.aux
+A level-1 auxiliary file: protocol.aux
+A level-1 auxiliary file: experiment.aux
+The style file: abbrvnat.bst
+Database file #1: thesis1.bib
+Warning--to sort, need author or key in dspstone
+Warning--to sort, need author or key in atmega128L
+Warning--to sort, need author or key in lance
+Warning--to sort, need author or key in offsetstone
+Warning--to sort, need author or key in tossim
+Warning--empty year in lpsolve
+Warning--empty year in diff
+You've used 64 entries,
+            2633 wiz_defined-function locations,
+            946 strings with 16372 characters,
+and the built_in function-call counts, 32665 in all, are:
+= -- 3296
+> -- 1404
+< -- 68
++ -- 521
+- -- 447
+* -- 2242
+:= -- 4965
+add.period$ -- 243
+call.type$ -- 64
+change.case$ -- 401
+chr.to.int$ -- 61
+cite$ -- 76
+duplicate$ -- 1565
+empty$ -- 2701
+format.name$ -- 552
+if$ -- 7163
+int.to.chr$ -- 4
+int.to.str$ -- 1
+missing$ -- 49
+newline$ -- 353
+num.names$ -- 236
+pop$ -- 774
+preamble$ -- 1
+purify$ -- 341
+quote$ -- 0
+skip$ -- 1267
+stack$ -- 0
+substring$ -- 1588
+swap$ -- 341
+text.length$ -- 33
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 694
+warning$ -- 7
+while$ -- 289
+width$ -- 0
+write$ -- 918
+(There were 7 warnings)
