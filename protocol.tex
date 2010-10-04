@@ -1,23 +1,23 @@
 \chapter{Distribution protocol}
 
-As introduced in Chapter~\ref{chap:intro}, there are two circumstances in software update, {\em software upgrade} and {\em software switch}. The {\em software upgrade} happens when the application that is already running in the WSN needs to be changed for bug fix or adding new features. So in this case, there is one source node -- the sink, and multiple destination nodes in the network. However, The {\em software switch} happens in MA-WSNs, where multiple applications are already deployed in the network. Because some neighboring nodes may already have the wanted binary code in memory, the code distribution problem here is how to route the code image from sensors to sensors. In this case, there are multiple source nodes in the network, which is different from the {\em software upgrade} case. Because of this difference, I propose to use two different code distribution protocols for the two different cases.
+As introduced in Chapter~\ref{chap:intro}, there are two circumstances in software update,  software upgrade and software switch. The software upgrade happens when the application that is already running in the WSN needs to be changed for bug fix or adding new features. So in this case, there is one source node -- the sink, and multiple destination nodes in the network. However, The software switch happens in MA-WSNs, where multiple applications are already deployed in the network. Because some neighboring nodes may already have the wanted binary code in memory, the code distribution problem here is how to route the code image from sensors to sensors. In this case, there are multiple source nodes in the network, which is different from the software upgrade case. Because of this difference, I propose to use two different code distribution protocols for the two different cases.
 
 
 \section{Broadcast based code distribution protocol (Deluge)}
-While doing {\em software upgrade}, the upgrade patches are generated on the sink node using the proposed update-conscious compilation techniques to improve the code similarity with the older version of such application. Then the patch is generated in the script format as mentioned above.After the patches are generated on the sink node, the network protocol Deluge~\cite{deluge} is used to disseminate the scripts to the network. 
+While doing software upgrade, the upgrade patches are generated on the sink node using the proposed update-conscious compilation techniques to improve the code similarity with the older version of such application. Then the patch is generated in the script format as mentioned above.After the patches are generated on the sink node, the network protocol Deluge~\cite{deluge} is used to disseminate the scripts to the network. 
 
 The protocol works as follows. 
 First, the whole update script is divided into fixed size pages.
-At the beginning, the states of nodes are set to {\tt Maintain} state. 
-Each sensor node keeps broadcasting the advertisement messages ({\tt ADV}) periodically,
+At the beginning, the states of nodes are set to {\it Maintain} state. 
+Each sensor node keeps broadcasting the advertisement messages ({\it ADV}) periodically,
 which contains the information of the application code that it has. 
-When a sensor node {\tt S} receives an advertisement, which indicates that the neighbor 
-{\tt N} has a newer version of the application in its memory or has finished downloading more pages, node S will send out a request message ({\tt REQ})
-to {\tt N} to request for a page, and change its own state from {\tt Maintain} to {\tt Request}.
+When a sensor node {\it S} receives an advertisement, which indicates that the neighbor 
+{\it N} has a newer version of the application in its memory or has finished downloading more pages, node S will send out a request message ({\it REQ})
+to {\it N} to request for a page, and change its own state from {\it Maintain} to {\it Request}.
 The state will be changed back when it receives all the packets in the requested page.
-Node {\tt N} will change state to {\tt Transmit} when it receives the request message from
-{\tt S}. Then it will start sending all the packets of the requested page to node {\tt S}.
-After the code transmission is finished, the state will be changed back to {\tt Maintain} state.
+Node {\it N} will change state to {\it Transmit} when it receives the request message from
+{\it S}. Then it will start sending all the packets of the requested page to node {\it S}.
+After the code transmission is finished, the state will be changed back to {\it Maintain} state.
 Figure~\ref{fdeluge} shows the advertise-request-data handshaking protocol used Deluge~\cite{deluge}.
 
 \begin{figure}[htbp]
@@ -36,64 +36,67 @@ the receiving order.
 
 \section{Multicast-based code redistribution protocol (MCP)}
 	
-\subsection{Motivation}
+\subsection{The software switch problem in MA-WSNs}
 	
-While doing {\em software switch}, the problem is a little bit different. The following example shown in Figure~\ref{fnet} illustrates the protocol design challenges here. 
-Three applications are distributed across different nodes in a network. The code distribution problem arises when there is a need to reprogram some nodes to run application {\tt A}.
+While doing software switch, the problem is a little bit different. The following example shown in Figure~\ref{fnet} illustrates the protocol design challenges here. 
+Three applications are distributed across different nodes in a network. The code distribution problem arises when there is a need to reprogram some nodes to run application {\it A}.
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=2.5in]{figures/fnet.eps}
-\caption{Code distribution: A Multi-Application WSN (MA-WSN).}
+\includegraphics[width=3in]{figures/fnet.eps}
+\caption{An example of software switch in a multi-application WSN (MA-WSN).}
 \label{fnet}
 \end{center}
 \end{figure}
 
-There are two existing approaches. A naive solution is to directly apply Deluge and disseminate application {\tt A} from the sink to all sensors. After dissemination, the nodes that do not need {\tt A} discard the code from their storage. The solution is clearly not a good choice due to unnecessary packets transmissions to the nodes that don't need it. The other solution is to let requesting nodes initiate code dissemination and fetch {\tt A} from nearby sensors. Melete~\cite{melete} is such a protocol --- the nodes that need to run {\tt A} broadcast their requests within a controlled range and discover the source nodes that have {\tt A}. Sources then send back the requested data packets. However, as a stateless protocol, Melete does not record the source nodes and has to discover them repeatedly. When transmitting applications with multiple pages, multiple sources within the range may respond and thus create significant signal collision. 
+There are two existing approaches. A naive solution is to directly apply Deluge and disseminate application {\it A} from the sink to all sensors. After dissemination, the nodes that do not need {\it A} discard the code from their storage. The solution is clearly not a good choice due to unnecessary packets transmissions to the nodes that don't need it. The other solution is to let requesting nodes initiate code dissemination and fetch {\it A} from nearby sensors. Melete~\cite{melete} is such a protocol --- the nodes that need to run {\it A} broadcast their requests within a controlled range and discover the source nodes that have {\it A}. Sources then send back the requested data packets. However, as a stateless protocol, Melete does not record the source nodes and has to discover them repeatedly. When transmitting applications with multiple pages, multiple sources within the range may respond and thus create significant signal collision. 
 
 
-\subsection{Overview}
+\subsection{A multi-cast based code redistribution protocol (MCP)}
 
 
-I propose a multicast-based code redistribution protocol, {\tt MCP}, to solve the ``n to n'' code distribution problem in {\em software switch}. MCP employs a gossip-based source node discovery strategy. Each sensor summarizes the application information from overheard advertisement messages, and stores this information in a local Application Information Table (AIT). Future dissemination requests are forwarded to nearby source nodes rather than flooding the network.
+I propose a multicast-based code redistribution protocol,  MCP, to solve the ``n to n'' code distribution problem in software switch. MCP employs a gossip-based source node discovery strategy. Each sensor summarizes the application information from overheard advertisement messages, and stores this information in a local application information table (AIT). Future dissemination requests are forwarded to nearby source nodes rather than flooding the network.
 Different from the Deluge~\cite{deluge} scheme discussed above, the data messages are only multicast to the requesters, which avoids the unnecessary packet transmission in the network. With the guide of AIT, the request messages can be directly sent to the source nodes, which avoids the request message flooding in the network.  
 
-An overview of our protocol is as follows.
+An overview of this protocol is as follows.
 
 \begin{itemize}
 \item 
-Sensors in MCP periodically broadcast {\tt ADV} messages to advertise their knowledge about running applications in the network, which is similar to Deluge. Each sensor summarizes its overheard {\tt ADV} messages in an {\em application information table (AIT)}. 
+Sensors in MCP periodically broadcast {\it ADV} messages to advertise their knowledge about running applications in the network, which is similar to Deluge. Each sensor summarizes its overheard {\it ADV} messages in an {\em application information table (AIT)}. 
 
 \item
-To reprogram a subset of sensors, the sink floods a dissemination command that guides which sensors should switch to run application {\tt A}. For example, a command ``[B$\rightarrow$A, p=0.25]'' indicates that the sensors whose active application is ``B'' should switch to ``A'' with a 25\% probability. That is 25\% of the nodes that are currently running application ``B'' will switch to ``A''.
+To reprogram a subset of sensors, the sink floods a dissemination command that guides which sensors should switch to run application {\it A}. For example, a command ``[B$\rightarrow$A, p=0.25]'' indicates that the sensors whose active application is ``B'' should switch to ``A'' with a 25\% probability. That is 25\% of the nodes that are currently running application ``B'' will switch to ``A''.
 
 \item
 After receiving the command from the sink, each sensor identifies its dissemination role as one of the followings.  \\
-(i)  a {\em source} if the sensor has the binary of application {\tt A}; \\
-(ii) a {\em requester} if the sensor does not have the binary of {\tt A} but needs to switch to run {\tt A}; or  \\
+(i)  a {\em source} if the sensor has the binary of application {\it A}; \\
+(ii) a {\em requester} if the sensor does not have the binary of {\it A} but needs to switch to run {\it A}; or  \\
 (iii) a {\em forwarder} if the sensor is neither a {\em source} nor a {\em requester}.
 
 \item
-A {\em requester} periodically sends out requests (i.e., {\tt REQ} messages) to its closest source, until it acquires all the pages of application {\tt A}. Instead of broadcast, the {\tt REQ} messages are sent to the source via multicast. A requester resends the {\tt REQ} message until it timeouts. It tries to request data from each source node several times before marking the node as a {\em temporary non-available} source.
+A {\em requester} periodically sends out requests (i.e., {\it REQ} messages) to its closest source, until it acquires all the pages of application {\it A}. Instead of broadcast, the {\it REQ} messages are sent to the source via multicast. A requester resends the {\it REQ} message until it timeouts. It tries to request data from each source node several times before marking the node as a {\em temporary non-available} source.
 
 \item 
-A source node responds with the data (i.e., {\tt Data} messages) that contain code fragments while a forwarder forwards both request and data packets. 
+A source node responds with the data (i.e., {\it Data} messages) that contain code fragments while a forwarder forwards both request and data packets. 
 \end{itemize}
 
-Similar to Melete and Deluge, MCP has three types of messages: an {\tt ADV} message that advertises interesting applications; a {\tt REQ} message that asks for packets of a particular page; and a {\tt Data} message that contains one data packet (i.e, a piece of code segment).
+Similar to Melete and Deluge, MCP has three types of messages: an {\it ADV} message that advertises interesting applications; a {\it REQ} message that asks for packets of a particular page; and a {\it Data} message that contains one data packet (i.e, a piece of code segment).
 
 \subsection{ADV message and application information table (AIT)}
+In MCP, each sensor periodically broadcasts ADV messages, and summarizes the information of overheard ADV messages into a small application information table (AIT). Fig. \ref{fait} illustrates the algorithm.
+
+Each {\it ADV} message contains the information of one application: (i) an application ID and version number; (ii) the number of pages of the application; (iii) the information of two closest source sensors --- the source ID and number of hops to the source (S, H); (iv) the CRC checksum. 
+If a sensor has multiple known applications, it advertises them in a round-robin fashion. Note that a sensor may not have the code images of all its known applications. 
+
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=4in]{figures/ftable.eps}
-\caption{Application Information Table.}
+\caption{An example of the application information table (AIT).}
 \label{fait}
 \end{center}
 \end{figure}
-In MCP, each sensor periodically broadcasts ADV messages, and summarizes the information of overheard ADV messages into a small application information table (AIT). Fig. \ref{fait} illustrates the algorithm.
 
-Each {\tt ADV} message contains the information of one application: (i) an application ID and version number; (ii) the number of pages of the application; (iii) the information of two closest source sensors --- the source ID and number of hops to the source (S, H); (iv) the CRC checksum. 
-If a sensor has multiple known applications, it advertises them in a round-robin fashion. Note that a sensor may not have the code images of all its known applications. 
+
 
 
 The AIT summarizes the overheard ADV messages. In addition to the application summary, AIT stores up to three closest source nodes for each known application, and the uplink sensor ID for each source, i.e., from which the source information was received.
@@ -130,7 +133,7 @@ Fig. \ref{fgrad} illustrates the involved nodes when h=2 and $\delta$=1. These n
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=1.5in]{figures/fgrad.eps}
-\caption{Gradient-based request routing (R and S are requester and source nodes respectively; h=2; $\delta$=1).}
+\caption[Gradient-based request routing.]{Gradient-based request routing. R and S are requester and source nodes respectively; h=2; $\delta$=1.}
 \label{fgrad}
 \end{center}
 \end{figure}
@@ -156,7 +159,7 @@ Caching on a requester is straightforward as the sensor always caches the next s
 As shown in~\cite{melete}, different applications in a MA-WSN
 usually share some code segments. For example, two applications
 may be designed for sensing and processing two different
-events — wildfire and animal mitigation. While the
+events like wildfire and animal mitigation. While the
 data processing components are different, the routing code
 could be similar. If one application has already been installed
 on some sensors, then at the time when a remote sensor
@@ -180,7 +183,8 @@ sink.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=4.5in]{figures/common.eps}
-\caption{Simultaneous code dissemination}
+\caption{Simultaneous code dissemination.}
+\vspace{-0.3in}
 \label{common}
 \end{center}
 \end{figure}
@@ -229,7 +233,7 @@ management on each sensor in the next section.
 \subsection{Protocol augmentation}
 Melete adopts a controlled
 broadcasting design to fetch code segments from peer sensors.
-$A$ requesting node broadcasts its {\tt REQ} messages to all
+$A$ requesting node broadcasts its {\it REQ} messages to all
 sensors within $m$ hops such that all sensors containing the
 requested packets in this range will respond. The broadcast
 range can gradually extend larger if no packet was received
@@ -249,10 +253,10 @@ the number of hops to $i$.
 
 This table is considered a hint and thus does not need to
 be accurate. To maintain the table, we enhance the heartbeat
-{\tt ADV} message in Deluge which was originally designed
+{\it ADV} message in Deluge which was originally designed
 to be sent periodically to keep the network state up-to-date.
 Each sensor attaches its knowledge about available applications
-to the {\tt ADV} message which is used to update the table
+to the {\it ADV} message which is used to update the table
 on the receiver side. Note that the table is maintained when
 the network is in stable state such that it has minimal interference
 during the dissemination. From this table a requesting

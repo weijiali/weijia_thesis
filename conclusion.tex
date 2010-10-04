@@ -1,0 +1,47 @@
+\chapter{Future Directions and Conclusion }
+
+In this chapter, I will address the future research directions and the conclusion of this research.
+
+\section{Future work}
+Although the designed software update framework has achieved the design goal and gained a lot energy savings for the WSN platform, there are some directions that I can keep working on to increase its value.
+
+\subsection{Apply to different platforms}
+The software update management framework can be used in the hardware platforms other than WSNs, e.g. the smart phones. The popularity of the smart phones has brought more interest of developing and using applications on them.
+By September 1st, 2010, there have been over 250,000 applications launched on the iPhone~\cite{iphone} platform. 
+According to Tech Crunchies~\cite{tech}, the average number of applications installed on an iPhone is 65. 
+Because of the rapid growing demand and the fast developing pace, these applications tend to be updated very often. Multiple releases of one application could be launched in a month.
+How to efficiently update these applications could be an issue, because frequent software update may use up the energy stored in the battery and consume too much bandwidth to satisfy the QoS of the other running applications. 
+
+Applying the update-conscious compilation and the differential patching techniques to these smart phone platforms can reduce the number of bytes that need to be transmitted to the phones. This will reduce not only the update time but also the data usage. With the multi-cast based code dissemination protocol installed, the smart phones will be able to download the new applications from the peer phones via bluetooth, which will reduce the data usage and cause less affect to the other running applications that may be heavily using the network.
+
+One future research direction is to apply the techniques proposed in this research to smart phones and evaluate the benefits that it can gain compared to the traditional solutions.
+
+\subsection{Approach other update-conscious compilation schemes}
+In this research, I focused on optimizing the register allocation and data allocation to improve the similarity between different binary versions. Besides this, there are other UCC research opportunities, such as UCC instruction selection and UCC instruction scheduling.
+
+Instruction selection transforms the tree-based middle-level intermediate representation (IR) into a low-level IR very close to its final target language. The traditional ``tile covering'' algorithms try to optimize the run-time overhead while selecting the proper ``tiles'' to cover the IR tree parts with the least cost. UCC instruction selection algorithm should take the instruction selection results of the old version as input while generating the new version and consider not only the run-time overhead but also the code similarity. This trade-off between the run-time overhead and the transmission overhead can be studied.
+
+The functional update primitive design favors the continuous updates, because in that way we can use one primitive to describe multiple updated instructions. 
+Comparing two updates that have the same number of new instructions, where one has all the updates concentrating at one or two update points, and the other one has all the updates scattering in the existing code, the first one will have a smaller update script. 
+Thus, while doing instruction scheduling, if we can advance or delay certain instructions to implode the updates, we will be able to reduce the patch size.
+This may affect the run-time performance by introducing more ``stalls''. This trade-off needs to be studied in the future research.
+
+\section{Conclusion}
+Wireless sensor networks (WSNs) have been widely used. Making it easy to maintain becomes an issue, because the sensors are usually unattached after deployed and the software running on them needs to updates for various reasons.
+Without the physical accesses to the sensors, the software update procedure can be energy consuming, because it relies on wireless communication. Experimental results have shown that the energy spent in transmitting one bit one hope away is equivalent to the energy consumed by executing one thousand instructions. If the sensor is running a simple application with a long idle time, the energy spent on the software update procedure may be higher than the energy spent in sensing and reporting.
+
+The greatest benefit that WSNs bring is that, once it is set up, it can sensor, compute and report automatically with very less human effort involved. However, if the energy consumption in the software update procedure is too high, the WSN users may need to frequently change the batteries of the sensors, or redeploys new sensors  whenever the old ones run out of power. This obviously makes using WSNs less appealing and of course will hinder the widespread of using this technology in real life. Therefore, how to update the software efficiently in WSNs is a critical  problem to solve in WSN study.
+
+In my thesis, I designed a framework that tacks this problem down from different viewpoints. 
+
+The update-conscious compiler (UCC) first generates the a new binary that is similar as the old version, in order to reduce the updates that need to be made. The update-conscious register allocation (UCC-RA) scheme formulates the problem as an ILP problem. The objective is to minimize the overall energy consumption including the run-time overhead in terms of the number of ``load'', ``store'' and ``move'' instructions, and the software update overhead in terms of the binary difference from the old version. The update-conscious data allocation scheme for general purpose applications uses a heuristic based solution to allocate the local variables, under a certain memory usage constraint. The update-conscious data allocation scheme for DSP applications adds the binary similarity consideration to the existing CSOA, CGOA algorithms, which generates the new binary with not only the similar data allocation result but also the similar addressing modes for the memory access instructions.
+Because of the trade-offs described above, the number of executions that the new binary is going to make, the memory size of the target platform, and the memory usage of the new binary all affect the performance of UCC. It achieves the best performance, when the target software is not frequently executed and it has a lower memory usage. 
+
+The generated binary is then compared with the old binary to generate the update patch. In order to furthermore reduce the patch size, several sets of patch primitives are designed. The {\tt simple} functional update primitives directly stores the binary comparison results in the patch, which may result in a larger update patch but is easy to be decoded on the sensors. The {\tt advanced} functional update primitives summarize the updates that affect more than one instructions in one primitive, which can generate smaller patches but requires a more complicated decoder on the sensors. The data based primitives are used to describe the data allocation changes and the affected addressing mode changes. The binary generation on the sensors involves rebuilding the data allocation table and fixing the addressing mode updates. This scheme requires the most effort to decode the patch and reconstruct the new binary compared to the functional update primitive sets. 
+Therefore, it depends on the update level and the network setting to choose the right primitive set. Higher level updates desire more complicated primitives to reduce the patch size.
+
+A multi-case based stateful code distribution protocol (MCP) is then used to disseminate the generated binary to the sensors. This protocol stores the routing information to the sources on the sensors, so that the download request can be directed to the sources without flooding the network.
+The memory on the sensors is wisely divided to cache packages received from different sources. 
+
+The three components together solve a critical WSN problem. According the experimental results, each component contributes a significantly amount of energy saving in the software update procedure. The motivation of the update-conscious compilation techniques is another great contribution of this research.
+

@@ -1,0 +1,50 @@
+\BOOKMARK [0][]{prelim.0}{TITLE PAGE}{}
+\BOOKMARK [0][]{prelim.1}{COMMITTEE MEMBERSHIP PAGE}{}
+\BOOKMARK [0][]{prelim.2}{ABSTRACT}{}
+\BOOKMARK [0][]{prelim.4}{TABLE OF CONTENTS}{}
+\BOOKMARK [0][]{chapter.1}{1.0 INTRODUCTION}{}
+\BOOKMARK [1][]{section.1.1}{1.1 Problem statement}{chapter.1}
+\BOOKMARK [1][]{section.1.2}{1.2 Challenges}{chapter.1}
+\BOOKMARK [1][]{section.1.3}{1.3 Proposed software update framework}{chapter.1}
+\BOOKMARK [1][]{section.1.4}{1.4 Design goals}{chapter.1}
+\BOOKMARK [1][]{section.1.5}{1.5 Assumptions}{chapter.1}
+\BOOKMARK [0][]{chapter.2}{2.0 BACKGROUND AND RELATED WORK}{}
+\BOOKMARK [1][]{section.2.1}{2.1 Software update in WSNs}{chapter.2}
+\BOOKMARK [1][]{section.2.2}{2.2 Compiler}{chapter.2}
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Register allocation}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Data allocation}{section.2.2}
+\BOOKMARK [1][]{section.2.3}{2.3 Patch generator}{chapter.2}
+\BOOKMARK [1][]{section.2.4}{2.4 Distribution protocol}{chapter.2}
+\BOOKMARK [0][]{chapter.3}{3.0 GOALS AND APPROACHES}{}
+\BOOKMARK [0][]{chapter.4}{4.0 \040UPDATE-CONSCIOUS COMPILATION \(UCC\) TECHNIQUES}{}
+\BOOKMARK [1][]{section.4.1}{4.1 Update-conscious compilation for general purpose applications}{chapter.4}
+\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 UCC data allocation \(UCC-DA\) for general purpose applications}{section.4.1}
+\BOOKMARK [3][]{subsubsection.4.1.1.1}{4.1.1.1 Data allocation problem for general purpose applications}{subsection.4.1.1}
+\BOOKMARK [3][]{subsubsection.4.1.1.2}{4.1.1.2 UCC data allocation for general purpose applications}{subsection.4.1.1}
+\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Update-conscious register allocation \(UCC-RA\) for general purpose applications}{section.4.1}
+\BOOKMARK [3][]{subsubsection.4.1.2.1}{4.1.2.1 Register allocation problem for general purpose applications}{subsection.4.1.2}
+\BOOKMARK [3][]{subsubsection.4.1.2.2}{4.1.2.2 UCC register allocation for general purpose applications}{subsection.4.1.2}
+\BOOKMARK [2][]{subsection.4.1.3}{4.1.3 Integration of the UCC data allocation and register allocation}{section.4.1}
+\BOOKMARK [3][]{subsubsection.4.1.3.1}{4.1.3.1 ILP based integration}{subsection.4.1.3}
+\BOOKMARK [3][]{subsubsection.4.1.3.2}{4.1.3.2 Heuristic based integration}{subsection.4.1.3}
+\BOOKMARK [1][]{section.4.2}{4.2 Update-conscious compilation for DSP applications}{chapter.4}
+\BOOKMARK [2][]{subsection.4.2.1}{4.2.1 Data allocation problem for DSP applications}{section.4.2}
+\BOOKMARK [2][]{subsection.4.2.2}{4.2.2 Update-conscious compilation data allocation \(UCC-DA\) for DSP applications}{section.4.2}
+\BOOKMARK [3][]{subsubsection.4.2.2.1}{4.2.2.1 Incremental coalescing single offset assignment \(ICSOA\)}{subsection.4.2.2}
+\BOOKMARK [2][]{subsection.4.2.3}{4.2.3 Register allocation problem for DSP applications}{section.4.2}
+\BOOKMARK [3][]{subsubsection.4.2.3.1}{4.2.3.1 Incremental coalescing general offset assignment \(ICGOA\)}{subsection.4.2.3}
+\BOOKMARK [0][]{chapter.5}{5.0 SOFTWARE DIFFERENTIAL PATCHING}{}
+\BOOKMARK [1][]{section.5.1}{5.1 Instruction based patching}{chapter.5}
+\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Simple primitives}{section.5.1}
+\BOOKMARK [2][]{subsection.5.1.2}{5.1.2 Advanced primitives}{section.5.1}
+\BOOKMARK [3][]{subsubsection.5.1.2.1}{5.1.2.1 Shift}{subsection.5.1.2}
+\BOOKMARK [3][]{subsubsection.5.1.2.2}{5.1.2.2 Clone}{subsection.5.1.2}
+\BOOKMARK [3][]{subsubsection.5.1.2.3}{5.1.2.3 Insert\137access}{subsection.5.1.2}
+\BOOKMARK [2][]{subsection.5.1.3}{5.1.3 Sensor-side primitive interpretation}{section.5.1}
+\BOOKMARK [1][]{section.5.2}{5.2 Data based patching}{chapter.5}
+\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 Data update primitives}{section.5.2}
+\BOOKMARK [3][]{subsubsection.5.2.1.1}{5.2.1.1 copy\137slot.}{subsection.5.2.1}
+\BOOKMARK [3][]{subsubsection.5.2.1.2}{5.2.1.2 insert\137var.}{subsection.5.2.1}
+\BOOKMARK [3][]{subsubsection.5.2.1.3}{5.2.1.3 shift\137slot.}{subsection.5.2.1}
+\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 Sensor-side primitive interpretation}{section.5.2}
+\BOOKMARK [3][]{subsubsection.5.2.2.1}{5.2.2.1 Auxili

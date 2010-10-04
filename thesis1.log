@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2007.11.21)  20 SEP 2010 13:56
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2007.11.21)  4 OCT 2010 12:08
 **thesis1
 (./thesis1.tex
 LaTeX2e <2001/06/01>
@@ -235,14 +235,9 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@output=\toks32
 \AP@partial=\box31
 \AP@footins=\box32
-) (./thesis1.aux (./intro.aux) (./related.aux) (./goals.aux) (./compiler.aux
-
-LaTeX Warning: Label `newObj2' multiply defined.
-
-
-LaTeX Warning: Label `newObj2' multiply defined.
-
-) (./patch.aux) (./protocol.aux) (./experiment.aux))
+) (./thesis1.aux (./intro.aux) (./related.aux) (./compiler.aux) (./patch.aux) (
+./protocol.aux)
+(./experiment.aux) (./conclusion.aux))
 \openout1 = `thesis1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -270,8 +265,513 @@ Package: nameref 2001/01/27 v2.19 Cross-referencing by name of section
 )
 LaTeX Info: Redefining \ref on input line 45.
 LaTeX Info: Redefining \pageref on input line 45.
- (./thesis1.out)
-(./thesis1.out)
+ (./thesis1.out (./thesis1.lof
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@encoding' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<let>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@family' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@series' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@shape' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\font@name' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\OT1/cmr/m/n/12' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@encoding' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<let>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@family' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@series' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@shape' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\font@name' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\OT1/cmr/m/n/12' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@encoding' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<let>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@family' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@series' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@shape' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\font@name' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\OT1/cmr/m/n/12' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@encoding' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<let>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@family' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@series' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@shape' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\font@name' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\OT1/cmr/m/n/12' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 74.
+
+)) (./thesis1.out (./thesis1.lof
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@encoding' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<let>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@family' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@series' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@shape' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\font@name' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\OT1/cmr/m/n/12' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@encoding' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<let>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@family' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@series' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@shape' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\font@name' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\OT1/cmr/m/n/12' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@encoding' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<let>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@family' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@series' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@shape' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\font@name' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\OT1/cmr/m/n/12' on input line 37.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@encoding' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<let>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@family' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@series' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\f@shape' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\<def>-command' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\font@name' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `\OT1/cmr/m/n/12' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 72.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 73.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 74.
+
+))
 \openout4 = `thesis1.out'.
 
 
@@ -287,38 +787,26 @@ Abstract
 
 ]) [4]
 Table of Contents
-(./thesis1.toc
-Overfull \hbox (41.89265pt too wide) in paragraph at lines 20--20
- [][] [] [][]  
- []
+(./thesis1.toc [5
 
-[5
-
-]
-Overfull \hbox (33.59831pt too wide) in paragraph at lines 28--28
- [][] [] [][]  
- []
-
-[6]
-Overfull \hbox (16.99985pt too wide) in paragraph at lines 66--66
- [][] [] [][]  
- []
-
-
-Overfull \hbox (42.13153pt too wide) in paragraph at lines 69--69
- [][] [] [][]  
- []
-
-[7]
-Overfull \hbox (14.29294pt too wide) in paragraph at lines 89--89
- [][] [] [][]  
- []
-
-)
+] [6] [7])
 \tf@toc=\write5
 \openout5 = `thesis1.toc'.
 
  [8]
+List of Figures
+(./thesis1.lof [9
+
+]
+Overfull \hbox (3.26126pt too wide) in paragraph at lines 29--29
+ [][] [] [][]  
+ []
+
+[10])
+\tf@lof=\write6
+\openout6 = `thesis1.lof'.
+
+ [11]
 \openout2 = `intro.aux'.
 
  (./intro.tex
@@ -352,55 +840,61 @@ Package hyperref Warning: bookmark level for unknown subfigure defaults to 0.
 File: figures/upgrade.eps Graphic file (type eps)
  <figures/upgrade.eps> [3]
 File: figures/switch.eps Graphic file (type eps)
- <figures/switch.eps> [4] [5]
+ <figures/switch.eps>
+Underfull \vbox (badness 1675) has occurred while \output is active []
+
+ [4]
+[5]
 File: figures/model.eps Graphic file (type eps)
  <figures/model.eps>
-[6]
+Overfull \hbox (40.19673pt too wide) in paragraph at lines 85--86
+ [][] 
+ []
+
+[6] [7] [8])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 125.
-
-
-(/usr/share/texmf/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 125.
- [8]) [9]
+ [9]
+[10]
 \openout2 = `related.aux'.
 
  (./related.tex
 Chapter 2
-[10
+[11
 
 
 
 ]
 File: figures/compiler.eps Graphic file (type eps)
- <figures/compiler.eps> [11] [12] [13]
-File: figures/agu.eps Graphic file (type eps)
- <figures/agu.eps> [14]
+ <figures/compiler.eps> [12] [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [14]
+File: figures/agu.eps Graphic file (type eps)
+
+<figures/agu.eps>
+
+Class pittetd Warning: The caption of Figure 7 is longer than one line on input
+ line 86.
+
+
+Underfull \vbox (badness 4995) has occurred while \output is active []
+
  [15]
-[16]
+Underfull \vbox (badness 2253) has occurred while \output is active []
+
+ [16]
+[17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
 File: figures/basic-protocol.eps Graphic file (type eps)
- <figures/basic-protocol.eps> [17]) [18]
-\openout2 = `goals.aux'.
 
- (./goals.tex
-Chapter 3
-File: figures/framework.eps Graphic file (type eps)
-<figures/framework.eps> [19
-
-
-
-]) [20]
+<figures/basic-protocol.eps> [19]) [20]
 \openout2 = `compiler.aux'.
 
  (./compiler.tex
-Chapter 4
+Chapter 3
 File: figures/com_sink.eps Graphic file (type eps)
 <figures/com_sink.eps> [21
 
@@ -412,183 +906,187 @@ File: figures/com_sensor.eps Graphic file (type eps)
 File: figures/fdata.0.eps Graphic file (type eps)
  <figures/fdata.0.eps>
 
-Class pittetd Warning: The caption of Figure 12 is longer than one line on inpu
+Class pittetd Warning: The caption of Figure 11 is longer than one line on inpu
 t line 51.
 
 [22] [23]
 File: figures/ram.eps Graphic file (type eps)
- <figures/ram.eps> [24]
+ <figures/ram.eps>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 106.
+
+ (/usr/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
+
+[24]
 
 Package hyperref Warning: bookmark level for unknown algorithm defaults to 0.
 
 [25]
 File: figures/stack.eps Graphic file (type eps)
- <figures/stack.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ <figures/stack.eps> [26]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 242.
+(amsmath)                 on input line 254.
 
-[26] [27]
+[27]
 File: figures/freg.0.eps Graphic file (type eps)
  <figures/freg.0.eps>
 
-Class pittetd Warning: The caption of Figure 15 is longer than one line on inpu
-t line 313.
+Class pittetd Warning: The caption of Figure 14 is longer than one line on inpu
+t line 325.
 
-[28]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
-[30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
-[32] [33]
-Overfull \hbox (18.86153pt too wide) in alignment at lines 541--546
+ [28]
+[29] [30] [31] [32] [33]
+Overfull \hbox (17.4381pt too wide) in alignment at lines 553--558
  [][][] []
  []
 
-[34] [35] [36] [37] [38] [39]
+[34] [35] [36] [37]
+Underfull \vbox (badness 1442) has occurred while \output is active []
 
-LaTeX Warning: Reference `dataconsts' on page 40 undefined on input line 831.
+ [38]
+Overfull \hbox (4.96461pt too wide) in paragraph at lines 839--847
+[][]
+ []
 
-[40] [41] [42] [43] [44]
+[39] [40] [41] [42] [43]
 File: figures/csoa.eps Graphic file (type eps)
  <figures/csoa.eps>
 
-Class pittetd Warning: The caption of Figure 24 is longer than one line on inpu
-t line 1030.
+Class pittetd Warning: The caption of Figure 23 is longer than one line on inpu
+t line 1050.
 
+[44]
 File: figures/updcsoa.eps Graphic file (type eps)
-<figures/updcsoa.eps>
+ <figures/updcsoa.eps>
+
+Class pittetd Warning: The caption of Figure 24 is longer than one line on inpu
+t line 1069.
+
 
 Class pittetd Warning: The caption of Figure 25 is longer than one line on inpu
-t line 1044.
+t line 1108.
 
-[45]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [45]
 File: ./figures/icsoa-overview.eps Graphic file (type eps)
 
 <./figures/icsoa-overview.eps>
-Overfull \hbox (21.67975pt too wide) in paragraph at lines 1106--1107
+Overfull \hbox (21.67975pt too wide) in paragraph at lines 1132--1133
  [] 
  []
 
-
-Class pittetd Warning: The caption of Figure 27 is longer than one line on inpu
-t line 1107.
-
+[46] [47]
 
 Package hyperref Warning: bookmark level for unknown algorithm defaults to 0.
-
-
-Underfull \vbox (badness 4328) has occurred while \output is active []
-
- [47]
-[48] [49]
-File: ./figures/icsoa.eps Graphic file (type eps)
- <./figures/icsoa.eps>
-
-Class pittetd Warning: The caption of Figure 28 is longer than one line on inpu
-t line 1163.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
+ [48]
+File: ./figures/icsoa.eps Graphic file (type eps)
+
+<./figures/icsoa.eps>
+
+Class pittetd Warning: The caption of Figure 27 is longer than one line on inpu
+t line 1189.
+
+[49]
 
 Package hyperref Warning: bookmark level for unknown algorithm defaults to 0.
 
-[51]) [52]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50])
+[51]
 \openout2 = `patch.aux'.
 
  (./patch.tex
-Chapter 5
+Chapter 4
 File: figures/patch.eps Graphic file (type eps)
-<figures/patch.eps>
-Underfull \vbox (badness 2556) has occurred while \output is active []
-
- [53
+<figures/patch.eps> [52
 
 
 
 ]
 File: figures/fopcode.eps Graphic file (type eps)
-
-<figures/fopcode.eps> [54]
+ <figures/fopcode.eps> [53]
 File: figures/sother.eps Graphic file (type eps)
  <figures/sother.eps>
 
-Class pittetd Warning: The caption of Figure 32 is longer than one line on inpu
+Class pittetd Warning: The caption of Figure 30 is longer than one line on inpu
 t line 42.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
+ [54]
 File: figures/shift.eps Graphic file (type eps)
 
 <figures/shift.eps>
 
-Class pittetd Warning: The caption of Figure 33 is longer than one line on inpu
+Class pittetd Warning: The caption of Figure 31 is longer than one line on inpu
 t line 76.
 
-[56] [57]
+[55] [56]
 File: figures/sclone.eps Graphic file (type eps)
  <figures/sclone.eps>
 
-Class pittetd Warning: The caption of Figure 34 is longer than one line on inpu
-t line 160.
+Class pittetd Warning: The caption of Figure 32 is longer than one line on inpu
+t line 163.
 
-[58]
+[57]
 File: ./figures/insacc.eps Graphic file (type eps)
  <./figures/insacc.eps>
 
-Class pittetd Warning: The caption of Figure 35 is longer than one line on inpu
-t line 224.
+Class pittetd Warning: The caption of Figure 33 is longer than one line on inpu
+t line 225.
 
-[59] [60]
+[58]
+Overfull \hbox (19.56865pt too wide) in paragraph at lines 246--254
+[]\OT1/cmr/m/n/12 Let us call the last mem-ory ac-cess in-struc-tion be-fore th
+e in-serted in-struc-tion the \OT1/cmtt/m/n/12 predecessor
+ []
+
+[59]
 File: ./figures/insert_access.eps Graphic file (type eps)
- <./figures/insert_access.eps> [61]
+ <./figures/insert_access.eps> [60]
 
 Package hyperref Warning: bookmark level for unknown algorithm defaults to 0.
 
-[62] [63]
+[61] [62]
 
 Package hyperref Warning: bookmark level for unknown algorithm defaults to 0.
 
-[64]
+[63]
 File: ./figures/fopcodedata.eps Graphic file (type eps)
- <./figures/fopcodedata.eps>
-Underfull \vbox (badness 4531) has occurred while \output is active []
-
- [65]
-Underfull \vbox (badness 4608) has occurred while \output is active []
-
- [66]
+ <./figures/fopcodedata.eps> [64] [65]
 File: ./figures/correct.eps Graphic file (type eps)
+ <./figures/correct.eps>
 
-<./figures/correct.eps>
+Class pittetd Warning: The caption of Figure 36 is longer than one line on inpu
+t line 485.
 
-Class pittetd Warning: The caption of Figure 38 is longer than one line on inpu
-t line 482.
-
-[67] [68] [69]
+[66] [67] [68]
 
 Package hyperref Warning: bookmark level for unknown algorithm defaults to 0.
 
-) [70] [71]
+) [69] [70]
 \openout2 = `protocol.aux'.
 
  (./protocol.tex
-Chapter 6
-[72
+Chapter 5
+[71
 
 
 
@@ -596,164 +1094,156 @@ Chapter 6
 File: figures/deluge.eps Graphic file (type eps)
  <figures/deluge.eps>
 File: figures/fnet.eps Graphic file (type eps)
- <figures/fnet.eps> [73]
-Underfull \vbox (badness 1769) has occurred while \output is active []
-
- [74]
+ <figures/fnet.eps> [72] [73] [74]
 File: figures/ftable.eps Graphic file (type eps)
 
-<figures/ftable.eps> [75] [76] [77]
+<figures/ftable.eps> [75] [76]
 File: figures/fgrad.eps Graphic file (type eps)
  <figures/fgrad.eps>
 
-Class pittetd Warning: The caption of Figure 44 is longer than one line on inpu
-t line 133.
+Class pittetd Warning: The caption of Figure 42 is longer than one line on inpu
+t line 136.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
 [78]
-Missing character: There is no ^^97 in font cmr12!
-
-Underfull \vbox (badness 4647) has occurred while \output is active []
-
- [79]
 File: figures/common.eps Graphic file (type eps)
-
-<figures/common.eps>
+ <figures/common.eps>
 Missing character: There is no ^^93 in font cmr12!
 Missing character: There is no ^^94 in font cmr12!
- [80] [81] [82]
+ [79] [80]
 Missing character: There is no ^^97 in font cmr12!
 Missing character: There is no ^^97 in font cmr12!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81]
 Missing character: There is no ^^97 in font cmr12!
- [83]
 Missing character: There is no ^^d7 in font cmr12!
+
+[82]
 Missing character: There is no ^^97 in font cmr12!
-
-Underfull \vbox (badness 2503) has occurred while \output is active []
-
- [84])
-[85]
+) [83]
 \openout2 = `experiment.aux'.
 
  (./experiment.tex
-Chapter 7
+Chapter 6
 
-Underfull \vbox (badness 7186) has occurred while \output is active []
+Underfull \vbox (badness 6125) has occurred while \output is active []
 
- [86
+ [84
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 []\OT1/cmr/m/n/10.95 Update
  []
 
 
-Class pittetd Warning: The caption of Figure 46 is longer than one line on inpu
-t line 75.
-
-
-Overfull \hbox (23.09242pt too wide) in paragraph at lines 86--98
+Overfull \hbox (23.09242pt too wide) in paragraph at lines 92--104
  [] 
  []
 
 
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 115--115
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85]
+[86]
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 128--128
 []\OT1/cmr/m/n/10.95 TinyOS| 
  []
 
 
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 118--118
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 131--131
 []\OT1/cmr/m/n/10.95 TinyOS| 
  []
 
 
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 123--123
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 136--136
 []\OT1/cmr/m/n/10.95 TinyOS| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []\OT1/cmr/m/n/10.95 CntToLeds
  []
 
 
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 127--127
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 140--140
 []\OT1/cmr/m/n/10.95 TinyOS| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []\OT1/cmr/m/n/10.95 Crypto
  []
 
 
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 133--133
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 146--146
 []\OT1/cmr/m/n/10.95 TinyOS| 
  []
 
-[87] [88]
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
+
+Overfull \hbox (3.69981pt too wide) in paragraph at lines 114--152
+\OT1/cmr/m/n/12 tion/deletion/update in-side and out-side loops, and the con-tr
+ol flow in-ser-tion/deletion/update.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
 []\OT1/cmr/m/n/10.95 Update
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 179--179
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 183--183
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 182--182
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 186--186
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 185--185
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 189--189
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 188--188
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 192--192
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 191--191
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 195--195
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
 
-Underfull \hbox (badness 5260) in paragraph at lines 191--191
+Underfull \hbox (badness 5260) in paragraph at lines 195--195
 []\OT1/cmr/m/n/10.95 Add an else branch for an if state-ment in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--193
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
 []\OT1/cmr/m/n/10.95 CntToRfms
  []
 
 
-Underfull \hbox (badness 3219) in paragraph at lines 193--193
+Underfull \hbox (badness 3219) in paragraph at lines 197--197
 \OMS/cmsy/m/n/10.95 )$ \OT1/cmr/m/n/10.95 Cnt-ToLed-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--195
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 []\OT1/cmr/m/n/10.95 CntToLeds$\OMS/cmsy/m/n/10.95 )$
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 197--197
-[]\OT1/cmr/m/n/10.95 Medium| 
- []
-
-
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 199--199
-[]\OT1/cmr/m/n/10.95 Medium| 
- []
-
-
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 202--202
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 201--201
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
@@ -763,324 +1253,328 @@ Overfull \hbox (3.10257pt too wide) in paragraph at lines 203--203
  []
 
 
-Overfull \hbox (1.9889pt too wide) in paragraph at lines 243--243
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 206--206
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 207--207
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+[87]
+Overfull \hbox (1.9889pt too wide) in paragraph at lines 246--246
 []\OT1/cmr/m/n/10.95 matrix1.c| 
  []
 
 
-Overfull \hbox (1.9889pt too wide) in paragraph at lines 247--247
+Overfull \hbox (1.9889pt too wide) in paragraph at lines 250--250
 []\OT1/cmr/m/n/10.95 matrix1.c| 
  []
 
 
-Overfull \hbox (1.4112pt too wide) in paragraph at lines 227--252
+Overfull \hbox (1.4112pt too wide) in paragraph at lines 230--255
  [] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3942) has occurred while \output is active []
 
- [89]
-[90] [91] [92] [93]
+ [88]
+[89] [90] [91] [92]
 File: figures/upd.eps Graphic file (type eps)
- <figures/upd.eps> [94]
+ <figures/upd.eps> [93]
 File: figures/prof.eps Graphic file (type eps)
- <figures/prof.eps> [95] [96]
+ <figures/prof.eps> [94] [95]
 File: figures/energy.eps Graphic file (type eps)
 
-<figures/energy.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [97]
+<figures/energy.eps> [96]
 File: figures/inst-cons.eps Graphic file (type eps)
-
-<figures/inst-cons.eps>
+ <figures/inst-cons.eps>
 File: figures/iter_linear.eps Graphic file (type eps)
  <figures/iter_linear.eps>
 
-Class pittetd Warning: The caption of Figure 55 is longer than one line on inpu
-t line 519.
+Class pittetd Warning: The caption of Figure 53 is longer than one line on inpu
+t line 549.
 
-[98]
 File: figures/time_linear.eps Graphic file (type eps)
- <figures/time_linear.eps>
+<figures/time_linear.eps>
 
-Class pittetd Warning: The caption of Figure 56 is longer than one line on inpu
-t line 554.
+Class pittetd Warning: The caption of Figure 54 is longer than one line on inpu
+t line 584.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [99]
-Underfull \vbox (badness 1072) has occurred while \output is active []
-
- [100]
-Overfull \hbox (28.82625pt too wide) in paragraph at lines 609--614
+[97] [98] [99]
+Overfull \hbox (28.82625pt too wide) in paragraph at lines 639--644
 []\OT1/cmr/m/n/12 The up-date bench-marks are cre-ated based on the AES ap-pli-
 ca-tion, shown in Fig-ure fbench.chg1
  []
 
+[100]
 File: ./figures/da-upd.eps Graphic file (type eps)
-<./figures/da-upd.eps>
+ <./figures/da-upd.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Class pittetd Warning: The caption of Figure 57 is longer than one line on inpu
-t line 626.
-
-[101]
+ [101]
 File: ./figures/stacksize.eps Graphic file (type eps)
- <./figures/stacksize.eps>
 
-Class pittetd Warning: The caption of Figure 58 is longer than one line on inpu
-t line 653.
+<./figures/stacksize.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[102] [103]
+ [102]
 File: ./figures/spacetradeoff.eps Graphic file (type eps)
- <./figures/spacetradeoff.eps> [104]
+
+<./figures/spacetradeoff.eps> [103]
 File: ./figures/inte-upd.eps Graphic file (type eps)
  <./figures/inte-upd.eps>
+Underfull \vbox (badness 5771) has occurred while \output is active []
 
-Class pittetd Warning: The caption of Figure 60 is longer than one line on inpu
-t line 726.
-
-[105]
-Underfull \hbox (badness 10000) in paragraph at lines 751--752
-
+ [104]
+Underfull \hbox (badness 10000) in paragraph at lines 787--787
+[]\OT1/cmr/m/n/10.95 GCC
  []
 
-[106]
-File: ./figures/update.eps Graphic file (type eps)
- <./figures/update.eps>
-File: ./figures/update2.eps Graphic file (type eps)
- <./figures/update2.eps> [107] [108]
-File: ./figures/exe.eps Graphic file (type eps)
 
-<./figures/exe.eps> [109] [110]
+Overfull \hbox (1.15918pt too wide) in paragraph at lines 787--787
+\OT1/cmr/m/n/10.95 Script
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 787--787
+\OT1/cmr/m/n/10.95 Size
+ []
+
+
+Overfull \hbox (6.05627pt too wide) in paragraph at lines 787--787
+\OT1/cmr/m/n/10.95 (bytes)| 
+ []
+
+
+Overfull \hbox (6.49747pt too wide) in paragraph at lines 787--787
+[]\OT1/cmr/m/n/10.95 #A| 
+ []
+
+
+Overfull \hbox (6.34538pt too wide) in paragraph at lines 787--787
+[]\OT1/cmr/m/n/10.95 #R| 
+ []
+
+
+Overfull \hbox (2.12334pt too wide) in paragraph at lines 787--787
+[]\OT1/cmr/m/n/10.95 #P| 
+ []
+
+
+Overfull \hbox (2.57959pt too wide) in paragraph at lines 787--787
+[]\OT1/cmr/m/n/10.95 #C| 
+ []
+
+
+Overfull \hbox (5.12872pt too wide) in paragraph at lines 787--787
+[]\OT1/cmr/m/n/10.95 #L| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 788--788
+[]\OT1/cmr/m/n/10.95 UCC
+ []
+
+
+Overfull \hbox (1.15918pt too wide) in paragraph at lines 788--788
+\OT1/cmr/m/n/10.95 Script
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 788--788
+\OT1/cmr/m/n/10.95 Size
+ []
+
+
+Overfull \hbox (6.05627pt too wide) in paragraph at lines 788--788
+\OT1/cmr/m/n/10.95 (bytes)| 
+ []
+
+
+Overfull \hbox (6.49747pt too wide) in paragraph at lines 788--788
+[]\OT1/cmr/m/n/10.95 #A| 
+ []
+
+
+Overfull \hbox (6.34538pt too wide) in paragraph at lines 788--788
+[]\OT1/cmr/m/n/10.95 #R| 
+ []
+
+
+Overfull \hbox (2.12334pt too wide) in paragraph at lines 788--788
+[]\OT1/cmr/m/n/10.95 #P| 
+ []
+
+
+Overfull \hbox (2.57959pt too wide) in paragraph at lines 788--788
+[]\OT1/cmr/m/n/10.95 #C| 
+ []
+
+
+Overfull \hbox (5.12872pt too wide) in paragraph at lines 788--788
+[]\OT1/cmr/m/n/10.95 #L| 
+ []
+
+
+Overfull \hbox (1.97125pt too wide) in paragraph at lines 795--795
+[]\OT1/cmr/m/n/10.95 143| 
+ []
+
+
+Overfull \hbox (1.97125pt too wide) in paragraph at lines 795--795
+[]\OT1/cmr/m/n/10.95 162| 
+ []
+
+
+Class pittetd Warning: The caption of Figure 59 is longer than one line on inpu
+t line 800.
+
+
+Underfull \vbox (badness 2326) has occurred while \output is active []
+
+ [105]
+[106] [107]
+File: ./figures/update1.eps Graphic file (type eps)
+ <./figures/update1.eps>
+File: ./figures/updatem.eps Graphic file (type eps)
+ <./figures/updatem.eps> [108]
+File: ./figures/da-exe1.eps Graphic file (type eps)
+
+<./figures/da-exe1.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [109]
+[110]
 File: ./figures/exe_ar.eps Graphic file (type eps)
- <./figures/exe_ar.eps> [111]
+ <./figures/exe_ar.eps>
+File: ./figures/da-energy.eps Graphic file (type eps)
+ <./figures/da-energy.eps> [111] [112]
 File: ./figures/upd_rand_bar.eps Graphic file (type eps)
 
 <./figures/upd_rand_bar.eps>
-
-Class pittetd Warning: The caption of Figure 66 is longer than one line on inpu
-t line 890.
-
 File: ./figures/exe_rand_bar.eps Graphic file (type eps)
-<./figures/exe_rand_bar.eps>
+ <./figures/exe_rand_bar.eps> [113]
+Underfull \vbox (badness 7344) has occurred while \output is active []
 
-Class pittetd Warning: The caption of Figure 67 is longer than one line on inpu
-t line 902.
+ [114]
+File: ./figures/update2.eps Graphic file (type eps)
 
-[112]
+<./figures/update2.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [113]
-File: figures/fsizes.eps Graphic file (type eps)
+ [115]
+Underfull \vbox (badness 4013) has occurred while \output is active []
 
-<figures/fsizes.eps> [114]
+ [116]
+File: ./figures/updatem2.eps Graphic file (type eps)
+
+<./figures/updatem2.eps>
+File: figures/da-exe2.eps Graphic file (type eps)
+ <figures/da-exe2.eps> [117]
+File: figures/fsizes.eps Graphic file (type eps)
+ <figures/fsizes.eps>
+[118] [119]
 File: figures/ftime.eps Graphic file (type eps)
  <figures/ftime.eps>
 File: figures/fdist1.eps Graphic file (type eps)
  <figures/fdist1.eps>
 File: figures/fdist3.eps Graphic file (type eps)
-
-<figures/fdist3.eps> [115] [116] [117]
+ <figures/fdist3.eps>
+[120] [121]
 File: figures/fdist2.eps Graphic file (type eps)
  <figures/fdist2.eps>
 File: figures/fcache.eps Graphic file (type eps)
-
-<figures/fcache.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [118]
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
-[]\OT1/cmr/m/n/10.95 GCC
- []
+ <figures/fcache.eps>) [122] [123]
+\openout2 = `conclusion.aux'.
 
 
-Overfull \hbox (1.15918pt too wide) in paragraph at lines 1017--1017
-\OT1/cmr/m/n/10.95 Script
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
-\OT1/cmr/m/n/10.95 Size
- []
-
-
-Overfull \hbox (6.05627pt too wide) in paragraph at lines 1017--1017
-\OT1/cmr/m/n/10.95 (bytes)| 
- []
-
-
-Overfull \hbox (6.49747pt too wide) in paragraph at lines 1017--1017
-[]\OT1/cmr/m/n/10.95 #A| 
- []
-
-
-Overfull \hbox (6.34538pt too wide) in paragraph at lines 1017--1017
-[]\OT1/cmr/m/n/10.95 #R| 
- []
-
-
-Overfull \hbox (2.12334pt too wide) in paragraph at lines 1017--1017
-[]\OT1/cmr/m/n/10.95 #P| 
- []
-
-
-Overfull \hbox (2.57959pt too wide) in paragraph at lines 1017--1017
-[]\OT1/cmr/m/n/10.95 #C| 
- []
-
-
-Overfull \hbox (5.12872pt too wide) in paragraph at lines 1017--1017
-[]\OT1/cmr/m/n/10.95 #L| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
-[]\OT1/cmr/m/n/10.95 UCC
- []
-
-
-Overfull \hbox (1.15918pt too wide) in paragraph at lines 1018--1018
-\OT1/cmr/m/n/10.95 Script
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1018
-\OT1/cmr/m/n/10.95 Size
- []
-
-
-Overfull \hbox (6.05627pt too wide) in paragraph at lines 1018--1018
-\OT1/cmr/m/n/10.95 (bytes)| 
- []
-
-
-Overfull \hbox (6.49747pt too wide) in paragraph at lines 1018--1018
-[]\OT1/cmr/m/n/10.95 #A| 
- []
-
-
-Overfull \hbox (6.34538pt too wide) in paragraph at lines 1018--1018
-[]\OT1/cmr/m/n/10.95 #R| 
- []
-
-
-Overfull \hbox (2.12334pt too wide) in paragraph at lines 1018--1018
-[]\OT1/cmr/m/n/10.95 #P| 
- []
-
-
-Overfull \hbox (2.57959pt too wide) in paragraph at lines 1018--1018
-[]\OT1/cmr/m/n/10.95 #C| 
- []
-
-
-Overfull \hbox (5.12872pt too wide) in paragraph at lines 1018--1018
-[]\OT1/cmr/m/n/10.95 #L| 
- []
-
-
-Overfull \hbox (1.97125pt too wide) in paragraph at lines 1025--1025
-[]\OT1/cmr/m/n/10.95 143| 
- []
-
-
-Overfull \hbox (1.97125pt too wide) in paragraph at lines 1025--1025
-[]\OT1/cmr/m/n/10.95 162| 
- []
-
-
-Class pittetd Warning: The caption of Figure 74 is longer than one line on inpu
-t line 1030.
-
-[119] [120]
-File: figures/time.eps Graphic file (type eps)
- <figures/time.eps>
-File: figures/bytes.eps Graphic file (type eps)
- <figures/bytes.eps> [121])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [122]
-[123]
-BIBLIOGRAPHY
-(./thesis1.bbl
-Overfull \hbox (36.06975pt too wide) in paragraph at lines 7--9
-[]\OT1/cmr/m/n/12 DSPStone bench-mark suite, 1995.  [][][][][][]. 
- []
-
-
-Overfull \hbox (124.90323pt too wide) in paragraph at lines 23--25
-[]\OT1/cmr/m/n/12 Atmel at-mega128(l) mi-cro-con-troller, 2008.  [][][][][][]. 
-
- []
-
+(./conclusion.tex
+Chapter 7
 [124
 
 
+
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 110--113
+Underfull \vbox (badness 4647) has occurred while \output is active []
+
+ [125]
+[126]) [127]
+BIBLIOGRAPHY
+(./thesis1.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 7--10
+[]\OT1/cmr/m/n/12 DSPStone bench-mark suite.  Web-site, 1995.  http://iss.rwth-
+
+ []
+
+[128
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 115--118
 []\OT1/cmr/m/n/12 Coin-or.  Non-lin-ear mixed in-te-ger pro-gram-ming, 2006.
  []
 
 
-Overfull \hbox (187.59439pt too wide) in paragraph at lines 115--120
-[]\OT1/cmr/m/n/12 Crossbow.  Mica2 data sheet, 2004.  [][][][][][]. 
+Overfull \hbox (10.93279pt too wide) in paragraph at lines 125--130
+[][][][][][]\OT1/cmr/m/n/12 . 
  []
 
 
-Overfull \hbox (186.94162pt too wide) in paragraph at lines 122--127
-[]\OT1/cmr/m/n/12 Crossbow.  Mi-caz data sheet, 2004.  [][][][][][]. 
+Overfull \hbox (10.93279pt too wide) in paragraph at lines 132--137
+[][][][][][]\OT1/cmr/m/n/12 . 
  []
 
 
-Overfull \hbox (192.75975pt too wide) in paragraph at lines 134--139
-[]\OT1/cmr/m/n/12 Crossbow.  Telosb datasheet, 2004.  [][][][][][]. 
+Overfull \hbox (16.68147pt too wide) in paragraph at lines 144--149
+[][][][][][]\OT1/cmr/m/n/12 . 
  []
 
 
-Overfull \hbox (199.37914pt too wide) in paragraph at lines 141--146
-[]\OT1/cmr/m/n/12 CrossBow.  Imote2 data sheet, 2009.  [][][][][][]. 
+Overfull \hbox (16.68147pt too wide) in paragraph at lines 151--156
+[][][][][][]\OT1/cmr/m/n/12 . 
  []
 
-[125] [126]
-Missing character: There is no ^^f3 in font cmr12!
 
-Overfull \hbox (23.2848pt too wide) in paragraph at lines 336--339
+Underfull \hbox (badness 6625) in paragraph at lines 158--161
+[]\OT1/cmr/m/n/12 T. Crunchies.  Tech crunchies -- in-ter-net statis-tics and n
+um-bers, 2010.
+ []
+
+[129] [130]
+Missing character: There is no ^^ef in font cmr12!
+Missing character: There is no ^^bf in font cmr12!
+Missing character: There is no ^^bd in font cmr12!
+ [131]
+Overfull \hbox (23.2848pt too wide) in paragraph at lines 360--363
 []\OT1/cmr/m/n/12 J. Regehr.  Tinyos stack anal-y-sis, 2009.  [][][][][][]. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--352
+Underfull \hbox (badness 10000) in paragraph at lines 373--376
 []\OT1/cmr/m/n/12 V. Ri-j-men and J. Dae-men.  Ad-vanced en-cryp-tion stan-dard
 , 1998.
  []
 
-[127]
-Underfull \hbox (badness 10000) in paragraph at lines 431--434
+[132]
+Underfull \hbox (badness 10000) in paragraph at lines 450--453
 []\OT1/cmr/m/n/12 Wikipedia.  Al-ka-line tech-ni-cal in-for-ma-tion, 2007.
  []
 
-[128])
+)
 \openout3 = `thesis1.etd'.
 
- [129] (./thesis1.aux (./intro.aux) (./related.aux) (./goals.aux)
-(./compiler.aux) (./patch.aux) (./protocol.aux) (./experiment.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+ [133] (./thesis1.aux (./intro.aux) (./related.aux) (./compiler.aux)
+(./patch.aux) (./protocol.aux) (./experiment.aux) (./conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 4142 strings out of 95847
- 53258 string characters out of 1195947
- 151221 words of memory out of 1000001
- 6923 multiletter control sequences out of 10000+50000
+ 4229 strings out of 95847
+ 54372 string characters out of 1195947
+ 159461 words of memory out of 1000001
+ 7001 multiletter control sequences out of 10000+50000
  12899 words of font info for 47 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
  31i,16n,38p,1189b,807s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on thesis1.dvi (137 pages, 597432 bytes).
+Output written on thesis1.dvi (144 pages, 670440 bytes).

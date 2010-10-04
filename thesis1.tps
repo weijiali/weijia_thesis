@@ -16,23 +16,23 @@ MinPos.x=-1
 MinPos.y=-1
 MaxPos.x=-4
 MaxPos.y=-30
-NormalPos.left=66
-NormalPos.top=87
-NormalPos.right=1024
-NormalPos.bottom=467
+NormalPos.left=132
+NormalPos.top=174
+NormalPos.right=1086
+NormalPos.bottom=718
 Class=CLatexEdit
-Document=\\ad.cs.pitt.edu\Users\Users1\weijiali\My Documents\resume.1\resume\cv\cv2.tex
+Document=compiler.tex
 
 [Frame0_Row0]
-cyCur=537
+cyCur=788
 cyMin=10
 
 [Frame0_Col0]
-cxCur=1073
+cxCur=1135
 cxMin=10
 
 [Frame0_View0,0]
-Cursor.row=32
-Cursor.column=15
-TopSubLine=15
+Cursor.row=1038
+Cursor.column=0
+TopSubLine=1066
 

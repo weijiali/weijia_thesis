@@ -7,8 +7,10 @@ A level-1 auxiliary file: compiler.aux
 A level-1 auxiliary file: patch.aux
 A level-1 auxiliary file: protocol.aux
 A level-1 auxiliary file: experiment.aux
+A level-1 auxiliary file: conclusion.aux
 The style file: abbrvnat.bst
 Database file #1: thesis1.bib
+Warning--to sort, need author or key in tinyos
 Warning--to sort, need author or key in dspstone
 Warning--to sort, need author or key in atmega128L
 Warning--to sort, need author or key in lance
@@ -16,45 +18,45 @@ Warning--to sort, need author or key in offsetstone
 Warning--to sort, need author or key in tossim
 Warning--empty year in lpsolve
 Warning--empty year in diff
-You've used 64 entries,
+You've used 67 entries,
             2633 wiz_defined-function locations,
-            946 strings with 16372 characters,
-and the built_in function-call counts, 32665 in all, are:
-= -- 3296
-> -- 1404
-< -- 68
-+ -- 521
-- -- 447
-* -- 2242
-:= -- 4965
-add.period$ -- 243
-call.type$ -- 64
-change.case$ -- 401
-chr.to.int$ -- 61
-cite$ -- 76
-duplicate$ -- 1565
-empty$ -- 2701
-format.name$ -- 552
-if$ -- 7163
+            964 strings with 16840 characters,
+and the built_in function-call counts, 33814 in all, are:
+= -- 3413
+> -- 1442
+< -- 70
++ -- 536
+- -- 459
+* -- 2308
+:= -- 5133
+add.period$ -- 254
+call.type$ -- 67
+change.case$ -- 418
+chr.to.int$ -- 64
+cite$ -- 81
+duplicate$ -- 1627
+empty$ -- 2811
+format.name$ -- 566
+if$ -- 7424
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 49
-newline$ -- 353
-num.names$ -- 236
-pop$ -- 774
+missing$ -- 50
+newline$ -- 369
+num.names$ -- 244
+pop$ -- 813
 preamble$ -- 1
-purify$ -- 341
+purify$ -- 354
 quote$ -- 0
-skip$ -- 1267
+skip$ -- 1316
 stack$ -- 0
-substring$ -- 1588
-swap$ -- 341
-text.length$ -- 33
+substring$ -- 1613
+swap$ -- 351
+text.length$ -- 34
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 694
-warning$ -- 7
-while$ -- 289
+type$ -- 727
+warning$ -- 8
+while$ -- 296
 width$ -- 0
-write$ -- 918
-(There were 7 warnings)
+write$ -- 960
+(There were 8 warnings)

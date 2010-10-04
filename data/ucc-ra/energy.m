@@ -15,7 +15,7 @@ y12=energy(:,13);
 y13=energy(:,14);
 plot(x,y1,'--',x,y2,'--',x,y3,'--',x,y4,'-x',x,y5,'-+',x,y6,'--',x,y7,'-*',x,y8,'--',x,y9,'--',x,y10,'--',x,y11,'-s',x,y12,'-o',x,y13,'--','LineWidth',1);
 colormap(gray);
-xlabel('Execution Frequency','fontsize',20);
+xlabel('Execution Number','fontsize',20);
 ylabel('Energy Savings (mJ)','fontsize',20);
 legend('M-G-1','M-G-2','M-G-3','M-G-4','M-G-5','M-G-6','M-G-7','M-G-8','M-G-9','M-G-10','M-G-11','M-G-12','M-G-13');
 saveas(gcf,'../../figures/energy.eps','eps');
