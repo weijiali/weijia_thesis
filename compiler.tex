@@ -25,7 +25,7 @@ The binary difference $U$ will then be transmitted over the network to the senso
 
 \section{UCC for general purpose applications}
 
-In this section, I will discuss about the update-conscious compilation schemes for general purpose applications.
+In this section, I will discuss about the update-conscious compilation (UCC) schemes for general purpose applications.
 The UCC schemes for general purpose applications include the register allocation scheme, data allocation and
 the integrated scheme that combines both register allocation and data allocation.
 The goal is to generate the new binary image as similar as the old binary image as possible with the minimal
@@ -180,7 +180,7 @@ First, it collects the following profiles for each function $P_i(i\geq
 $NumOfDelV_i$ & the total number of deleted variables in $P_i$; \\
 $NumOfNewV_i$ & the total number of new variables in $P_i$; \\
 $NumOfInsts_i$ & the projected maximal simultaneous instances of $P_i$; \\
-$Usage_i(a)$ & the usage of variable {\tt a} in $P_i$. 
+$Usage_i(a)$ & the usage of variable {\it a} in $P_i$. 
 \end{tabular}
 \end{center}
 \end{small}
@@ -278,7 +278,7 @@ instruction updates.
 %memory with implicit address increment between two instructions. If
 %data is relocated, new instructions must be inserted to change the
 %memory access address in the next instruction.  Fortunately, we
-%experimented with {\tt gcc 3.4.3} compiler and found that the PIA mode
+%experimented with gcc 3.4.3 compiler and found that the PIA mode
 %is mainly used to access the four bytes of an integer variable and
 %thus is insensitive to the variable relocation. For this reason, we do
 %not consider the impact the PIA mode when relocating the data. If they
@@ -337,7 +337,7 @@ Decisions for ``changed'' chunks are made by UCC-RA, while decisions for ``uncha
 
 While doing UCC-RA, each variable in the input chunk is tagged with the register name that was assigned in the old binary. This tag is called {\em preferred-register tag}. The {\em preferred-register tag} is a hint to improving code similarity in UCC-RA.
 
-The register allocator then allocates registers for each changed chunk, and gradually matches the register assignment, or allocation decisions from both changed and non-changed chunks for semantic correctness. Decisions for changed chunks are made by our UCC-RA while decisions for unchanged chunks are taken from the old code before the update. The two decisions are made conjointly. If a variable's live range spans across the chunk boundary, from ``changed'' to ``non-changed'' or vice versa, then the assignment in the ``changed'' chunk gives {\em preference} to the assignment in the ``non-changed'' chunk to maximize the similarity. However, this preference may not always be adopted by the allocator. If the allocator decides to use a new register in the ``changed'' chunk, then a {\tt mov} instruction between the two chunks should be inserted to move data between the new and the old registers. Register preference should also be given to the same variables on different control flow paths (they might be of different chunk types). However, if the allocator chooses a different register, then a {\it mov} instruction is also necessary.
+The register allocator then allocates registers for each changed chunk, and gradually matches the register assignment, or allocation decisions from both changed and non-changed chunks for semantic correctness. Decisions for changed chunks are made by our UCC-RA while decisions for unchanged chunks are taken from the old code before the update. The two decisions are made conjointly. If a variable's live range spans across the chunk boundary, from ``changed'' to ``non-changed'' or vice versa, then the assignment in the ``changed'' chunk gives {\em preference} to the assignment in the ``non-changed'' chunk to maximize the similarity. However, this preference may not always be adopted by the allocator. If the allocator decides to use a new register in the ``changed'' chunk, then a {\it mov} instruction between the two chunks should be inserted to move data between the new and the old registers. Register preference should also be given to the same variables on different control flow paths (they might be of different chunk types). However, if the allocator chooses a different register, then a {\it mov} instruction is also necessary.
 
 Clearly, placing too many inter-register movement instructions requires not only transmitting more update data to remote sensors but also executing more instructions at runtime. Therefore, it is desirable to develop a precise cost-benefit model such that an inter-register movement instruction is inserted only if it is estimated to be energy-efficient.
 
