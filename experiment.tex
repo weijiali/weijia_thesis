@@ -3,7 +3,8 @@ In this chapter, I will present the experimental results.
 First, the methodology that I used to construct the sensor software update benchmarks are addressed.
 Then, I divided the experimental results into two parts,
 the data collected before code dissemination and the data collected after code dissemination.
-The former part compares the trade-off between the generated script size and the code performance for both general purpose and DSP applications.
+The former part compares the trade-off between the generated script size and the code performance for both general 
+purpose and DSP applications.
 The latter part compares the network traffic and time consumption between the proposed protocol with
 the other existing schemes.
 
@@ -75,7 +76,8 @@ R-G-3 &  ${1.54 \Rightarrow 1.55}$ & Medium & Modify the condition of two ``if''
 R-G-4 &  ${1.55 \Rightarrow 1.56}$ & High & Move one function. Add one ``if'' statement to reset 
 	one variable when it's invalid, and all the other four related variables. \\ \hline
 R-G-5 &  ${1.56 \Rightarrow 1.57}$ & Medium & Move two ``memcpy'' statements to be next to the relative ``if'' statements. \\ \hline
-R-G-6 &  ${1.57 \Rightarrow 1.58}$ & High & Modify the condition of two ``if'' statements. Add two ``for'' loops. Remove two statements. \\ \hline
+R-G-6 &  ${1.57 \Rightarrow 1.58}$ & High & Modify the condition of two ``if'' statements. Add two ``for'' loops. 
+Remove two statements. \\ \hline
 
 \end{tabular}
 \end{small}
@@ -106,7 +108,9 @@ R-D-3 & speed\_control 2 $\Rightarrow$3 &high &  Multiple global variables are c
 \label{dsp-bench}
 \end{small}
 \end{figure}
-For the DSP applications, I selected the matrix multiplication function {\it matrix.c} and one function in the ADPCM standard implement {\it speed\_control} as the real DSP update benchmarks. More information can be found in Figure~\ref{dsp-bench}. 
+For the DSP applications, I selected the matrix multiplication function {\it matrix.c} and one function in the ADPCM 
+standard implement {\it speed\_control} as the real DSP update benchmarks. More information can be found in 
+Figure~\ref{dsp-bench}. 
 
 
 
@@ -143,7 +147,8 @@ combines the tasks performed by CntToRfm and CntToLeds. \\ \hline
 AES & Crypto Lib & It encrypts a given 128 bit input buffer using AES
 algorithm. I select the encryption code in the experiment.\\ \hline \hline
 
-Deluge & TinyOS & The mulithop code dissemination protocol in TinyOS. I tracked its continuous updates in different TinyOS versions as a real life case study. \\ \hline
+Deluge & TinyOS & The mulithop code dissemination protocol in TinyOS. I tracked its continuous updates in different 
+TinyOS versions as a real life case study. \\ \hline
 \end{tabular}
 \end{small}
 \caption{Base benchmarks for general purpose applications.}
@@ -180,17 +185,13 @@ twice --- within and outside the loop. \\ \hline
 
 M-G-6 & Blink &Low &Add a new parameter in TOSH\_run\_task. \\ \hline
 
-M-G-7 & CntToLeds & Medium & Insert three variables and their uses; \\
-\hline
+M-G-7 & CntToLeds & Medium & Insert three variables and their uses; \\ \hline
 
-M-G-8 & CntToRfm & Medium & Insert a global variable and use in three
-different functions. \\ \hline
+M-G-8 & CntToRfm & Medium & Insert a global variable and use in three different functions. \\ \hline
 
-M-G-9 & CntToRfm & Medium & Insert a local variable and use it several
-times in TOSH\_run\_next\_task function. \\ \hline
+M-G-9 & CntToRfm & Medium & Insert a local variable and use it several times in TOSH\_run\_next\_task function. \\ \hline
 
-M-G-10 & Blink&Medium & Insert a global variable and use it in a new
-if/then branch in TOSH\_run\_next\_task function. \\ \hline
+M-G-10 & Blink&Medium & Insert a global variable and use it in a new if/then branch in TOSH\_run\_next\_task function. \\ \hline
 
 M-G-11 & Blink & Medium & Add an else branch for an if statement in Timer\_HandleFire. \\ \hline
 
@@ -198,14 +199,11 @@ M-G-12 & CntToRfms $\Rightarrow$ CntToLedsRfm &high & Change the application fro
 
 M-G-13* &CntToLeds$\Rightarrow$ CntToRfms &high & Change the application from CntToLeds to CntToRfms. \\ \hline 
 
-M-G-14 & AES & Medium & Add two and remove one local variables in function invShiftRows().
-\\ \hline
-M-G-15 & AES & Medium & Add one and remove two local variables in function invShiftRows().
-\\ \hline
+M-G-14 & AES & Medium & Add two and remove one local variables in function invShiftRows(). \\ \hline
+M-G-15 & AES & Medium & Add one and remove two local variables in function invShiftRows(). \\ \hline
 
 M-G-16 & AES & Medium & Add one local variable in function invShiftRows() and add a four element array in function invMixSubColumns().\\ \hline
 M-G-17 & AES & Medium & Remove one local variable in function invShiftRows() and remove a four element array in function invMixSubColumns().\\ \hline
-
 
 M-G-18 & AES & High & Remove one and add two local variables in function invShiftRows(). Remove two and add four local variables in function invMixSubColumns().\\ \hline
 M-G-19 & AES & High & Add one and remove two local variables in function invShiftRows(). Add two and remove four local variables in function invMixSubColumns().\\ \hline
@@ -220,7 +218,9 @@ M-G-19 & AES & High & Add one and remove two local variables in function invShif
 
 
 \subsubsection{DSP application update benchmark}
-For the DSP applications, I inserted/deleted code to create/remove the variable interferences to the DSP base benchmarks, such as the matrix multiplication function {\it matrix.c} and one function in the ADPCM standard implement {\it speed\_control} as the real DSP update benchmarks. 
+For the DSP applications, I inserted/deleted code to create/remove the variable interferences to the DSP base 
+benchmarks, such as the matrix multiplication function {\it matrix.c} and one function in the ADPCM standard implement 
+{\it speed\_control} as the real DSP update benchmarks. 
 The detailed benchmarks are listed in Figure~\ref{dsp-manual}. 
 
 \begin{figure}[htdp]
@@ -233,10 +233,9 @@ Test &   Function & Update &Description \\
 Case & & Level&\\
 \hline\hline
 M-D-1  & verify.c& Low & Update \textbf{one basic block}  to create
-the interference between two variables that are \textbf{not coalesced} 
-in the original version.\\
+the interference between two variables that are \textbf{not coalesced} in the original version.\\
 \hline
-M-D-2  & verify.c& medium & Update \textbf{one basic block} to create
+M-D-2  & verify.c& medium & Update \textbf{one basic block} to create 
 the interference between three variables that are \textbf{coalesced}
 in the original version. \\
 \hline
@@ -265,7 +264,8 @@ I also wrote a tool to generate the update benchmarks automatically.
 
 \subsubsection{General purpose application update benchmark}
 For general purpose application study, 
-the generated test cases are used to evaluate the compilation time of the update-conscious compilation schemes. The compilation time here depends on the complexity of the
+the generated test cases are used to evaluate the compilation time of the update-conscious compilation schemes. The 
+compilation time here depends on the complexity of the
 ILP problem created by update-conscious compiler.  
 Because the number of decision variables, constrains and the complexity of
 the objective goal all affect the problem complexity, one source level modification may create problems with
@@ -297,7 +297,8 @@ To simply the description, let us define one input statement as one IR statement
 one variable in the access sequence or one interference between
 two variables for second type of input.
 
-For a given input, the point between each two statements and the point after the last statement are called an update point.
+For a given input, the point between each two statements and the point after the last statement are called an update 
+point.
 Given the update percentage, the number of statements that need to be updated is fixed
 for one base application.
 A random set of the update points will be selected for updates according to this number.
@@ -350,7 +351,7 @@ similar results.
 
 I selected {\tt Avrora}, an instruction-level sensor network
 simulator, to collect the execution cycles of the code before and
-after compiling the updated code with UCC and GCC (the accuracy of the
+after compiling the updated code with a UCC and GCC (the accuracy of the
 simulator has been reported in prior work~\cite{avrora}). I then
 integrated the energy model and execution profiles to study the energy
 consumption tradeoffs with different compilation approaches.
@@ -516,7 +517,12 @@ transmit, and the more savings I gain from UCC-RA.
 \label{fexp.energy}
 \end{figure}
 
-When the code generated from UCC-RA runs slightly slower than that from GCC-RA (e.g., test case M-G-12), extra energy will be consumed in instruction execution. This can diminish the transmission energy savings when the code is executed very frequently. Therefore, UCC-RA adaptively inserts {\tt mov} instructions according to execution profiles and update frequency. A large $Cnt$ would disable the insertion such that UCC-RA and GCC-RA have the same energy consumption in the worst case. For example, UCC-RA falls back to take the GCC-RA's decision when the modified in code test case 12 is projected to execute more than 10$^7$ times.
+When the code generated from UCC-RA runs slightly slower than that from GCC-RA (e.g., test case M-G-12), extra energy 
+will be consumed in instruction execution. This can diminish the transmission energy savings when the code is executed 
+very frequently. Therefore, UCC-RA adaptively inserts {\tt mov} instructions according to execution profiles and update 
+frequency. A large $Cnt$ would disable the insertion such that UCC-RA and GCC-RA have the same energy consumption in 
+the worst case. For example, UCC-RA falls back to take the GCC-RA's decision when the modified in code test case 12 is 
+projected to execute more than 10$^7$ times.
 %because of the diminishing energy gain.
 
 
@@ -772,11 +778,14 @@ register. Thus, no extra move or spill instructions are introduced.
 I used the real general purpose benchmarks (R-G-1 $\sim$ R-G-6)
 listed in Figure~\ref{fdeluge.src} to study the performance tradeoffs and
 energy savings for real software update cases.
-I used both GCC and UCC to get new binaries after each update, and then generate the update scripts according using update primitives described before. These scripts are distributed to the network using
+I used both GCC and the UCC designed for general purpose applications to get new binaries after each update, and then generate the update scripts according using 
+update primitives described before. These scripts are distributed to the network using
 the proposed MCP protocol and Deluge protocol to compare the network traffic and time savings.
 
 
-Figure~\ref{fdeluge.data} shows the comparison results which include the number of script instructions per each type of primitive, and the final script size (bytes) for these two compilation techniques. In the case study, I did not add new instructions such that the performance is the same.
+Figure~\ref{fdeluge.data} shows the comparison results which include the number of script instructions per each type of 
+primitive, and the final script size (bytes) for these two compilation techniques. In the case study, I did not add new 
+instructions such that the performance is the same.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -797,14 +806,25 @@ R-G-6 &  \bf3981& 12&6&143&162&0 &\bf1069 &2&2&1&6&2 \\  \hline
 \end{tabular}
 \end{small}
 \end{center}
-\caption[Script size comparison for real purpose updates.]{Script size comparison for real general purpose updates (\#A: add primitive; \#R: remove primitive; \#P: replace primitive; \#C: copy primitive; \#L: clone primitive).}
+\caption[Script size comparison for real purpose updates.]{Script size comparison for real general purpose updates 
+(\#A: add primitive; \#R: remove primitive; \#P: replace primitive; \#C: copy primitive; \#L: clone primitive).}
 \label{fdeluge.data}
 \end{figure}
 
-The average script size deduction for all the 6 test cases is 55\% comparing with GCC. This is because UCC reduces the instructions that need to be updated, thus the number of update primitives in the script is reduced. In addition, I found that when more instructions need to be updated, the code tends to be divided into smaller pieces, which results in more {\tt copy} primitives. For example in case R-G-3, UCC reduces the number of {\tt replace} primitives from 39 to 0, and {\tt copy} primitives from 43 to 4, which results in a 97\% script size deduction.
+The average script size deduction for all the 6 test cases is 55\% comparing with GCC. This is because UCC reduces the 
+instructions that need to be updated, thus the number of update primitives in the script is reduced. In addition, I 
+found that when more instructions need to be updated, the code tends to be divided into smaller pieces, which results 
+in more {\tt copy} primitives. For example in case R-G-3, UCC reduces the number of {\tt replace} primitives from 39 to 
+0, and {\tt copy} primitives from 43 to 4, which results in a 97\% script size deduction.
 
-Notice that the {\tt clone} primitive is not frequently used in the script. This is because when the number of the instructions that can be ``cloned'' from the original code is not big enough, using {\tt replace} primitive is more efficient. For example, if there are {\tt N} instructions that can be ``cloned'' from the original code, which means that they are the same with the related instructions in the original code except for the register assignments, and a one-one mapping can be created between the register assignments in the two versions. The number of such register assignment mappings is {\tt M}. 
-In such situation, I can use both {\tt clone} primitive and {\tt replace} primitive to represent the code updates. And the overhead of using each primitive is shown in the following equations.
+Notice that the {\tt clone} primitive is not frequently used in the script. This is because when the number of the 
+instructions that can be ``cloned'' from the original code is not big enough, using {\tt replace} primitive is more 
+efficient. For example, if there are {\tt N} instructions that can be ``cloned'' from the original code, which means 
+that they are the same with the related instructions in the original code except for the register assignments, and a 
+one-one mapping can be created between the register assignments in the two versions. The number of such register 
+assignment mappings is {\tt M}. 
+In such situation, I can use both {\tt clone} primitive and {\tt replace} primitive to represent the code updates. And 
+the overhead of using each primitive is shown in the following equations.
 
 \begin{small}
 \begin{eqnarray}
@@ -815,7 +835,8 @@ Cost_{clone} < Cost_{replace} \Rightarrow N-M > 2
 \end{eqnarray}
 \end{small}
 
-As shown in Equation \ref{clonevsreplace}, only when $N-M > 2$ is satisfied, I can gain more benefit by choosing the {\tt clone} primitive.
+As shown in Equation \ref{clonevsreplace}, only when $N-M > 2$ is satisfied, I can gain more benefit by choosing the 
+{\tt clone} primitive.
 
 \subsection{DSP software update pre-dissemination}
 
@@ -828,14 +849,21 @@ Then, I used the automatically generated DSP benchmarks to study the performance
 for more general cases.
 
 \subsubsection{Settings}
-I have implemented the proposed update-conscious ICSOA/ICGOA algorithms. I chose the Lance Compiler\cite{lance} to convert the source code (C code) into intermediate representations (IRs) from which the access sequence and interference graph are extracted. I selected the DSPstone\cite{dspstone} benchmark suite that is widely used to measure the performance of DSP compilers. I adopted CSOA-Offsetstone\cite{offsetstone} as the baseline CSOA and implemented ICSOA on top of it. 
+I have implemented the proposed update-conscious ICSOA/ICGOA algorithms. I chose the Lance Compiler\cite{lance} to 
+convert the source code (C code) into intermediate representations (IRs) from which the access sequence and 
+interference graph are extracted. I selected the DSPstone\cite{dspstone} benchmark suite that is widely used to measure 
+the performance of DSP compilers. I adopted CSOA-Offsetstone\cite{offsetstone} as the baseline CSOA and implemented 
+ICSOA on top of it. 
 %
-%I evaluated the impact as the number of variable interferences that are added by the code update, and whether these new interferences conflict with existing variable partitioning result. An interference conflict happens when two coalesced variables (in the old assignment) have overlapped live ranges and thus cannot be coalesced anymore.
+%I evaluated the impact as the number of variable interferences that are added by the code update, and whether these 
+new interferences conflict with existing variable partitioning result. An interference conflict happens when two 
+coalesced variables (in the old assignment) have overlapped live ranges and thus cannot be coalesced anymore.
 
 
 \subsubsection{Performance evaluation using man-benches}
 \textbf{Single offset assignment}
-Figure \ref{update} compares the software update overhead for CSOA and ICSOA. I used three script formats to do the comparison.
+Figure \ref{update} compares the software update overhead for CSOA and ICSOA. I used three script formats to do the 
+comparison.
 \begin{itemize}
 \itemsep 0pt
 \item
@@ -847,13 +875,22 @@ Figure \ref{update} compares the software update overhead for CSOA and ICSOA. I 
 \end{itemize}
 
 Using the same script generator with ICSOA, the update script size can be reduced by 32\%.
-This is because that the update-aware scheme follows the variable coalesces and offset assignment of the old code. The generated code has better code similarity to the old version in terms of both offset assignment and instruction addressing mode. In Test-Case M-D-1, the code update is very small such that the difference between the old and new offset assignments is not big. I did not see much benefit using ICSOA over CSOA. 
+This is because that the update-aware scheme follows the variable coalesces and offset assignment of the old code. The 
+generated code has better code similarity to the old version in terms of both offset assignment and instruction 
+addressing mode. In Test-Case M-D-1, the code update is very small such that the difference between the old and new 
+offset assignments is not big. I did not see much benefit using ICSOA over CSOA. 
 
-When comparing different script generators, I observed that  the advanced script generator produces a smaller script due to its usage of the {\it insert\_access} primitive. When there is no variable access insertion but contains removal or update in the code update, the two script generators produce the same script i.e. Test-Case M-D-4 and M-D-5.
+When comparing different script generators, I observed that  the advanced script generator produces a smaller script 
+due to its usage of the {\it insert\_access} primitive. When there is no variable access insertion but contains removal 
+or update in the code update, the two script generators produce the same script i.e. Test-Case M-D-4 and M-D-5.
 
 
-The {\em context-aware} script generator produces smaller scripts when the code update is medium. Instead of sending individual instruction differences, it just sends out the data allocation differences, from which each node generates the new binary by itself i.e. Test-Case M-D-4 and M-D-5. I see a significant script size reduction by using this scheme. 
-Adopting context-aware script tends to incur large complexity i.e. Test-Case M-D-1 and M-D-3 where I see a small script size increase due to the complexity to specify the offset assignment change. 
+The {\em context-aware} script generator produces smaller scripts when the code update is medium. Instead of sending 
+individual instruction differences, it just sends out the data allocation differences, from which each node generates 
+the new binary by itself i.e. Test-Case M-D-4 and M-D-5. I see a significant script size reduction by using this 
+scheme. 
+Adopting context-aware script tends to incur large complexity i.e. Test-Case M-D-1 and M-D-3 where I see a small script 
+size increase due to the complexity to specify the offset assignment change. 
 
 
 \begin{figure}[htbp]
@@ -876,15 +913,26 @@ When there are multiple ARs, Figure \ref{update2} compares CGOA and ICGOA scheme
 \end{figure}
 
 When there are more ARs, recompiling the program results in large changes in both the variable
-partition and offset assignment. For Test-Case 3, CGOA with context-aware script has larger size than that with simple script. This is because that the significant variable partition change and requires more primitives to specify the new offset layout. 
+partition and offset assignment. For Test-Case 3, CGOA with context-aware script has larger size than that with simple 
+script. This is because that the significant variable partition change and requires more primitives to specify the new 
+offset layout. 
 
-In conclusion, ICSOA/ICGOA is preferred when there are medium changes while recompilation is preferred when the change is small or large.
+In conclusion, ICSOA/ICGOA is preferred when there are medium changes while recompilation is preferred when the change 
+is small or large.
 
 
-In this paper I evaluated the static code quality i.e. the number of instructions in the new binary produced by CSOA and ICSOA schemes. An alternative approach is to evaluate the dynamic code quality i.e. the runtime instruction counts with given execution profiles. Although the latter provides more accurate evaluation, as I discussed in the introduction section, embedded mobile systems can periodically recharge the battery, so the execution overhead is less critical compared to its the communication overhead.
+In this paper I evaluated the static code quality i.e. the number of instructions in the new binary produced by CSOA 
+and ICSOA schemes. An alternative approach is to evaluate the dynamic code quality i.e. the runtime instruction counts 
+with given execution profiles. Although the latter provides more accurate evaluation, as I discussed in the 
+introduction section, embedded mobile systems can periodically recharge the battery, so the execution overhead is less 
+critical compared to its the communication overhead.
 
 \textbf{Single offset assignment}
-As shown in Figure \ref{exetotal}, ICSOA produces about the similar number of instructions as CSOA. On average, the binary generated by ICSOA is 10\% larger than the binary generated by CSOA. And for the worst test case, i.e. Test-Case 3, the binary generated by ICSOA is 23\% larger than CSOA. Because the ICSOA scheme incrementally does the data allocation based on the {\it coalesced access graph} of the old version, the old variable coalescing result is kept in the new version to improve code similarity. As a result, the code generated by ICSOA is not as efficient. 
+As shown in Figure \ref{exetotal}, ICSOA produces about the similar number of instructions as CSOA. On average, the 
+binary generated by ICSOA is 10\% larger than the binary generated by CSOA. And for the worst test case, i.e. Test-Case 
+3, the binary generated by ICSOA is 23\% larger than CSOA. Because the ICSOA scheme incrementally does the data 
+allocation based on the {\it coalesced access graph} of the old version, the old variable coalescing result is kept in 
+the new version to improve code similarity. As a result, the code generated by ICSOA is not as efficient. 
 
 \begin{figure}[htbp]
 \begin{center}
@@ -896,7 +944,9 @@ As shown in Figure \ref{exetotal}, ICSOA produces about the similar number of in
 \end{figure}
 
 
-To better understand the code quality difference between two approaches, Figure \ref{exebreakdown} shows the breakdown of the execution overhead. I separated the new code at the intermediate representation (IR) level into the changed and unchanged parts. I then create their mapping to the binary level code segments.
+To better understand the code quality difference between two approaches, Figure \ref{exebreakdown} shows the breakdown 
+of the execution overhead. I separated the new code at the intermediate representation (IR) level into the changed and 
+unchanged parts. I then create their mapping to the binary level code segments.
 
 
 \begin{figure}[htdp]
@@ -929,10 +979,14 @@ M-D-5	&4	&22	&0	&0	&0	&24	&2	&1	\\
 \end{figure}
 
 
-Due to the change to offset assignment, the same IR instructions may be different in the old and new code. The change could be categorized into two types: (1) updating the addressing mode of the related binary instructions, such as the first memory access in Figure \ref{recomdiff}; (2) adding addressing mode change instructions. The first type update does not change the instruction number as no extra instruction is added,
+Due to the change to offset assignment, the same IR instructions may be different in the old and new code. The change 
+could be categorized into two types: (1) updating the addressing mode of the related binary instructions, such as the 
+first memory access in Figure \ref{recomdiff}; (2) adding addressing mode change instructions. The first type update 
+does not change the instruction number as no extra instruction is added,
 but for the second type, one extra instruction is added per change. 
 
-To study the code quality, I divide the overhead into four categories as follows. T1-T3 shows how efficient the offset assignment algorithm is; and T4 shows how the extra patch affects the final result.
+To study the code quality, I divide the overhead into four categories as follows. T1-T3 shows how efficient the offset 
+assignment algorithm is; and T4 shows how the extra patch affects the final result.
 \begin{itemize}
 %\itemsep 0pt
 \item T1: AR loading instructions removed from the old code;
@@ -941,12 +995,15 @@ To study the code quality, I divide the overhead into four categories as follows
 \item T4: ALU instructions inserted into the new code.
 \end{itemize}
 
-Comparing columns T1 and T2 of both CSOA and ICSOA in Figure \ref{exebreakdown}, I found that CSOA generates less binary instructions for the unchanged IR part. It removes more AR loading instructions, and inserts less such instructions. For the new code part, CSOA generates less AR loading instructions. When performing complete recompilation, CSOA uses the new access sequences and variable interferences of the whole function, and thus can generate the better offset assignment.
+Comparing columns T1 and T2 of both CSOA and ICSOA in Figure \ref{exebreakdown}, I found that CSOA generates less 
+binary instructions for the unchanged IR part. It removes more AR loading instructions, and inserts less such 
+instructions. For the new code part, CSOA generates less AR loading instructions. When performing complete 
+recompilation, CSOA uses the new access sequences and variable interferences of the whole function, and thus can 
+generate the better offset assignment.
 
-Column T4 shows the number of ALU instructions generated by compiling the new assembly code.  Since ICSOA needs to add patch variables to remove the interferences due to overlapped live ranges, it adds several ``move'' instructions in the code, which causes more T4 type instructions.
-
-\textbf{General offset assignment} For the test case M-D-3 that has the largest code quality difference, I increased the number of available ARs, and found that with more available ARs, the code quality difference is reduced, as shown in Figure \ref{exe_ar}. The extra instruction number drops from 20\% to 6\% when the address register number is increased from 1 to 4. 
-This is because with more ARs, the variables are partitioned into smaller sets. The software update tends to create less new interference and needs fewer patch variables. Fewer interferences result in less overhead in ICSOA. 
+Column T4 shows the number of ALU instructions generated by compiling the new assembly code.  Since ICSOA needs to add 
+patch variables to remove the interferences due to overlapped live ranges, it adds several ``move'' instructions in the 
+code, which causes more T4 type instructions.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -954,7 +1011,6 @@ This is because with more ARs, the variables are partitioned into smaller sets. 
 \caption{Code quality comparison between ICGOA and CGOA.}
 \label{exe_ar}
 \end{center}
-\vspace{-0.2in}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -964,19 +1020,42 @@ This is because with more ARs, the variables are partitioned into smaller sets. 
 \label{energy-dsp}
 \end{center}
 \end{figure}
+\textbf{General offset assignment} For the test case M-D-3 that has the largest code quality difference, I increased 
+the number of available ARs, and found that with more available ARs, the code quality difference is reduced, as shown 
+in Figure \ref{exe_ar}. The extra instruction number drops from 20\% to 6\% when the address register number is 
+increased from 1 to 4. 
+This is because with more ARs, the variables are partitioned into smaller sets. The software update tends to create 
+less new interference and needs fewer patch variables. Fewer interferences result in less overhead in ICSOA. 
 
-The update-conscious data allocation scheme trades the run-time code performance for the transmission overhead during software update. Thus, the overall energy savings depend on the number of the times that the target binary will execute before retiring. Figure~\ref{energy-dsp} shows the energy savings of ICSOA over CSOA as a function of 
+
+
+The update-conscious data allocation scheme trades the run-time code performance for the transmission overhead during 
+software update. Thus, the overall energy savings depend on the number of the times that the target binary will execute 
+before retiring. Figure~\ref{energy-dsp} shows the energy savings of ICSOA over CSOA as a function of 
 $Cnt$, which is projected from the execution profiles and the code update frequency.
 
 
 
-As we can see in Figure~\ref{energy-dsp}, with the increase of the execution number of one application, the overall energy savings that are achieved by using the update-conscious compilation scheme is reduced. This is because the energy saved in the one time binary transmission is overwhelmed by the extra run-time overhead. When a large $Cnt$ is predicted, the update-conscious compilation will fall back to the CSOA scheme in order to achieve overall energy efficiency. 
+As we can see in Figure~\ref{energy-dsp}, with the increase of the execution number of one application, the overall 
+energy savings that are achieved by using the update-conscious compilation scheme is reduced. This is because the 
+energy saved in the one time binary transmission is overwhelmed by the extra run-time overhead. When a large $Cnt$ is 
+predicted, the update-conscious compilation will fall back to the CSOA scheme in order to achieve overall energy 
+efficiency. 
 
 \subsubsection{Performance evaluation using auto-benches}
-I next inserted changes randomly into a file ({\em verify.c}) to study the robustness of my proposed scheme. The inserted code involves the use of both existing and new variables. The ratio of these two types is 1:1, and the sizes of the inserted/changed code range from 5\% to 60\% of the original code. Given an update percentage, I randomly generated 500 test cases and reported the average.
+I next inserted changes randomly into a file ({\em verify.c}) to study the robustness of my proposed scheme. The 
+inserted code involves the use of both existing and new variables. The ratio of these two types is 1:1, and the sizes 
+of the inserted/changed code range from 5\% to 60\% of the original code. Given an update percentage, I randomly 
+generated 500 test cases and reported the average.
 
-The script size comparison is shown in Figure \ref{upd_rand_bar}. For all three types of the script generation schemes, incremental compilation scheme reduces more of the
-update script size and thus the software update transmission overhead. However, the results show that I achieved the maximum script size reduction when the update percentage is between 10\% and 40\%. This is because ICSOA benefits more when most of the update is caused by the data allocation changes rather than new/updated instruction operations. When the update percentage is too big, i.e. larger than 40\%, most changes are new or updated instructions. When the update percentage is too small, i.e. smaller than 20\%, the data allocation table is less likely to change even with recompilation. Thus, the benefits from ICSOA are limited.
+The script size comparison is shown in Figure \ref{upd_rand_bar}. For all three types of the script generation schemes, 
+incremental compilation scheme reduces more of the
+update script size and thus the software update transmission overhead. However, the results show that I achieved the 
+maximum script size reduction when the update percentage is between 10\% and 40\%. This is because ICSOA benefits more 
+when most of the update is caused by the data allocation changes rather than new/updated instruction operations. When 
+the update percentage is too big, i.e. larger than 40\%, most changes are new or updated instructions. When the update 
+percentage is too small, i.e. smaller than 20\%, the data allocation table is less likely to change even with 
+recompilation. Thus, the benefits from ICSOA are limited.
 
 
 \begin{figure}[htbp]
@@ -988,7 +1067,10 @@ update script size and thus the software update transmission overhead. However, 
 \vspace{-0.2in}
 \end{figure}
 
-The code quality is compared in Figure \ref{exe_rand_bar}. Larger code update percentage, i.e. over 40\%, has more live range extension of old variables, which produces more patch variables and instructions. Thus, the code produced by the recompilation scheme has a larger number of T4 type instructions; the code generated by the ICSOA scheme has a worse execution performance. 
+The code quality is compared in Figure \ref{exe_rand_bar}. Larger code update percentage, i.e. over 40\%, has more live 
+range extension of old variables, which produces more patch variables and instructions. Thus, the code produced by the 
+recompilation scheme has a larger number of T4 type instructions; the code generated by the ICSOA scheme has a worse 
+execution performance. 
 
 
 \begin{figure}[htbp]
@@ -1001,13 +1083,19 @@ The code quality is compared in Figure \ref{exe_rand_bar}. Larger code update pe
 \end{figure}
 
 
-From Figure \ref{exe_rand_bar} and Figure \ref{upd_rand_bar}, I conclude that when the code update percentage is between 20\% and 40\%, using the update-conscious offset assignment scheme can save about 30\% of the transmission overhead, assuming that advanced script is used, with about 2\% extra instruction execution.
+From Figure \ref{exe_rand_bar} and Figure \ref{upd_rand_bar}, I conclude that when the code update percentage is 
+between 20\% and 40\%, using the update-conscious offset assignment scheme can save about 30\% of the transmission 
+overhead, assuming that advanced script is used, with about 2\% extra instruction execution.
 
 
-From the experimental results, I can also see that the simply using the code primitives works better with the incremental compilation scheme, and the context-aware primitives works better with the recompilation scheme.
-This is because that the context-aware primitives trades updating individual instructions for setting up the auxiliary data structures and letting the sensors to construct these updates.
-Thus, when I recompile the new version, a relatively great number of instructions are changed due to the data allocation differences, so the  context-aware primitives can gain more benefit by saving those updates. 
-On the other hand, when I use the incremental compilation technique, the saving is not great enough to balance the spending in setting up the data structures, therefore, just using the code primitives is more beneficial. 
+From the experimental results, I can also see that the simply using the code primitives works better with the 
+incremental compilation scheme, and the context-aware primitives works better with the recompilation scheme.
+This is because that the context-aware primitives trades updating individual instructions for setting up the auxiliary 
+data structures and letting the sensors to construct these updates.
+Thus, when I recompile the new version, a relatively great number of instructions are changed due to the data 
+allocation differences, so the  context-aware primitives can gain more benefit by saving those updates. 
+On the other hand, when I use the incremental compilation technique, the saving is not great enough to balance the 
+spending in setting up the data structures, therefore, just using the code primitives is more beneficial. 
 
 
 \subsubsection{Performance evaluation using real-benches}
@@ -1020,7 +1108,9 @@ I compared the update script size, generated binary performance and long term en
 between the baseline CSOA scheme and the proposed ICSOA scheme.
 With the consideration of both update-conscious data allocation (UCC-DA) and update-conscious
 register allocation (UCC-RA), I did the comparison between the baseline CGOA scheme and ICGOA scheme.
-The update scripts are then generated using different update primitives described before. These scripts are distributed to the network using the base Deluge protocol and the proposed MCP protocol to compare the network traffic and time consumption.
+The update scripts are then generated using different update primitives described before. These scripts are distributed 
+to the network using the base Deluge protocol and the proposed MCP protocol to compare the network traffic and time 
+consumption.
 
 \begin{figure}[htbp]
 \centering
@@ -1031,16 +1121,31 @@ The update scripts are then generated using different update primitives describe
 \end{figure}
 
 Figure~\ref{update-dsp-real} shows the generated script size comparison using different compilation techniques 
-and update primitive sets. Here, test case R-D-1 and R-D-2 are medium level updates, while R-D-3 is a high level update. 
+and update primitive sets. Here, test case R-D-1 and R-D-2 are medium level updates, while R-D-3 is a high level 
+update. 
 
-Comparison between \textbf{CSOA-simple} and \textbf{ICSOA-simple}, we can see that update-conscious data allocation (ICSOA) produces the binary that is more similar as the old binary when the update level is relatively low. When the code has significant changes, e.g. Test-Case R-D-3 introduces 32\% code changes, the old and new code segments are mixed, such that the benefit from keeping the old data offset assignment diminishes.
+Comparison between \textbf{CSOA-simple} and \textbf{ICSOA-simple}, we can see that update-conscious data allocation 
+(ICSOA) produces the binary that is more similar as the old binary when the update level is relatively low. When the 
+code has significant changes, e.g. Test-Case R-D-3 introduces 32\% code changes, the old and new code segments are 
+mixed, such that the benefit from keeping the old data offset assignment diminishes.
 
-Comparison between \textbf{CSOA-simple} and \textbf{CSOA-advanced} shows the script size deduction that we can achieve using the advanced script primitives over the simple script primitives. The advanced primitives tend to take more effect when the code update level is higher. This is because they work under certain circumstances, e.g., only when the update involves inlined functions, the {\tt clone} primitive can help to reduce the script size, and higher level updates provide more opportunities for these primitives to take effect.
+Comparison between \textbf{CSOA-simple} and \textbf{CSOA-advanced} shows the script size deduction that we can achieve 
+using the advanced script primitives over the simple script primitives. The advanced primitives tend to take more 
+effect when the code update level is higher. This is because they work under certain circumstances, e.g., only when the 
+update involves inlined functions, the {\tt clone} primitive can help to reduce the script size, and higher level 
+updates provide more opportunities for these primitives to take effect.
 
-Comparison between \textbf{CSOA-simple} and \textbf{CSOA-data} shows the script size deduction that we can achieve using the   context-aware primitives over the simple script primitives. Although using the  context-aware primitives primitives increase the code regeneration overhead on the sensors, it helps to reduce the script size significantly, especially when the data allocation update is significant. For example, the baseline CSOA scheme compared to the ICSOA scheme produces a more different data allocation result from the old version.
-The improvement achieved by the  context-aware primitives when using the CSOA compilation technique is higher than using the ICSOA compilation technique.
+Comparison between \textbf{CSOA-simple} and \textbf{CSOA-data} shows the script size deduction that we can achieve 
+using the   context-aware primitives over the simple script primitives. Although using the  context-aware primitives 
+primitives increase the code regeneration overhead on the sensors, it helps to reduce the script size significantly, 
+especially when the data allocation update is significant. For example, the baseline CSOA scheme compared to the ICSOA 
+scheme produces a more different data allocation result from the old version.
+The improvement achieved by the  context-aware primitives when using the CSOA compilation technique is higher than 
+using the ICSOA compilation technique.
 
-In real life, there are usually more than one address registers available on a DSP chip. The more the address registers that are available, the larger the solution space is. Without the knowledge of the old compilation results, regenerating the new binary may cause more data allocation differences. 
+In real life, there are usually more than one address registers available on a DSP chip. The more the address registers 
+that are available, the larger the solution space is. Without the knowledge of the old compilation results, 
+regenerating the new binary may cause more data allocation differences. 
 
 Figure~\ref{update2-dsp-real} shows the experimental results, for double address register situation.
 Here, I compared the baseline CGOA scheme with the proposed ICGOA scheme. 
@@ -1053,9 +1158,13 @@ Here, I compared the baseline CGOA scheme with the proposed ICGOA scheme.
 \vspace{-0.1in}
 \end{figure}
 
-We can see that when more address registers are available, the baseline scheme tends to generate the larger update scripts, which increases the improvement space of the update-conscious compilation techniques.
+We can see that when more address registers are available, the baseline scheme tends to generate the larger update 
+scripts, which increases the improvement space of the update-conscious compilation techniques.
 
-Figure~\ref{exe-dsp-real} shows the generated code performance comparison between the baseline CSOA scheme and the proposed ICSOA scheme. When code changes, inheriting the old data allocation result may not result in an efficient code. Thus, ICSOA generates more instructions compared to CSOA. For these real test cases, on average, ICSOA increases the run-time overhead by 3.7\%. 
+Figure~\ref{exe-dsp-real} shows the generated code performance comparison between the baseline CSOA scheme and the 
+proposed ICSOA scheme. When code changes, inheriting the old data allocation result may not result in an efficient 
+code. Thus, ICSOA generates more instructions compared to CSOA. For these real test cases, on average, ICSOA increases 
+the run-time overhead by 3.7\%. 
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.6]{figures/da-exe2.eps}
@@ -1067,9 +1176,14 @@ Figure~\ref{exe-dsp-real} shows the generated code performance comparison betwee
 
 \section{Patch dissemination performance evaluation}
 \subsection{Settings}
-I implemented MCP on the TinyOS~\cite{tinyos} platform. For comparison, I also implemented Melete~\cite{melete} and studied various network settings using TOSSIM~\cite{tossim}. 
+I implemented MCP on the TinyOS~\cite{tinyos} platform. For comparison, I also implemented Melete~\cite{melete} and 
+studied various network settings using TOSSIM~\cite{tossim}. 
 
-I simulated mesh MA-WSNs of different sizes. I set the default spacing factor to 15 and model the lossy communication channel using the tool provided by TinyOS. There are four applications each of which is uniformly distributed across the network. In the default setting, 30\% of the sensors have application {\tt A} and there is a request from the sink to reprogram 20\% of the other sensors to run {\tt A}. MCP disseminates the code from in-network sources instead of the sink. 
+I simulated mesh MA-WSNs of different sizes. I set the default spacing factor to 15 and model the lossy communication 
+channel using the tool provided by TinyOS. There are four applications each of which is uniformly distributed across 
+the network. In the default setting, 30\% of the sensors have application {\tt A} and there is a request from the sink 
+to reprogram 20\% of the other sensors to run {\tt A}. MCP disseminates the code from in-network sources instead of the 
+sink. 
 
 \subsection{Message overhead}
 
@@ -1080,9 +1194,20 @@ I simulated mesh MA-WSNs of different sizes. I set the default spacing factor to
 \label{fmsg}
 \end{figure}
 
-Fig.~\ref{fmsg} shows the breakdown of the number of messages with different dissemination protocols. Without considering advertisement messages, Melete and Deluge have about the same message overhead, which was also reported in \cite{melete}. There are a large number of {\tt ADV} messages in Deluge, and a negligible number in Melete. The reason of such difference is Deluge depends heavily on incoming {\tt ADV} message, e.g., a sensor node only sends out new requests if it receives {\tt ADV} messages indicating its neighbors have more up-to-date data. Instead, in Melete, requesters receive the command from the sink code and then know the target application and its size. The requesters can proactively send out more requests after timeouts or receiving one complete page. The {\tt ADV} messages contribute to 37-40\% of the total message overhead in Deluge. 
+Fig.~\ref{fmsg} shows the breakdown of the number of messages with different dissemination protocols. Without 
+considering advertisement messages, Melete and Deluge have about the same message overhead, which was also reported in 
+\cite{melete}. There are a large number of {\tt ADV} messages in Deluge, and a negligible number in Melete. The reason 
+of such difference is Deluge depends heavily on incoming {\tt ADV} message, e.g., a sensor node only sends out new 
+requests if it receives {\tt ADV} messages indicating its neighbors have more up-to-date data. Instead, in Melete, 
+requesters receive the command from the sink code and then know the target application and its size. The requesters can 
+proactively send out more requests after timeouts or receiving one complete page. The {\tt ADV} messages contribute to 
+37-40\% of the total message overhead in Deluge. 
 
-My scheme takes a similar approach as Melete but requires some {\tt ADV} messages to update the AIT before, during and after the code switch. The {\tt ADV}'s overhead is low compared to the request and data transfer message overhead. On average my scheme reduces about 20\% of the message overhead from Melete. The main reason for this reduction is that Melete tends to have multiple responders within a small range and has a higher possibility of signal collision. MCP alleviates the problem by chosing one closeby source, which reduces the number of data packets in transmission.
+My scheme takes a similar approach as Melete but requires some {\tt ADV} messages to update the AIT before, during and 
+after the code switch. The {\tt ADV}'s overhead is low compared to the request and data transfer message overhead. On 
+average my scheme reduces about 20\% of the message overhead from Melete. The main reason for this reduction is that 
+Melete tends to have multiple responders within a small range and has a higher possibility of signal collision. MCP 
+alleviates the problem by chosing one closeby source, which reduces the number of data packets in transmission.
 
 \subsection{Completion time}
 
@@ -1093,7 +1218,10 @@ My scheme takes a similar approach as Melete but requires some {\tt ADV} message
 \label{ftime}
 \end{figure}
 
-Fig.~\ref{ftime} compares the dissemination completion time of the different protocols. For the Deluge result, I record the time interval used by all requesters to complete the new code downloading. In practice, the Deluge protocol may still proceed to flood all sensors since it is not designed to update a subset of sensors. MCP requires less time to finish dissemination; on average it saves 45\% and 25\% over Deluge and Melete respectively.
+Fig.~\ref{ftime} compares the dissemination completion time of the different protocols. For the Deluge result, I record 
+the time interval used by all requesters to complete the new code downloading. In practice, the Deluge protocol may 
+still proceed to flood all sensors since it is not designed to update a subset of sensors. MCP requires less time to 
+finish dissemination; on average it saves 45\% and 25\% over Deluge and Melete respectively.
 
 \subsection{Sensitivity to node distribution}
 
@@ -1111,17 +1239,28 @@ Fig.~\ref{ftime} compares the dissemination completion time of the different pro
 \label{floc}
 \end{figure}
 
-Fig. \ref{fsr} illustrates message overhead with a different number of sources and requesters. I omit the dissemination time figure which exhibits similar results.
-Along the X axis, (a,b) denotes that out of all the sensor nodes, a\% sources and b\% requesters are randomly selected in the field. I observed that the overhead tends to increase with more requesters and fewer sources. The difference is not significant.
+Fig. \ref{fsr} illustrates message overhead with a different number of sources and requesters. I omit the dissemination 
+time figure which exhibits similar results.
+Along the X axis, (a,b) denotes that out of all the sensor nodes, a\% sources and b\% requesters are randomly selected 
+in the field. I observed that the overhead tends to increase with more requesters and fewer sources. The difference is 
+not significant.
 
 
-Fig. \ref{floc} compares the message overhead when sources and requesters are distributed with location concentration. {\tt EvenD} denotes that all nodes are evenly distributed. {\tt CornerD} denotes that sources and requesters are distributed at the two diagonal corners of the rectangle field. {\tt SideD} denotes that sources and requesters are distributed along two sides of the field. From the figure, Melete has better performance than Deluge under even distribution. However, it generates significant conflicts and performs worse than Deluge when the nodes are unevenly deployed. MCP has consistently better results over Melete and Deluge. For the corner and side settings, MCP and Deluge are similar as almost all nodes are involved in the dissemination. 
+Fig. \ref{floc} compares the message overhead when sources and requesters are distributed with location concentration. 
+{\tt EvenD} denotes that all nodes are evenly distributed. {\tt CornerD} denotes that sources and requesters are 
+distributed at the two diagonal corners of the rectangle field. {\tt SideD} denotes that sources and requesters are 
+distributed along two sides of the field. From the figure, Melete has better performance than Deluge under even 
+distribution. However, it generates significant conflicts and performs worse than Deluge when the nodes are unevenly 
+deployed. MCP has consistently better results over Melete and Deluge. For the corner and side settings, MCP and Deluge 
+are similar as almost all nodes are involved in the dissemination. 
 
 
 \subsection{Sensitivity to application sizes}
 Fig. \ref{fnumPage} shows message overhead with different application sizes. 
 Due to the epidemic dissemination, Deluge exhibits approximately linear message overhead when
-increasing the application size from 8 to 16 pages. Both Melete and MCP greatly reduce the communication overhead; however, they have slightly more than linear message overhead due to independent page requesting from requesters. MCP has a nearly constant message overhead reduction versus Melete, varying from 17.5\% for 8 pages to 18.1\% for 16 pages.
+increasing the application size from 8 to 16 pages. Both Melete and MCP greatly reduce the communication overhead; 
+however, they have slightly more than linear message overhead due to independent page requesting from requesters. MCP 
+has a nearly constant message overhead reduction versus Melete, varying from 17.5\% for 8 pages to 18.1\% for 16 pages.
 
 \begin{figure}[htbp]
 \centering
@@ -1139,7 +1278,13 @@ increasing the application size from 8 to 16 pages. Both Melete and MCP greatly 
 
 
 \subsection{Sensitivity to cache sizes}
-Fig~\ref{fcache} summarizes message overhead of Melete and MCP with different cache sizes, i.e., the number of code pages that may be cached in memory. Here N=1 denotes that there is no caching. From the figure, MCP achieves significant communication overhead reduction when caching one or two future pages, and diminishing benefits when with larger cache sizes. The reason is that in MCP, a request message can preempt a working node (a source, a requester, or a forwarder) if that node works on a page with a larger page number and the page index difference is bigger than one. In this way, MCP prioritizes slow requesters such that they can keep up the pace with the nearby dissemination and take advantage of cached packets.
+Fig~\ref{fcache} summarizes message overhead of Melete and MCP with different cache sizes, i.e., the number of code 
+pages that may be cached in memory. Here N=1 denotes that there is no caching. From the figure, MCP achieves 
+significant communication overhead reduction when caching one or two future pages, and diminishing benefits when with 
+larger cache sizes. The reason is that in MCP, a request message can preempt a working node (a source, a requester, or 
+a forwarder) if that node works on a page with a larger page number and the page index difference is bigger than one. 
+In this way, MCP prioritizes slow requesters such that they can keep up the pace with the nearby dissemination and take 
+advantage of cached packets.
 
 
 

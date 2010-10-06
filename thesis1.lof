@@ -37,44 +37,44 @@
 \contentsline {figure}{\numberline {33}{\ignorespaces An example of the {\tt insert\_access} primitive.}}{59}{figure.4.33}
 \contentsline {figure}{\numberline {34}{\ignorespaces An example of the interpretation procedure of the {\tt insert\_access} primitive .}}{60}{figure.4.34}
 \contentsline {figure}{\numberline {35}{\ignorespaces The data layout patch script primitives.}}{65}{figure.4.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces The code construction procedure of the data primitives.}}{66}{figure.4.36}
+\contentsline {figure}{\numberline {36}{\ignorespaces The code construction procedure of the data primitives.}}{67}{figure.4.36}
 \contentsline {figure}{\numberline {37}{\ignorespaces Coalesced variable list.}}{68}{figure.4.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces The AR in/out value list.}}{68}{figure.4.38}
+\contentsline {figure}{\numberline {38}{\ignorespaces The AR in/out value list.}}{69}{figure.4.38}
 \contentsline {figure}{\numberline {39}{\ignorespaces Advertise-request-data handshaking protocol in Deluge.}}{72}{figure.5.39}
 \contentsline {figure}{\numberline {40}{\ignorespaces An example of software switch in a multi-application WSN (MA-WSN).}}{73}{figure.5.40}
 \contentsline {figure}{\numberline {41}{\ignorespaces An example of the application information table (AIT).}}{75}{figure.5.41}
 \contentsline {figure}{\numberline {42}{\ignorespaces Gradient-based request routing.}}{77}{figure.5.42}
 \contentsline {figure}{\numberline {43}{\ignorespaces Simultaneous code dissemination.}}{79}{figure.5.43}
-\contentsline {figure}{\numberline {44}{\ignorespaces Real general purpose application update benchmark.}}{86}{figure.6.44}
-\contentsline {figure}{\numberline {45}{\ignorespaces Real DSP application update benchmark. }}{86}{figure.6.45}
-\contentsline {figure}{\numberline {46}{\ignorespaces Base benchmarks for general purpose applications.}}{87}{figure.6.46}
-\contentsline {figure}{\numberline {47}{\ignorespaces Manually generated general purpose application update benchmark.}}{89}{figure.6.47}
-\contentsline {figure}{\numberline {48}{\ignorespaces Manually DSP application update benchmark.}}{90}{figure.6.48}
-\contentsline {figure}{\numberline {49}{\ignorespaces Script size comparison between UCC-RA and GCC-RA.}}{93}{figure.6.49}
-\contentsline {figure}{\numberline {50}{\ignorespaces Code quality comparison between UCC-RA and GCC-RA.}}{95}{figure.6.50}
-\contentsline {figure}{\numberline {51}{\ignorespaces The energy savings per update for general purpose applications.}}{96}{figure.6.51}
-\contentsline {figure}{\numberline {52}{\ignorespaces The number of constraints as a function of number of IR instruction.}}{98}{figure.6.52}
-\contentsline {figure}{\numberline {53}{\ignorespaces The number of iterations as a function of.}}{98}{figure.6.53}
-\contentsline {figure}{\numberline {54}{\ignorespaces The time to solve one iteration as a function of.}}{99}{figure.6.54}
-\contentsline {figure}{\numberline {55}{\ignorespaces Script size comparison between UCC-DA and GCC-DA.}}{101}{figure.6.55}
-\contentsline {figure}{\numberline {56}{\ignorespaces Worst-case stack size comparison between UCC-DA and GCC-DA.}}{102}{figure.6.56}
-\contentsline {figure}{\numberline {57}{\ignorespaces Tradeoff between the worst-case stack size and the instruction updates.}}{103}{figure.6.57}
-\contentsline {figure}{\numberline {58}{\ignorespaces Script size comparison between the integrated scheme and the baseline scheme.}}{105}{figure.6.58}
-\contentsline {figure}{\numberline {59}{\ignorespaces Script size comparison for real purpose updates.}}{106}{figure.6.59}
-\contentsline {figure}{\numberline {60}{\ignorespaces Script size comparison between ICSOA and CSOA ($Num_{addr\_reg} = 1$).}}{108}{figure.6.60}
-\contentsline {figure}{\numberline {61}{\ignorespaces Script size comparison ICGOA and CGOA($Num_{addr\_reg} = 2$).}}{109}{figure.6.61}
-\contentsline {figure}{\numberline {62}{\ignorespaces Code quality comparison between CSOA and ICSOA.}}{110}{figure.6.62}
-\contentsline {figure}{\numberline {63}{\ignorespaces Execution overhead breakdown.}}{110}{figure.6.63}
-\contentsline {figure}{\numberline {64}{\ignorespaces Code quality comparison between ICGOA and CGOA.}}{112}{figure.6.64}
-\contentsline {figure}{\numberline {65}{\ignorespaces The energy savings for DSP applications.}}{112}{figure.6.65}
-\contentsline {figure}{\numberline {66}{\ignorespaces Script size comparison (scattered random new code insertion).}}{114}{figure.6.66}
-\contentsline {figure}{\numberline {67}{\ignorespaces Code quality comparison (scattered random new code insertion).}}{115}{figure.6.67}
-\contentsline {figure}{\numberline {68}{\ignorespaces Script size comparison between CSOA and ICSOA ($Num_{addr\_reg} = 1$).}}{116}{figure.6.68}
-\contentsline {figure}{\numberline {69}{\ignorespaces Script size comparison between CGOA and ICGOA ($Num_{addr\_reg} = 2$).}}{117}{figure.6.69}
-\contentsline {figure}{\numberline {70}{\ignorespaces Code quality comparison between CSOA and ICSOA ($Num_{addr\_reg} = 1$).}}{118}{figure.6.70}
-\contentsline {figure}{\numberline {71}{\ignorespaces Message overhead.}}{119}{figure.6.71}
-\contentsline {figure}{\numberline {72}{\ignorespaces Dissemination time.}}{120}{figure.6.72}
-\contentsline {figure}{\numberline {73}{\ignorespaces Dissemination with different number of sources and requesters.}}{121}{figure.6.73}
-\contentsline {figure}{\numberline {74}{\ignorespaces Dissemination with uneven source/requester node distribution.}}{121}{figure.6.74}
-\contentsline {figure}{\numberline {75}{\ignorespaces Dissemination with different number of pages.}}{123}{figure.6.75}
-\contentsline {figure}{\numberline {76}{\ignorespaces Dissemination with Different Cache Sizes.}}{123}{figure.6.76}
+\contentsline {figure}{\numberline {44}{\ignorespaces Real general purpose application update benchmark.}}{82}{figure.6.44}
+\contentsline {figure}{\numberline {45}{\ignorespaces Real DSP application update benchmark. }}{82}{figure.6.45}
+\contentsline {figure}{\numberline {46}{\ignorespaces Base benchmarks for general purpose applications.}}{83}{figure.6.46}
+\contentsline {figure}{\numberline {47}{\ignorespaces Manually generated general purpose application update benchmark.}}{85}{figure.6.47}
+\contentsline {figure}{\numberline {48}{\ignorespaces Manually DSP application update benchmark.}}{86}{figure.6.48}
+\contentsline {figure}{\numberline {49}{\ignorespaces Script size comparison between UCC-RA and GCC-RA.}}{89}{figure.6.49}
+\contentsline {figure}{\numberline {50}{\ignorespaces Code quality comparison between UCC-RA and GCC-RA.}}{91}{figure.6.50}
+\contentsline {figure}{\numberline {51}{\ignorespaces The energy savings per update for general purpose applications.}}{92}{figure.6.51}
+\contentsline {figure}{\numberline {52}{\ignorespaces The number of constraints as a function of number of IR instruction.}}{94}{figure.6.52}
+\contentsline {figure}{\numberline {53}{\ignorespaces The number of iterations as a function of.}}{94}{figure.6.53}
+\contentsline {figure}{\numberline {54}{\ignorespaces The time to solve one iteration as a function of.}}{95}{figure.6.54}
+\contentsline {figure}{\numberline {55}{\ignorespaces Script size comparison between UCC-DA and GCC-DA.}}{97}{figure.6.55}
+\contentsline {figure}{\numberline {56}{\ignorespaces Worst-case stack size comparison between UCC-DA and GCC-DA.}}{98}{figure.6.56}
+\contentsline {figure}{\numberline {57}{\ignorespaces Tradeoff between the worst-case stack size and the instruction updates.}}{99}{figure.6.57}
+\contentsline {figure}{\numberline {58}{\ignorespaces Script size comparison between the integrated scheme and the baseline scheme.}}{101}{figure.6.58}
+\contentsline {figure}{\numberline {59}{\ignorespaces Script size comparison for real purpose updates.}}{102}{figure.6.59}
+\contentsline {figure}{\numberline {60}{\ignorespaces Script size comparison between ICSOA and CSOA ($Num_{addr\_reg} = 1$).}}{104}{figure.6.60}
+\contentsline {figure}{\numberline {61}{\ignorespaces Script size comparison ICGOA and CGOA($Num_{addr\_reg} = 2$).}}{105}{figure.6.61}
+\contentsline {figure}{\numberline {62}{\ignorespaces Code quality comparison between CSOA and ICSOA.}}{106}{figure.6.62}
+\contentsline {figure}{\numberline {63}{\ignorespaces Execution overhead breakdown.}}{106}{figure.6.63}
+\contentsline {figure}{\numberline {64}{\ignorespaces Code quality comparison between ICGOA and CGOA.}}{108}{figure.6.64}
+\contentsline {figure}{\numberline {65}{\ignorespaces The energy savings for DSP applications.}}{108}{figure.6.65}
+\contentsline {figure}{\numberline {66}{\ignorespaces Script size comparison (scattered random new code insertion).}}{110}{figure.6.66}
+\contentsline {figure}{\numberline {67}{\ignorespaces Code quality comparison (scattered random new code insertion).}}{111}{figure.6.67}
+\contentsline {figure}{\numberline {68}{\ignorespaces Script size comparison between CSOA and ICSOA ($Num_{addr\_reg} = 1$).}}{112}{figure.6.68}
+\contentsline {figure}{\numberline {69}{\ignorespaces Script size comparison between CGOA and ICGOA ($Num_{addr\_reg} = 2$).}}{113}{figure.6.69}
+\contentsline {figure}{\numberline {70}{\ignorespaces Code quality comparison between CSOA and ICSOA ($Num_{addr\_reg} = 1$).}}{114}{figure.6.70}
+\contentsline {figure}{\numberline {71}{\ignorespaces Message overhead.}}{115}{figure.6.71}
+\contentsline {figure}{\numberline {72}{\ignorespaces Dissemination time.}}{116}{figure.6.72}
+\contentsline {figure}{\numberline {73}{\ignorespaces Dissemination with different number of sources and requesters.}}{117}{figure.6.73}
+\contentsline {figure}{\numberline {74}{\ignorespaces Dissemination with uneven source/requester node distribution.}}{117}{figure.6.74}
+\contentsline {figure}{\numberline {75}{\ignorespaces Dissemination with different number of pages.}}{119}{figure.6.75}
+\contentsline {figure}{\numberline {76}{\ignorespaces Dissemination with Different Cache Sizes.}}{119}{figure.6.76}

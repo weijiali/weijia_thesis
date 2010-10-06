@@ -1,6 +1,6 @@
 \contentsline {chapter}{{\bfseries \numberline {1.0}INTRODUCTION}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Overview of this research}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Assumptions}{8}{section.1.2}
+\contentsline {section}{\numberline {1.2}Assumptions}{9}{section.1.2}
 \contentsline {section}{\numberline {1.3}Organization of this dissertation}{10}{section.1.3}
 \contentsline {chapter}{{\bfseries \numberline {2.0}BACKGROUND AND RELATED WORK}}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Software update in WSNs}{11}{section.2.1}
@@ -9,8 +9,8 @@
 \contentsline {subsection}{\numberline {2.2.2}Data allocation}{15}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Patch generator}{17}{section.2.3}
 \contentsline {section}{\numberline {2.4}Distribution protocol}{19}{section.2.4}
-\contentsline {chapter}{{\bfseries \numberline {3.0} UPDATE-CONSCIOUS COMPILATION (UCC) TECHNIQUES}}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}UCC for general purpose applications}{22}{section.3.1}
+\contentsline {chapter}{{\bfseries \numberline {3.0} UPDATE-CONSCIOUS COMPILER (UCC) TECHNIQUES}}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}UCC techniques for general purpose applications}{22}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}UCC data allocation (UCC-DA) for general purpose applications}{22}{subsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.1.1}Data allocation problem for general purpose applications}{23}{subsubsection.3.1.1.1}
 \contentsline {subsubsection}{\numberline {3.1.1.2}UCC data allocation for general purpose applications}{24}{subsubsection.3.1.1.2}
@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {3.1.3}Integration of UCC-DA and UCC-RA}{39}{subsection.3.1.3}
 \contentsline {subsubsection}{\numberline {3.1.3.1}ILP based integration}{39}{subsubsection.3.1.3.1}
 \contentsline {subsubsection}{\numberline {3.1.3.2}Heuristic based integration}{42}{subsubsection.3.1.3.2}
-\contentsline {section}{\numberline {3.2}UCC for DSP applications}{44}{section.3.2}
+\contentsline {section}{\numberline {3.2}UCC techniques for DSP applications}{44}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Data allocation problem for DSP applications}{45}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}UCC data allocation (UCC-DA) for DSP applications}{46}{subsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.2.1}Incremental coalescing single offset assignment (ICSOA)}{46}{subsubsection.3.2.2.1}
@@ -31,14 +31,14 @@
 \contentsline {subsection}{\numberline {4.1.1}Simple primitives}{53}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Advanced primitives}{55}{subsection.4.1.2}
 \contentsline {subsubsection}{\numberline {4.1.2.1}shift}{55}{subsubsection.4.1.2.1}
-\contentsline {subsubsection}{\numberline {4.1.2.2}clone}{56}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.2}clone}{57}{subsubsection.4.1.2.2}
 \contentsline {subsubsection}{\numberline {4.1.2.3}insert\_access}{58}{subsubsection.4.1.2.3}
-\contentsline {subsection}{\numberline {4.1.3}Sensor-side interpretation for functional primitives}{60}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.3}Sensor-side interpretation for functional primitives}{61}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Data based patching}{64}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Data update primitives}{64}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}Data update primitives}{65}{subsection.4.2.1}
 \contentsline {subsubsection}{\numberline {4.2.1.1}copy\_slot}{65}{subsubsection.4.2.1.1}
-\contentsline {subsubsection}{\numberline {4.2.1.2}insert\_var}{65}{subsubsection.4.2.1.2}
-\contentsline {subsubsection}{\numberline {4.2.1.3}shift\_slot}{65}{subsubsection.4.2.1.3}
+\contentsline {subsubsection}{\numberline {4.2.1.2}insert\_var}{66}{subsubsection.4.2.1.2}
+\contentsline {subsubsection}{\numberline {4.2.1.3}shift\_slot}{66}{subsubsection.4.2.1.3}
 \contentsline {subsection}{\numberline {4.2.2}Sensor-side primitive interpretation}{66}{subsection.4.2.2}
 \contentsline {subsubsection}{\numberline {4.2.2.1}Auxiliary data structures}{67}{subsubsection.4.2.2.1}
 \contentsline {chapter}{{\bfseries \numberline {5.0}DISTRIBUTION PROTOCOL}}{71}{chapter.5}
@@ -50,52 +50,49 @@
 \contentsline {subsection}{\numberline {5.2.4}Request multicasting}{76}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Caching}{78}{subsection.5.2.5}
 \contentsline {section}{\numberline {5.3}Simultaneous code dissemination}{78}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Protocol augmentation}{80}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Simultaneous requesting both types of packets}{81}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Adaptive memory management}{82}{section.5.4}
-\contentsline {chapter}{{\bfseries \numberline {6.0}EXPERIMENTAL RESULTS}}{84}{chapter.6}
-\contentsline {section}{\numberline {6.1}Benchmarks}{84}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Update levels}{85}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Real update benchmarks (real-benches)}{85}{subsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.2.1}General purpose application update benchmark}{85}{subsubsection.6.1.2.1}
-\contentsline {subsubsection}{\numberline {6.1.2.2}DSP application update benchmark}{87}{subsubsection.6.1.2.2}
-\contentsline {subsection}{\numberline {6.1.3}Manually generated update benchmarks (man-benches)}{87}{subsection.6.1.3}
-\contentsline {subsubsection}{\numberline {6.1.3.1}General purpose application update benchmark}{87}{subsubsection.6.1.3.1}
-\contentsline {subsubsection}{\numberline {6.1.3.2}DSP application update benchmark}{88}{subsubsection.6.1.3.2}
-\contentsline {subsection}{\numberline {6.1.4}Automatically generated update benchmarks (auto-benches)}{88}{subsection.6.1.4}
-\contentsline {subsubsection}{\numberline {6.1.4.1}General purpose application update benchmark}{88}{subsubsection.6.1.4.1}
-\contentsline {subsubsection}{\numberline {6.1.4.2}DSP application update benchmark}{90}{subsubsection.6.1.4.2}
-\contentsline {subsubsection}{\numberline {6.1.4.3}Methodology used to generate the auto-benches}{90}{subsubsection.6.1.4.3}
-\contentsline {section}{\numberline {6.2}Pre-dissemination performance evaluation}{91}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}General purpose software update using UCC-RA}{91}{subsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.1.1}Settings}{92}{subsubsection.6.2.1.1}
-\contentsline {subsubsection}{\numberline {6.2.1.2}The generate script size}{92}{subsubsection.6.2.1.2}
-\contentsline {subsubsection}{\numberline {6.2.1.3}The generated code quality}{94}{subsubsection.6.2.1.3}
-\contentsline {subsubsection}{\numberline {6.2.1.4}The energy savings}{95}{subsubsection.6.2.1.4}
-\contentsline {subsubsection}{\numberline {6.2.1.5}The problem complexity and compilation time}{97}{subsubsection.6.2.1.5}
-\contentsline {subsection}{\numberline {6.2.2}General purpose software update using UCC-DA}{99}{subsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.2.1}Settings}{100}{subsubsection.6.2.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2.2}The generated script size}{101}{subsubsection.6.2.2.2}
-\contentsline {subsubsection}{\numberline {6.2.2.3}The wasted memory space}{102}{subsubsection.6.2.2.3}
-\contentsline {subsubsection}{\numberline {6.2.2.4}Tradeoff between wasted space and binary differences }{103}{subsubsection.6.2.2.4}
-\contentsline {subsection}{\numberline {6.2.3}General purpose software update using the integrated scheme}{104}{subsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.3.1}Performance evaluation using man-benches}{104}{subsubsection.6.2.3.1}
-\contentsline {subsubsection}{\numberline {6.2.3.2}Performance evaluation using real-benches}{105}{subsubsection.6.2.3.2}
-\contentsline {subsection}{\numberline {6.2.4}DSP software update pre-dissemination}{107}{subsection.6.2.4}
-\contentsline {subsubsection}{\numberline {6.2.4.1}Settings}{107}{subsubsection.6.2.4.1}
-\contentsline {subsubsection}{\numberline {6.2.4.2}Performance evaluation using man-benches}{107}{subsubsection.6.2.4.2}
-\contentsline {subsubsection}{\numberline {6.2.4.3}Performance evaluation using auto-benches}{113}{subsubsection.6.2.4.3}
-\contentsline {subsubsection}{\numberline {6.2.4.4}Performance evaluation using real-benches}{115}{subsubsection.6.2.4.4}
-\contentsline {section}{\numberline {6.3}Patch dissemination performance evaluation}{118}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Settings}{118}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Message overhead}{119}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Completion time}{120}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Sensitivity to node distribution}{120}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}Sensitivity to application sizes}{122}{subsection.6.3.5}
-\contentsline {subsection}{\numberline {6.3.6}Sensitivity to cache sizes}{122}{subsection.6.3.6}
-\contentsline {chapter}{{\bfseries \numberline {7.0}FUTURE DIRECTIONS AND CONCLUSION }}{124}{chapter.7}
-\contentsline {section}{\numberline {7.1}Future work}{124}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Apply to different platforms}{124}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Approach other update-conscious compilation schemes}{125}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Conclusion}{126}{section.7.2}
-\contentsline {chapter}{{\bfseries \bibname }}{128}{section*.1}
+\contentsline {chapter}{{\bfseries \numberline {6.0}EXPERIMENTAL RESULTS}}{80}{chapter.6}
+\contentsline {section}{\numberline {6.1}Benchmarks}{80}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Update levels}{81}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Real update benchmarks (real-benches)}{81}{subsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.2.1}General purpose application update benchmark}{81}{subsubsection.6.1.2.1}
+\contentsline {subsubsection}{\numberline {6.1.2.2}DSP application update benchmark}{83}{subsubsection.6.1.2.2}
+\contentsline {subsection}{\numberline {6.1.3}Manually generated update benchmarks (man-benches)}{83}{subsection.6.1.3}
+\contentsline {subsubsection}{\numberline {6.1.3.1}General purpose application update benchmark}{83}{subsubsection.6.1.3.1}
+\contentsline {subsubsection}{\numberline {6.1.3.2}DSP application update benchmark}{84}{subsubsection.6.1.3.2}
+\contentsline {subsection}{\numberline {6.1.4}Automatically generated update benchmarks (auto-benches)}{84}{subsection.6.1.4}
+\contentsline {subsubsection}{\numberline {6.1.4.1}General purpose application update benchmark}{84}{subsubsection.6.1.4.1}
+\contentsline {subsubsection}{\numberline {6.1.4.2}DSP application update benchmark}{86}{subsubsection.6.1.4.2}
+\contentsline {subsubsection}{\numberline {6.1.4.3}Methodology used to generate the auto-benches}{86}{subsubsection.6.1.4.3}
+\contentsline {section}{\numberline {6.2}Pre-dissemination performance evaluation}{87}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}General purpose software update using UCC-RA}{87}{subsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.1.1}Settings}{88}{subsubsection.6.2.1.1}
+\contentsline {subsubsection}{\numberline {6.2.1.2}The generate script size}{88}{subsubsection.6.2.1.2}
+\contentsline {subsubsection}{\numberline {6.2.1.3}The generated code quality}{90}{subsubsection.6.2.1.3}
+\contentsline {subsubsection}{\numberline {6.2.1.4}The energy savings}{91}{subsubsection.6.2.1.4}
+\contentsline {subsubsection}{\numberline {6.2.1.5}The problem complexity and compilation time}{93}{subsubsection.6.2.1.5}
+\contentsline {subsection}{\numberline {6.2.2}General purpose software update using UCC-DA}{95}{subsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2.1}Settings}{96}{subsubsection.6.2.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2.2}The generated script size}{97}{subsubsection.6.2.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2.3}The wasted memory space}{98}{subsubsection.6.2.2.3}
+\contentsline {subsubsection}{\numberline {6.2.2.4}Tradeoff between wasted space and binary differences }{99}{subsubsection.6.2.2.4}
+\contentsline {subsection}{\numberline {6.2.3}General purpose software update using the integrated scheme}{100}{subsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.3.1}Performance evaluation using man-benches}{100}{subsubsection.6.2.3.1}
+\contentsline {subsubsection}{\numberline {6.2.3.2}Performance evaluation using real-benches}{101}{subsubsection.6.2.3.2}
+\contentsline {subsection}{\numberline {6.2.4}DSP software update pre-dissemination}{103}{subsection.6.2.4}
+\contentsline {subsubsection}{\numberline {6.2.4.1}Settings}{103}{subsubsection.6.2.4.1}
+\contentsline {subsubsection}{\numberline {6.2.4.2}Performance evaluation using man-benches}{103}{subsubsection.6.2.4.2}
+\contentsline {subsubsection}{\numberline {6.2.4.3}Performance evaluation using auto-benches}{109}{subsubsection.6.2.4.3}
+\contentsline {subsubsection}{\numberline {6.2.4.4}Performance evaluation using real-benches}{111}{subsubsection.6.2.4.4}
+\contentsline {section}{\numberline {6.3}Patch dissemination performance evaluation}{114}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Settings}{114}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Message overhead}{115}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Completion time}{116}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Sensitivity to node distribution}{118}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Sensitivity to application sizes}{118}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}Sensitivity to cache sizes}{118}{subsection.6.3.6}
+\contentsline {chapter}{{\bfseries \numberline {7.0}FUTURE DIRECTIONS AND CONCLUSION }}{121}{chapter.7}
+\contentsline {section}{\numberline {7.1}Future work}{121}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Apply to different platforms}{121}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Approach other update-conscious compilation schemes}{122}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Conclusion}{123}{section.7.2}
+\contentsline {chapter}{{\bfseries \bibname }}{125}{section*.1}

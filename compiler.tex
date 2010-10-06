@@ -1,7 +1,10 @@
-\chapter{ Update-conscious compilation (UCC) techniques}
+\chapter{ Update-conscious compiler (UCC) techniques}
 
 The conventional compilation takes the following steps to generate binary code from the source code, as depicted in
-Figure~\ref{fover.sink}. First, the compiler converts the source code $S$ into an intermediate representation $ir$. Next, the compiler optimizes the $ir$ for several iterations, and produces the optimized intermediate representation $IR$. Finally, the code generation stage uses $IR$ to generate the binary code $E$ by applying data allocation, code placement, register allocation, etc.
+Figure~\ref{fover.sink}. First, the compiler converts the source code $S$ into an intermediate representation $ir$. 
+Next, the compiler optimizes the $ir$ for several iterations, and produces the optimized intermediate representation 
+$IR$. Finally, the code generation stage uses $IR$ to generate the binary code $E$ by applying data allocation, code 
+placement, register allocation, etc.
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=1]{figures/com_sink.eps}
@@ -9,12 +12,19 @@ Figure~\ref{fover.sink}. First, the compiler converts the source code $S$ into a
 \label{fover.sink}
 \end{figure}
 
-The proposed UCC schemes are performed at the code generation stage, i.e. from $IR$ to $E$. This helps to preserve the performance improvements from the optimization passes. 
-Three update-conscious schemes are proposed for register allocation and data allocation phase in the code generation stage. For clarity, I assume that the optimization passes are {\it independent} from these two phases, and other optimizations will be investigated in the future work.
+The proposed UCC schemes are performed at the code generation stage, i.e. from $IR$ to $E$. This helps to preserve the 
+performance improvements from the optimization passes. 
+Three update-conscious schemes are proposed for register allocation and data allocation phase in the code generation 
+stage. For clarity, I assume that the optimization passes are {\it independent} from these two phases, and other 
+optimizations will be investigated in the future work.
 
-When $S$ is updated to $S'$ (Figure~\ref{fover.sink}), $ir$ and $IR$ are also updated to $ir'$ and $IR'$ respectively. Let $\Delta$ represent the differences between the $IR'$ and its previous version $IR$. With $\Delta$, the compiler can analyze and decide how to generate the binary $E'$ such that its difference from $E$, denoted as $U$, is small.
+When $S$ is updated to $S'$ (Figure~\ref{fover.sink}), $ir$ and $IR$ are also updated to $ir'$ and $IR'$ respectively. 
+Let $\Delta$ represent the differences between the $IR'$ and its previous version $IR$. With $\Delta$, the compiler can 
+analyze and decide how to generate the binary $E'$ such that its difference from $E$, denoted as $U$, is small.
 
-The binary difference $U$ will then be transmitted over the network to the sensors. When the sensors receive the complete $U$, it will construct the target executable $E'$ by combining $U$ with old version executable {E}. This demonstrated in Figure~\ref{fover.sensor}.
+The binary difference $U$ will then be transmitted over the network to the sensors. When the sensors receive the 
+complete $U$, it will construct the target executable $E'$ by combining $U$ with old version executable {E}. This 
+demonstrated in Figure~\ref{fover.sensor}.
 
 \begin{figure}[htp]
 \centering
@@ -23,9 +33,9 @@ The binary difference $U$ will then be transmitted over the network to the senso
 \label{fover.sensor}
 \end{figure}
 
-\section{UCC for general purpose applications}
+\section{UCC techniques for general purpose applications}
 
-In this section, I will discuss about the update-conscious compilation (UCC) schemes for general purpose applications.
+In this section, I will discuss about the update-conscious compiler (UCC) techniques for general purpose applications.
 The UCC schemes for general purpose applications include the register allocation scheme, data allocation and
 the integrated scheme that combines both register allocation and data allocation.
 The goal is to generate the new binary image as similar as the old binary image as possible with the minimal
@@ -37,7 +47,7 @@ run-time performance loss. I will discuss the detailed algorithms in this sectio
 The binary instructions can be updated due to data allocation result changes.
 For example, the load/store instructions that access a variable whose memory address is changed,
 need to be updated.
-Thus, one task of UCC is to improve the data allocation similarity.
+Thus, one task of a UCC is to improve the data allocation similarity.
 
 
 \subsubsection{Data allocation problem for general purpose applications}
@@ -59,7 +69,8 @@ original code (Figure~\ref{fdata.0}(a)), three variables {\it a, b},
 and {\it c} are allocated with offset 0, 2, and 4 respectively, to a
 base address. Assume the code is updated by replacing variable {\it a}
 with a constant, and introducing a new variable {\it d}. The existing
-compiler may generate the data allocation scheme as shown in Figure~\ref{fdata.0}(b), in which all variables are assigned with new
+compiler may generate the data allocation scheme as shown in Figure~\ref{fdata.0}(b), in which all variables are 
+assigned with new
 offsets, resulting in three updated instructions. However, an update-conscious algorithm should put the new
 variable {\it d} in {\it a}'s old location, as shown in
 Figure~\ref{fdata.0}(c), resulting in only one updated instruction. 
@@ -187,7 +198,9 @@ $Usage_i(a)$ & the usage of variable {\it a} in $P_i$.
 
 Second, it gradually allocates new variables within each procedure
 $P_i$ as shown in Algorithm~\ref{alg-data} line 6$\sim$13. 
-Instead of removing the deleted variables directly, it only marks them as deleted variables so that their space can be reused by new variables. If $NumOfNewV_i$ is larger than or equal to $NumOfDelV_i$, it reuses all the space from the deleted variables and allocate extra space to satisfy the remaining new variables. 
+Instead of removing the deleted variables directly, it only marks them as deleted variables so that their space can be 
+reused by new variables. If $NumOfNewV_i$ is larger than or equal to $NumOfDelV_i$, it reuses all the space from the 
+deleted variables and allocate extra space to satisfy the remaining new variables. 
 If $NumOfNewV_i$ is smaller than $NumOfDelV_i$, i.e., new variables
 cannot reuse all space of the deleted ones, then it computes the number of words left to be filled
 using the following formular:
@@ -290,7 +303,7 @@ instruction updates.
 Besides the data allocation results, the register allocation results can also 
 affect the similarity between generated binary images.
 Instructions need to be updated if the assigned registers are changed.
-Thus, another task of UCC is to produce similar register assignment
+Thus, another task of a UCC is to produce similar register assignment
 when generating the new binary.
 
 \subsubsection{Register allocation problem for general purpose applications} 
@@ -309,7 +322,8 @@ all the uses in subsequent statements in the statement range \{5,15\}.
 In contrast, an alternative {\em update-conscious} decision may
 allocate {\it b} to {\it R2} only for the range \{5,11\} where {\it
 R1} is not free, and match the old allocation for the range \{12, 15\}
-with one extra {\it mov} instruction, as shown in Figure~\ref{freg0}(c). By comparing these two solutions, it is clear that
+with one extra {\it mov} instruction, as shown in Figure~\ref{freg0}(c). By comparing these two solutions, it is clear 
+that
 while the solution (b) achieves better code quality, the solution (c)
 results in less update cost. The discrepancy in energy consumption
 between data transmission and instruction execution makes the solution
@@ -319,7 +333,8 @@ frequently executed, or the update is extremely rare.
 \begin{figure}
 \centering
 \includegraphics[scale=1.2]{figures/freg.0.eps}
-\caption[An example of register allocation for general purpose applications.]{An example of register allocation for general purpose applications.
+\caption[An example of register allocation for general purpose applications.]{An example of register allocation for 
+general purpose applications.
 (a). Variable {\it a} and {\it b} are assigned with register {\it R1};
 (b). The live ranges of {\it a} and {\it b} overlap with each other after the code update;
 (c). Split {\it b}'s live range and assign a new register to it.}
@@ -330,22 +345,45 @@ frequently executed, or the update is extremely rare.
 \subsubsection{UCC register allocation for general purpose applications}\label{secra}
 %
 
-The basic idea of UCC register allocation (UCC-RA)~\cite{ucc} is to retain mostly the old register assignments and perform new register allocations to the changed and new instructions {\em with preferences to the decisions for the given binary}. 
+The basic idea of UCC register allocation (UCC-RA)~\cite{ucc} is to retain mostly the old register assignments and 
+perform new register allocations to the changed and new instructions {\em with preferences to the decisions for the 
+given binary}. 
 
-To achieve this, IR instructions are first identified as ``changed'' or ``non-changed'', and then successive instructions of the same type are grouped into chunks. The register allocator then allocates registers for each chunk.
-Decisions for ``changed'' chunks are made by UCC-RA, while decisions for ``unchanged'' chunks are taken from the old code before the update. For the variables whose live ranges span across the chunk boundary, the register allocation consistency is checked at the end. Inter-register movement instructions may be added to ensure the the semantic correctness.
+To achieve this, IR instructions are first identified as ``changed'' or ``non-changed'', and then successive 
+instructions of the same type are grouped into chunks. The register allocator then allocates registers for each chunk.
+Decisions for ``changed'' chunks are made by UCC-RA, while decisions for ``unchanged'' chunks are taken from the old 
+code before the update. For the variables whose live ranges span across the chunk boundary, the register allocation 
+consistency is checked at the end. Inter-register movement instructions may be added to ensure the the semantic 
+correctness.
 
-While doing UCC-RA, each variable in the input chunk is tagged with the register name that was assigned in the old binary. This tag is called {\em preferred-register tag}. The {\em preferred-register tag} is a hint to improving code similarity in UCC-RA.
+While doing UCC-RA, each variable in the input chunk is tagged with the register name that was assigned in the old 
+binary. This tag is called {\em preferred-register tag}. The {\em preferred-register tag} is a hint to improving code 
+similarity in UCC-RA.
 
-The register allocator then allocates registers for each changed chunk, and gradually matches the register assignment, or allocation decisions from both changed and non-changed chunks for semantic correctness. Decisions for changed chunks are made by our UCC-RA while decisions for unchanged chunks are taken from the old code before the update. The two decisions are made conjointly. If a variable's live range spans across the chunk boundary, from ``changed'' to ``non-changed'' or vice versa, then the assignment in the ``changed'' chunk gives {\em preference} to the assignment in the ``non-changed'' chunk to maximize the similarity. However, this preference may not always be adopted by the allocator. If the allocator decides to use a new register in the ``changed'' chunk, then a {\it mov} instruction between the two chunks should be inserted to move data between the new and the old registers. Register preference should also be given to the same variables on different control flow paths (they might be of different chunk types). However, if the allocator chooses a different register, then a {\it mov} instruction is also necessary.
+The register allocator then allocates registers for each changed chunk, and gradually matches the register assignment, 
+or allocation decisions from both changed and non-changed chunks for semantic correctness. Decisions for changed chunks 
+are made by our UCC-RA while decisions for unchanged chunks are taken from the old code before the update. The two 
+decisions are made conjointly. If a variable's live range spans across the chunk boundary, from ``changed'' to 
+``non-changed'' or vice versa, then the assignment in the ``changed'' chunk gives {\em preference} to the assignment in 
+the ``non-changed'' chunk to maximize the similarity. However, this preference may not always be adopted by the 
+allocator. If the allocator decides to use a new register in the ``changed'' chunk, then a {\it mov} instruction 
+between the two chunks should be inserted to move data between the new and the old registers. Register preference 
+should also be given to the same variables on different control flow paths (they might be of different chunk types). 
+However, if the allocator chooses a different register, then a {\it mov} instruction is also necessary.
 
-Clearly, placing too many inter-register movement instructions requires not only transmitting more update data to remote sensors but also executing more instructions at runtime. Therefore, it is desirable to develop a precise cost-benefit model such that an inter-register movement instruction is inserted only if it is estimated to be energy-efficient.
+Clearly, placing too many inter-register movement instructions requires not only transmitting more update data to 
+remote sensors but also executing more instructions at runtime. Therefore, it is desirable to develop a precise 
+cost-benefit model such that an inter-register movement instruction is inserted only if it is estimated to be 
+energy-efficient.
 
 \paragraph{Formalizing the UCC register allocation}
-Motivated by the 0/1 integer linear programming research for register allocation \cite{related:ilp}, the UCC-RA problem can be formulated as a non-linear integer programming problem. The general idea of how to select the decision variables, formulate the constraints and the objective function is addressed the below. 
+Motivated by the 0/1 integer linear programming research for register allocation \cite{related:ilp}, the UCC-RA problem 
+can be formulated as a non-linear integer programming problem. The general idea of how to select the decision 
+variables, formulate the constraints and the objective function is addressed the below. 
 
 \textbf{The decision variables.} 
-I use a set of decision variables that represent the register assignments we need to make at each program point. The decision variable is defined as~\ref{decision_vars}. 
+I use a set of decision variables that represent the register assignments we need to make at each program point. The 
+decision variable is defined as~\ref{decision_vars}. 
 
 \begin{small}
 \begin{eqnarray}
@@ -366,11 +404,17 @@ $s$ & statement; \\
 \end{small}
 
 The decision variables $X_{op.v.s}^{Ri}$ can be 0 or 1.
-With the value assigned to be 1, it means that register {\it Ri} is assigned to variable {\it v} at statement {\it s} for operation {\it op}, and 0 otherwise. For example, when decision variable $X_{def.v.s}^{Ri}$ is set to 1, it means that the variable {\it v} is defined at statement {\it s}, and  register {\it Ri} is assigned to hold the value of variable {\it v}. 
+With the value assigned to be 1, it means that register {\it Ri} is assigned to variable {\it v} at statement {\it s} 
+for operation {\it op}, and 0 otherwise. For example, when decision variable $X_{def.v.s}^{Ri}$ is set to 1, it means 
+that the variable {\it v} is defined at statement {\it s}, and  register {\it Ri} is assigned to hold the value of 
+variable {\it v}. 
 In the example shown in Figure~\ref{freg0}(b) statement (1), the decision variable that is used to determine whether
 to allocate variable {\it a} in {\it R1} can be written as $X_{def.a.1}^{R1}$.
 \textbf{The objective function.}
-Let us use a simple example in Figure \ref{freg0} to explain the proposed procedure. The code contains several instructions: the first two are the definitions of variable {\it a} and {\it b} respectively, while the third one uses both variables. Let us assume at statement (6), {\it a} is dead but {\it b} is still alive, and the preferred-registers of {\it a} and {\it b} are {\it R1} and {\it R2} respectively.
+Let us use a simple example in Figure \ref{freg0} to explain the proposed procedure. The code contains several 
+instructions: the first two are the definitions of variable {\it a} and {\it b} respectively, while the third one uses 
+both variables. Let us assume at statement (6), {\it a} is dead but {\it b} is still alive, and the preferred-registers 
+of {\it a} and {\it b} are {\it R1} and {\it R2} respectively.
 
 \begin{figure}[htbp]
 \begin{tabular}{c|p{5.0in}} 
@@ -524,7 +568,8 @@ have one of the following two constraints:
 
 \begin{small}
 \begin{eqnarray}
-X_{use.a.s}^{Ri} + X_{useCont.a.s}^{Ri} \leq X_{cont.a.{\bf(s-1)}}^{Ri} + X_{ld.a.s}^{Ri} + X_{mov.in.a.s}^{Ri} \nonumber 
+X_{use.a.s}^{Ri} + X_{useCont.a.s}^{Ri} \leq X_{cont.a.{\bf(s-1)}}^{Ri} + X_{ld.a.s}^{Ri} + X_{mov.in.a.s}^{Ri} 
+\nonumber 
 \end{eqnarray}
 \end{small}
 \vspace{-0.1in}
@@ -554,7 +599,8 @@ at instruction {\it s}.
 U_{a.s} = \left\{\begin{array}{r@{\quad:\quad}l} 
 X_{def.a.s}^{Ri} & \mbox{if {\it a} is defined at {\it s}} \\ 
 X_{use.a.s}^{Ri} + X_{useCont.a.s}^{Ri} & \mbox{if {\it a} is used at {\it s}} \\
-X_{lastUse.a.s}^{Ri} & \mbox{if {\it a} is used at {\it s} and no longer used in the later instructions}\end{array}\right. 
+X_{lastUse.a.s}^{Ri} & \mbox{if {\it a} is used at {\it s} and no longer used in the later 
+instructions}\end{array}\right. 
 \end{eqnarray}
 \end{small}
 
@@ -656,7 +702,8 @@ E_{changed\_IR} &= &\sum_{\forall s} (freq(s) \times E_{exe}) +
 \sum_{\forall s}(E_{trans})  \label{cE}\\
 %
 E_{unchanged\_IR} &= & \sum_{\forall s} (freq(s) \times E_{exe}) + \nonumber\\ 
-									&  & \sum_{\forall s}(1-\prod_{\forall a}{X_{def/use.a.s}^{prefer(a,s)}}) \times 					E_{trans} \label{uE}\\
+									&  & \sum_{\forall s}(1-\prod_{\forall 
+a}{X_{def/use.a.s}^{prefer(a,s)}}) \times 					E_{trans} \label{uE}\\
 %
 E_{spill} &=& \sum_{\forall s, a, Ri}
 (freq(s) \times (X_{st.a.s}^{Ri}+X_{ld.a.s}^{Ri}) \times E_{exe}) + \nonumber\\
@@ -798,7 +845,7 @@ update script as well.
 
 \subsection{Integration of UCC-DA and UCC-RA}\label{integration}
 
-When constructing the objective function of the update-conscious register allocation scheme (UCC-RA),
+When constructing the objective function of the UCC register allocation scheme (UCC-RA),
 the changed and unchanged IR statements are treated differently.
 For the changed IR statements, the code update cannot be avoided, thus, using UCC-RA scheme cannot
 gain any benefit for this type of statements. On the other hand, for the unchanged IR statements, 
@@ -897,9 +944,11 @@ The energy consumption of the inserted {\it mov} instructions is formulated as $
 Because the data allocation result will only affect the transmission energy consumption of the load/store
 instructions, only $E_{spill}$ needs to be reformulated.
 
-In the old formular, there were two factors that determine whether the corresponding load/store instruction needs transmission energy
+In the old formular, there were two factors that determine whether the corresponding load/store instruction needs 
+transmission energy
 to update the instruction:
-whether there was a spill here in the old binary ($spill(a,Ri,s)$), and how the variables are allocated in the registers($X_{ld.a.s}^{Ri}$ and $X_{st.a.s}^{Ri}$).
+whether there was a spill here in the old binary ($spill(a,Ri,s)$), and how the variables are allocated in the 
+registers($X_{ld.a.s}^{Ri}$ and $X_{st.a.s}^{Ri}$).
 For the instructions that did not have the register spill in the old binary, the code
 update is required, because this load/store instruction is a newly inserted instruction.
 Otherwise, the energy consumpiton depends on whether the register allocation results
@@ -974,7 +1023,8 @@ affect the complexity of the ILP problem, because no more decision variables wil
 The detailed algorithm is described as below.
 
 Instead of solving both data allocation and register allocation problems simultaneously, 
-the compiler will solve them one after another in sequential order. It does UCC-DA first and find out the variables whose 
+the compiler will solve them one after another in sequential order. It does UCC-DA first and find out the variables 
+whose 
 memory addresses are to be changed. This information is then passed to UCC-RA. The memory access statements that
 access these variables will be considered as changed IRs instead of unchanged IRs.
 
@@ -992,10 +1042,13 @@ from the old version.
 \end{figure}
 
 I introduce another notation $datachg(s)$ shown in Figure ~\ref{notation2} to describe whether the unchanged IR
-statement needs update because of data allocation result changes. After the UCC-DA is done, the compiler marks the variables whose memory location are changed. Then, the $datachg(s)$ parameters of those memory access statements that accesses any of these variables will be marked as ``1''. Otherwise, they will be marked as ``0''.
+statement needs update because of data allocation result changes. After the UCC-DA is done, the compiler marks the 
+variables whose memory location are changed. Then, the $datachg(s)$ parameters of those memory access statements that 
+accesses any of these variables will be marked as ``1''. Otherwise, they will be marked as ``0''.
 
 
-The objective function needs to be changed as shown in Figure~\ref{newObj}. When both $chg(s)$ and $datachg(s)$ are set to ``0'' , the IR statement is treated as an unchanged statement.
+The objective function needs to be changed as shown in Figure~\ref{newObj}. When both $chg(s)$ and $datachg(s)$ are set 
+to ``0'' , the IR statement is treated as an unchanged statement.
 \begin{figure*}[ht]
 \begin{small}
 \begin{eqnarray}
@@ -1019,7 +1072,8 @@ For example, assume that we have two data reallocation options. Reallocating var
 {\it a} and {\it b} gives the equal amount memory space usage, but variable {\it a}
 is more frequently used than {\it b}. The UCC-DA is more likely to reallocate variable
 {\it b} instead of {\it a}, because this decision will cause less code updates.
-However, if later the UCC-RA decides to assign another register for {\it a}, then these {\it a} related instructions still 
+However, if later the UCC-RA decides to assign another register for {\it a}, then these {\it a} related instructions 
+still 
 have to be updated. It is more energy efficient to reallocate variable {\it a} instead
 of {\it b} while doing UCC-DA.
 
@@ -1027,18 +1081,25 @@ For this type of cases, the ILP based solution can produce a near-optimal soluti
 because it solves the UCC-RA and UCC-DA problems at the same time. However, it will
 take longer time. This is the tradeoff between the two proposed algorithms.
 
-\section{UCC for DSP applications}
+\section{UCC techniques for DSP applications}
 
-As discussed in Chapter~\ref{chap:related}, with the address generation unit (AGU), DSP instruction set supports the post-incremental, post-decremental, and pre-decremental instructions,  where address calculated can be in parallel with the other operations,
+As discussed in Chapter~\ref{chap:related}, with the address generation unit (AGU), DSP instruction set supports the 
+post-incremental, post-decremental, and pre-decremental instructions,  where address calculated can be in parallel with 
+the other operations,
 if the next memory location to be accessed is within the auto modify range of the previous access.
 Thus, no extra address calculation instruction is needed for these cases.
-An optimal data allocation algorithm is desired to allocate the variables accessed sequentially in adjacent memory slots. So that, less instructions are needed to explicitly update the address registers, which will reduce the code size and execution overhead.
+An optimal data allocation algorithm is desired to allocate the variables accessed sequentially in adjacent memory 
+slots. So that, less instructions are needed to explicitly update the address registers, which will reduce the code 
+size and execution overhead.
 
-Because of such connection between the data allocation and code generation in DSP applications, keeping data allocation similar as the older version will keep the addressing modes similar as the old version,
-therefore the generated binary image. Thus, an update-conscious data allocation scheme is desired for DSP application updates.
+Because of such connection between the data allocation and code generation in DSP applications, keeping data allocation 
+similar as the older version will keep the addressing modes similar as the old version,
+therefore the generated binary image. Thus, an update-conscious data allocation scheme is desired for DSP application 
+updates.
 
 Besides that, how to assign address registers to the variables can also affect the generated binary similarity.
-Keeping the address register allocation result similar as the old version also improves the generated binary similarity, which reduces the patch size.
+Keeping the address register allocation result similar as the old version also improves the generated binary 
+similarity, which reduces the patch size.
 
 \begin{figure}[ht]
 \begin{center}
@@ -1055,31 +1116,45 @@ Keeping the address register allocation result similar as the old version also i
 
 \subsection{Data allocation problem for DSP applications}
 
-An motivation of the proposed UCC data allocation (UCC-DA) scheme is shown in  Figure~\ref{csoa}. When a DSP application undergoes a small update, the code before and after the change are similar. Update oblivious schemes generate the new memory layout and its corresponding binary code without considering the similarity between different versions. 
+An motivation of the proposed UCC data allocation (UCC-DA) scheme is shown in  Figure~\ref{csoa}. When a DSP 
+application undergoes a small update, the code before and after the change are similar. Update oblivious schemes 
+generate the new memory layout and its corresponding binary code without considering the similarity between different 
+versions. 
 
-However, an UCC-DA algorithm reads in the old access graph and its interfere graph, and strives to generate a new memory layout that minimizes the update script, i.e. the difference between the new and old binaries. A sensor node only needs to download the update script and regenerates the new binary and/or the new memory layout (Figure~\ref{ioverview}) with simple interpretation.
+However, an UCC-DA algorithm reads in the old access graph and its interfere graph, and strives to generate a new 
+memory layout that minimizes the update script, i.e. the difference between the new and old binaries. A sensor node 
+only needs to download the update script and regenerates the new binary and/or the new memory layout 
+(Figure~\ref{ioverview}) with simple interpretation.
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[scale=0.5]{figures/updcsoa.eps}
-\caption[An example for the need of UCC data allocation for DSP applications.]{A motivational example for the need of UCC data allocation for DSP applications.
+\caption[An example for the need of UCC data allocation for DSP applications.]{A motivational example for the need of 
+UCC data allocation for DSP applications.
 (a) The C code after a simple update over Figure~\ref{csoa};
 (b) The new interference graph;
 (c) The new access graph;
-(d) The new data allocation using CSOA, showing significantly different layout from the original assignment shown in Figure~\ref{csoa}(d).}
+(d) The new data allocation using CSOA, showing significantly different layout from the original assignment shown in 
+Figure~\ref{csoa}(d).}
 \label{updcsoa}
 \end{center}
 \vspace{-10mm}
 \end{figure}
-Figure~\ref{updcsoa} illustrates the data allocation result of the example shown in Figure \ref{csoa} using an UCC-DA algorithm.
-Figure~\ref{updcsoa}(a) shows the new code after a simple change of the above example, i.e. the third instruction is changed (in the box). Using the new access graph and interference graphs CSOA generates a very different variable coalescing result (Figure~\ref{updcsoa}(d)). The memory layout difference further translates to selecting different addressing instructions at each memory access (Figure~\ref{recomdiff}). Out of seven instructions to be updated in the old code, four of them are due to the data allocation change.
+Figure~\ref{updcsoa} illustrates the data allocation result of the example shown in Figure \ref{csoa} using an UCC-DA 
+algorithm.
+Figure~\ref{updcsoa}(a) shows the new code after a simple change of the above example, i.e. the third instruction is 
+changed (in the box). Using the new access graph and interference graphs CSOA generates a very different variable 
+coalescing result (Figure~\ref{updcsoa}(d)). The memory layout difference further translates to selecting different 
+addressing instructions at each memory access (Figure~\ref{recomdiff}). Out of seven instructions to be updated in the 
+old code, four of them are due to the data allocation change.
 
 \begin{figure}[htbp]
 \begin{small}
 \begin{center}
 \begin{tabular}{|c|c||l||l|l||l|l|} \hline\hline
 %    &    & \multicolumn{3}{c|}{Addressing Mode} &  \multicolumn{2}{c|}{Code Update}\\ \cline{3-7}
-    & Access   & Original      & \multicolumn{2}{l||}{Update-Oblivious} & \multicolumn{2}{l|}{Update-Conscious} \\ \cline{4-7}
+    & Access   & Original      & \multicolumn{2}{l||}{Update-Oblivious} & \multicolumn{2}{l|}{Update-Conscious} \\ 
+\cline{4-7}
     & sequence & code         & code        & update & code         & update \\ \hline \hline
  0  & a        & ~~$\bullet$++  & ~~$\bullet$   & diff**   & ~~$\bullet$++  &        \\ 
  1  & b        & ~~$\bullet$    & ~~$\bullet$   &        & ~~$\bullet$    &        \\
@@ -1125,7 +1200,12 @@ by keeping the data allocation similar as the old data allocation result.
 \subsubsection{Incremental coalescing single offset assignment (ICSOA)}
 
 
-To minimize the update script, I propose to perform update-conscious code updates through incremental coalescing SOA (ICSOA) (Figure~\ref{ioverview}). When a DSP application undergoes a small update, the change does not greatly affect the binary code. On the server side, ICSOA reads in the old access graph and its interference graph, and strives to generate a new memory layout that minimizes the update script. On the mobile system side, only the update script needs to be downloaded. With simple interpretation, the mobile system  regenerates the new binary and/or the new memory layout.
+To minimize the update script, I propose to perform update-conscious code updates through incremental coalescing SOA 
+(ICSOA) (Figure~\ref{ioverview}). When a DSP application undergoes a small update, the change does not greatly affect 
+the binary code. On the server side, ICSOA reads in the old access graph and its interference graph, and strives to 
+generate a new memory layout that minimizes the update script. On the mobile system side, only the update script needs 
+to be downloaded. With simple interpretation, the mobile system  regenerates the new binary and/or the new memory 
+layout.
 
 \begin{figure*}[htbp]
 \begin{center}
@@ -1136,7 +1216,10 @@ To minimize the update script, I propose to perform update-conscious code update
 \end{figure*}
 
 
-The pseudo code of ICSOA is shown in Algorithm \ref{icsoaalg}. It first builds the access graphs before and after the code update, performs the CSOA algorithm, retrieves the coalesced variable assignment in $\textit{CAG}_1$, updates the new access graph $\textit{AG}_2$, resolves possible conflicts when applying the old layout to the new code, and calls CSOA again to find the new offset assignment. 
+The pseudo code of ICSOA is shown in Algorithm \ref{icsoaalg}. It first builds the access graphs before and after the 
+code update, performs the CSOA algorithm, retrieves the coalesced variable assignment in $\textit{CAG}_1$, updates the 
+new access graph $\textit{AG}_2$, resolves possible conflicts when applying the old layout to the new code, and calls 
+CSOA again to find the new offset assignment. 
 
 \begin{algorithm}
 \caption{Incremental Coalescing-Based SOA (ICSOA)}
@@ -1159,26 +1242,48 @@ The pseudo code of ICSOA is shown in Algorithm \ref{icsoaalg}. It first builds t
 \end{algorithmic}
 \end{algorithm}
 
-\paragraph{Function  update\_access\_graph().} It combines the access graph result of the old version ($\textit{CAG}_1$) and the newly generated access graph ($\textit{AG}_2$), into a new access graph ($\textit{AG}_\textit{NEW}$).
-We build $\textit{AG}_\textit{NEW}$ based on $\textit{CAG}_1$, by adding new variable nodes and removing unused nodes, so that
-$\textit{AG}_\textit{NEW}$ not only represents the updated access sequence but also keeps all the coalescing offset assignment result from the old version.
-Using $\textit{AG}_\textit{NEW}$ instead of $\textit{AG}_2$ as the offset assignment input helps to improve the offset assignment similarity with the previous version, and reduces the patch transmission overhead.
-However, when the code change is relatively large, the energy saved by improving code similarity may be offset by the code quality loss. 
-For this reason, when combining the graphs, {\it update\_access\_graph()} evaluates the number of accesses of each old variable in the new code, and extracts it from its coalesced group if the variable has more new or updated accesses than the unchanged ones. 
+\paragraph{Function  update\_access\_graph().} It combines the access graph result of the old version 
+($\textit{CAG}_1$) and the newly generated access graph ($\textit{AG}_2$), into a new access graph 
+($\textit{AG}_\textit{NEW}$).
+We build $\textit{AG}_\textit{NEW}$ based on $\textit{CAG}_1$, by adding new variable nodes and removing unused nodes, 
+so that
+$\textit{AG}_\textit{NEW}$ not only represents the updated access sequence but also keeps all the coalescing offset 
+assignment result from the old version.
+Using $\textit{AG}_\textit{NEW}$ instead of $\textit{AG}_2$ as the offset assignment input helps to improve the offset 
+assignment similarity with the previous version, and reduces the patch transmission overhead.
+However, when the code change is relatively large, the energy saved by improving code similarity may be offset by the 
+code quality loss. 
+For this reason, when combining the graphs, {\it update\_access\_graph()} evaluates the number of accesses of each old 
+variable in the new code, and extracts it from its coalesced group if the variable has more new or updated accesses 
+than the unchanged ones. 
 The intuition is to extract the variables from their old coalescing groups only if it can bring explicit benefits. 
 A new node is introduced for each extracted variable. Empty group nodes will be removed from $\textit{AG}_\textit{NEW}$.
 At the end, the function adjusts the weights of impacted access edges accordingly to finish the update.
 
 
-\paragraph{Function resolve\_conflicts().}In the code update, two variables that were coalesced in the old assignment may interfere with each other. We identify this as a {\em conflict} and use the function {\it resolve\_conflicts()} to resolve it. 
+\paragraph{Function resolve\_conflicts().}In the code update, two variables that were coalesced in the old assignment 
+may interfere with each other. We identify this as a {\em conflict} and use the function {\it resolve\_conflicts()} to 
+resolve it. 
 
 The function first orders the variables in each coalescing group, by the factor 
 $$\frac{\textit{Num}_{\textit{local}\_\textit{itfs}}}{\textit{Num}_{\textit{local}\_\textit{acs}}} .$$
-Here, $\textit{Num}_{\textit{local}\_\textit{itfs}}$ represents the number of interferences between the variable and the other group members, and $\textit{Num}_{\textit{local}\_\textit{acs}}$ represents the number of adjacent accesses between this variable and the other group members. The function then extracts the interfering variable that has the highest factor value one by one until all the interferences in the group are resolved. By doing so, the variables that create more interferences but have fewer adjacent accesses with the others are extracted earlier from the coalescing group. 
+Here, $\textit{Num}_{\textit{local}\_\textit{itfs}}$ represents the number of interferences between the variable and 
+the other group members, and $\textit{Num}_{\textit{local}\_\textit{acs}}$ represents the number of adjacent accesses 
+between this variable and the other group members. The function then extracts the interfering variable that has the 
+highest factor value one by one until all the interferences in the group are resolved. By doing so, the variables that 
+create more interferences but have fewer adjacent accesses with the others are extracted earlier from the coalescing 
+group. 
 
-For each variable chosen to be extracted from the coalescing group, the function splits the live range (i.e. conflict range) into to two subranges, the original part and the newly extended part. We use the old variable name to represent the original subrange, and introduce a {\em patch variable} for the extended subrange. To ensure semantic correctness, we insert {\it a'=a} or {\it a=a'} to move the value between the subranges. The insertion involves memory copy and tends to incur large overhead. We will evaluate its impact in the experiments.
+For each variable chosen to be extracted from the coalescing group, the function splits the live range (i.e. conflict 
+range) into to two subranges, the original part and the newly extended part. We use the old variable name to represent 
+the original subrange, and introduce a {\em patch variable} for the extended subrange. To ensure semantic correctness, 
+we insert {\it a'=a} or {\it a=a'} to move the value between the subranges. The insertion involves memory copy and 
+tends to incur large overhead. We will evaluate its impact in the experiments.
  
-For the example in Figure~\ref{csoa}, ICSOA combines the coalesced offset assignment (Figure \ref{csoa}(d)) and the new access graph (Figure~\ref{updcsoa}(c)). Figure \ref{icsoa}(a) shows the updated access graph. As there is no conflict between the access graph and interference graph, ICSOA outputs the same coalesced assignment (Figure \ref{icsoa}(c)). In this example, the script generated from ICSOA is 71\% smaller than that of recompilation using CSOA.
+For the example in Figure~\ref{csoa}, ICSOA combines the coalesced offset assignment (Figure \ref{csoa}(d)) and the new 
+access graph (Figure~\ref{updcsoa}(c)). Figure \ref{icsoa}(a) shows the updated access graph. As there is no conflict 
+between the access graph and interference graph, ICSOA outputs the same coalesced assignment (Figure \ref{icsoa}(c)). 
+In this example, the script generated from ICSOA is 71\% smaller than that of recompilation using CSOA.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -1193,15 +1298,22 @@ For the example in Figure~\ref{csoa}, ICSOA combines the coalesced offset assign
 \end{figure}
 
 \subsection{Address register allocation and data allocation for DSP applications}
-In practice, more address registers are available on DSP chips. Keeping the address register assignment to the variables the same as the old version may also improve the binary level similarity.
-I propose an update-conscious address register allocation scheme for DSP applications here that generates a similar association between the address registers and variables
+In practice, more address registers are available on DSP chips. Keeping the address register assignment to the 
+variables the same as the old version may also improve the binary level similarity.
+I propose an update-conscious address register allocation scheme for DSP applications here that generates a similar 
+association between the address registers and variables
 with the old version, and integrate that with the data allocation scheme (ICSOA).
 
 \subsubsection{Incremental coalescing general offset assignment (ICGOA)}
-The ICSOA algorithm proposed above solves the data allocation problem for DSP applications when there is only one available address register, while this ICGOA algorithm here is to solve more realistic problems. It is developed based on the CGOA algorithm~\cite{related:ottoni}. The goal is to solve both address register allocation and data allocation problems for DSP applications.
+The ICSOA algorithm proposed above solves the data allocation problem for DSP applications when there is only one 
+available address register, while this ICGOA algorithm here is to solve more realistic problems. It is developed based 
+on the CGOA algorithm~\cite{related:ottoni}. The goal is to solve both address register allocation and data allocation 
+problems for DSP applications.
 
-This problem can be formulated as how to divide the variables into a certain number of groups, assuming that accesses to the variables in the same group will use the same address register.
-Then we can use the ICSOA algorithm proposed above to allocate the variables in each partition group and generate the complete memory layout by combining the partial data allocation
+This problem can be formulated as how to divide the variables into a certain number of groups, assuming that accesses 
+to the variables in the same group will use the same address register.
+Then we can use the ICSOA algorithm proposed above to allocate the variables in each partition group and generate the 
+complete memory layout by combining the partial data allocation
 results. The detailed algorithm is presented in Algorithm~\ref{icgoaalg}. 
 
 \begin{algorithm}[htbp]
@@ -1215,11 +1327,13 @@ results. The detailed algorithm is presented in Algorithm~\ref{icgoaalg}.
 \COMMENT{Run CGOA over the original code}
 \STATE $\textit{Partition}_1[N_{AR}] \leftarrow \textit{CGOA}(\textit{AS}_1,\textit{IG}_1,N_{AR})$;\\
 \COMMENT{Remove the deleted variables and partition the newly added variables}
-\STATE $\textit{Partition}_2[N_{AR}] \leftarrow  \textit{ICGOA}\_\textit{Partition}(\textit{Partition}_1[],N_{AR},\textit{AS}_2,\textit{IG}_2)$;
+\STATE $\textit{Partition}_2[N_{AR}] \leftarrow  
+\textit{ICGOA}\_\textit{Partition}(\textit{Partition}_1[],N_{AR},\textit{AS}_2,\textit{IG}_2)$;
 
 \COMMENT{Run ICSOA in each variable partition group}
 \FOR {$i=0$ to $N_{AR}$}
-\STATE $\textit{Offset}[i] \leftarrow ICSOA(\textit{Partition}_2[i],\textit{AS}_1,\textit{AS}_2,\textit{IG}_1,\textit{IG}_2)$;
+\STATE $\textit{Offset}[i] \leftarrow 
+ICSOA(\textit{Partition}_2[i],\textit{AS}_1,\textit{AS}_2,\textit{IG}_1,\textit{IG}_2)$;
 \ENDFOR
 
 \STATE Return $\textit{Offset}$;
@@ -1228,18 +1342,29 @@ results. The detailed algorithm is presented in Algorithm~\ref{icgoaalg}.
 \end{algorithmic}
 \end{algorithm}
 
-It first uses the CGOA algorithm~\cite{related:ottoni} to produce the variable partition of the old version based on the old access graph and interference graph using a heuristic based algorithm. 
-In this algorithm, the variables are sorted by the decreasing order of the {\it global interference number} $\textit{Num}_{\textit{global}\_\textit{itfs}}$, which is the total number of interferences that each variable has with the other variables. The variable that has a higher {\it global interference number} is processed earlier than the ones with lower {\it global interference numbers}, because they have more constraints.
-Then, CGOA determines the partition group that the variable belongs to according to the {\it local interference numbers} $\textit{Num}_{\textit{local}\_\textit{itfs}}$. This number represents the number of interferences that this variable has with the other variables within a partition group. The {\it local interference number} between each variable and each partition group is calculated and the variable is assigned to the group that has the smallest {\it local interference number}.
+It first uses the CGOA algorithm~\cite{related:ottoni} to produce the variable partition of the old version based on 
+the old access graph and interference graph using a heuristic based algorithm. 
+In this algorithm, the variables are sorted by the decreasing order of the {\it global interference number} 
+$\textit{Num}_{\textit{global}\_\textit{itfs}}$, which is the total number of interferences that each variable has with 
+the other variables. The variable that has a higher {\it global interference number} is processed earlier than the ones 
+with lower {\it global interference numbers}, because they have more constraints.
+Then, CGOA determines the partition group that the variable belongs to according to the {\it local interference 
+numbers} $\textit{Num}_{\textit{local}\_\textit{itfs}}$. This number represents the number of interferences that this 
+variable has with the other variables within a partition group. The {\it local interference number} between each 
+variable and each partition group is calculated and the variable is assigned to the group that has the smallest {\it 
+local interference number}.
 This partition result is saved in $\textit{Partition}_1$ in algorithm~\ref{icgoaalg}.
 
 
-Based on the old partition result $\textit{Partition}_1$, the removed variables are first deleted from each partition. New variables are considered next. 
+Based on the old partition result $\textit{Partition}_1$, the removed variables are first deleted from each partition. 
+New variables are considered next. 
 Same as CGOA, the new variables are first ordered by the {\it global interference number}.
 Each variable tends to be assigned with the group that has the fewest {\it local interferences}.
-This generated new partition $\textit{Partition}_2$ should be very similar as the old one, because it just incorporates the variable changes to the old partition.
+This generated new partition $\textit{Partition}_2$ should be very similar as the old one, because it just incorporates 
+the variable changes to the old partition.
 
-After that, we run the ICSOA algorithm within each partition group to generate the memory layout for the variables inside each group.
+After that, we run the ICSOA algorithm within each partition group to generate the memory layout for the variables 
+inside each group.
 The ICSOA results are then combined to form the final result.
 
 

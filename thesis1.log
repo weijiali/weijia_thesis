@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2007.11.21)  4 OCT 2010 12:08
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2007.11.21)  6 OCT 2010 01:12
 **thesis1
 (./thesis1.tex
 LaTeX2e <2001/06/01>
@@ -847,15 +847,15 @@ Underfull \vbox (badness 1675) has occurred while \output is active []
 [5]
 File: figures/model.eps Graphic file (type eps)
  <figures/model.eps>
-Overfull \hbox (40.19673pt too wide) in paragraph at lines 85--86
+Overfull \hbox (40.19673pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
-[6] [7] [8])
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[6] [7]
+Underfull \vbox (badness 1675) has occurred while \output is active []
 
- [9]
-[10]
+ [8]
+[9]) [10]
 \openout2 = `related.aux'.
 
  (./related.tex
@@ -866,7 +866,12 @@ Chapter 2
 
 ]
 File: figures/compiler.eps Graphic file (type eps)
- <figures/compiler.eps> [12] [13]
+ <figures/compiler.eps> [12]
+
+Package natbib Warning: Citation `related:graph-color-prio rity' on page 13 und
+efined on input line 83.
+
+[13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
@@ -875,7 +880,11 @@ File: figures/agu.eps Graphic file (type eps)
 <figures/agu.eps>
 
 Class pittetd Warning: The caption of Figure 7 is longer than one line on input
- line 86.
+ line 158.
+
+
+Package natbib Warning: Citation `related:sudar sanam' on page 15 undefined on 
+input line 176.
 
 
 Underfull \vbox (badness 4995) has occurred while \output is active []
@@ -907,18 +916,18 @@ File: figures/fdata.0.eps Graphic file (type eps)
  <figures/fdata.0.eps>
 
 Class pittetd Warning: The caption of Figure 11 is longer than one line on inpu
-t line 51.
+t line 61.
 
 [22] [23]
 File: figures/ram.eps Graphic file (type eps)
  <figures/ram.eps>
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 106.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 117.
 
  (/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
 
 [24]
 
@@ -930,21 +939,21 @@ File: figures/stack.eps Graphic file (type eps)
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 254.
+(amsmath)                 on input line 267.
 
 [27]
 File: figures/freg.0.eps Graphic file (type eps)
  <figures/freg.0.eps>
 
 Class pittetd Warning: The caption of Figure 14 is longer than one line on inpu
-t line 325.
+t line 340.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28]
 [29] [30] [31] [32] [33]
-Overfull \hbox (17.4381pt too wide) in alignment at lines 553--558
+Overfull \hbox (17.4381pt too wide) in alignment at lines 598--604
  [][][] []
  []
 
@@ -952,7 +961,7 @@ Overfull \hbox (17.4381pt too wide) in alignment at lines 553--558
 Underfull \vbox (badness 1442) has occurred while \output is active []
 
  [38]
-Overfull \hbox (4.96461pt too wide) in paragraph at lines 839--847
+Overfull \hbox (4.96461pt too wide) in paragraph at lines 886--894
 [][]
  []
 
@@ -961,18 +970,18 @@ File: figures/csoa.eps Graphic file (type eps)
  <figures/csoa.eps>
 
 Class pittetd Warning: The caption of Figure 23 is longer than one line on inpu
-t line 1050.
+t line 1111.
 
 [44]
 File: figures/updcsoa.eps Graphic file (type eps)
  <figures/updcsoa.eps>
 
 Class pittetd Warning: The caption of Figure 24 is longer than one line on inpu
-t line 1069.
+t line 1138.
 
 
 Class pittetd Warning: The caption of Figure 25 is longer than one line on inpu
-t line 1108.
+t line 1183.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -981,7 +990,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: ./figures/icsoa-overview.eps Graphic file (type eps)
 
 <./figures/icsoa-overview.eps>
-Overfull \hbox (21.67975pt too wide) in paragraph at lines 1132--1133
+Overfull \hbox (21.67975pt too wide) in paragraph at lines 1212--1213
  [] 
  []
 
@@ -998,7 +1007,7 @@ File: ./figures/icsoa.eps Graphic file (type eps)
 <./figures/icsoa.eps>
 
 Class pittetd Warning: The caption of Figure 27 is longer than one line on inpu
-t line 1189.
+t line 1294.
 
 [49]
 
@@ -1014,18 +1023,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  (./patch.tex
 Chapter 4
 File: figures/patch.eps Graphic file (type eps)
-<figures/patch.eps> [52
+<figures/patch.eps>
+Underfull \vbox (badness 2556) has occurred while \output is active []
+
+ [52
 
 
 
 ]
 File: figures/fopcode.eps Graphic file (type eps)
- <figures/fopcode.eps> [53]
+
+<figures/fopcode.eps> [53]
 File: figures/sother.eps Graphic file (type eps)
  <figures/sother.eps>
 
 Class pittetd Warning: The caption of Figure 30 is longer than one line on inpu
-t line 42.
+t line 58.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1036,46 +1049,69 @@ File: figures/shift.eps Graphic file (type eps)
 <figures/shift.eps>
 
 Class pittetd Warning: The caption of Figure 31 is longer than one line on inpu
-t line 76.
+t line 112.
 
-[55] [56]
+[55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
 File: figures/sclone.eps Graphic file (type eps)
- <figures/sclone.eps>
+
+<figures/sclone.eps>
 
 Class pittetd Warning: The caption of Figure 32 is longer than one line on inpu
-t line 163.
+t line 215.
 
-[57]
+
+Underfull \vbox (badness 2903) has occurred while \output is active []
+
+ [57]
+[58]
 File: ./figures/insacc.eps Graphic file (type eps)
  <./figures/insacc.eps>
 
 Class pittetd Warning: The caption of Figure 33 is longer than one line on inpu
-t line 225.
+t line 283.
 
-[58]
-Overfull \hbox (19.56865pt too wide) in paragraph at lines 246--254
+[59]
+Overfull \hbox (19.56865pt too wide) in paragraph at lines 309--317
 []\OT1/cmr/m/n/12 Let us call the last mem-ory ac-cess in-struc-tion be-fore th
 e in-serted in-struc-tion the \OT1/cmtt/m/n/12 predecessor
  []
 
-[59]
 File: ./figures/insert_access.eps Graphic file (type eps)
- <./figures/insert_access.eps> [60]
+<./figures/insert_access.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+Underfull \vbox (badness 4995) has occurred while \output is active []
+
+ [61]
 
 Package hyperref Warning: bookmark level for unknown algorithm defaults to 0.
 
-[61] [62]
 
 Package hyperref Warning: bookmark level for unknown algorithm defaults to 0.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
 [63]
 File: ./figures/fopcodedata.eps Graphic file (type eps)
- <./figures/fopcodedata.eps> [64] [65]
+ <./figures/fopcodedata.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
 File: ./figures/correct.eps Graphic file (type eps)
- <./figures/correct.eps>
+
+<./figures/correct.eps>
 
 Class pittetd Warning: The caption of Figure 36 is longer than one line on inpu
-t line 485.
+t line 568.
 
 [66] [67] [68]
 
@@ -1102,30 +1138,11 @@ File: figures/fgrad.eps Graphic file (type eps)
  <figures/fgrad.eps>
 
 Class pittetd Warning: The caption of Figure 42 is longer than one line on inpu
-t line 136.
+t line 198.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [77]
-[78]
+[77] [78]
 File: figures/common.eps Graphic file (type eps)
- <figures/common.eps>
-Missing character: There is no ^^93 in font cmr12!
-Missing character: There is no ^^94 in font cmr12!
- [79] [80]
-Missing character: There is no ^^97 in font cmr12!
-Missing character: There is no ^^97 in font cmr12!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [81]
-Missing character: There is no ^^97 in font cmr12!
-Missing character: There is no ^^d7 in font cmr12!
-
-[82]
-Missing character: There is no ^^97 in font cmr12!
-) [83]
+ <figures/common.eps>) [79]
 \openout2 = `experiment.aux'.
 
  (./experiment.tex
@@ -1133,42 +1150,32 @@ Chapter 6
 
 Underfull \vbox (badness 6125) has occurred while \output is active []
 
- [84
+ [80
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
 []\OT1/cmr/m/n/10.95 Update
  []
 
 
-Overfull \hbox (23.09242pt too wide) in paragraph at lines 92--104
+Overfull \hbox (23.09242pt too wide) in paragraph at lines 94--106
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85]
-[86]
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 128--128
+ [81]
+[82]
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 132--132
 []\OT1/cmr/m/n/10.95 TinyOS| 
  []
 
 
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 131--131
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 135--135
 []\OT1/cmr/m/n/10.95 TinyOS| 
- []
-
-
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 136--136
-[]\OT1/cmr/m/n/10.95 TinyOS| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--140
-[]\OT1/cmr/m/n/10.95 CntToLeds
  []
 
 
@@ -1177,38 +1184,43 @@ Overfull \hbox (0.9734pt too wide) in paragraph at lines 140--140
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
-[]\OT1/cmr/m/n/10.95 Crypto
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+[]\OT1/cmr/m/n/10.95 CntToLeds
  []
 
 
-Overfull \hbox (0.9734pt too wide) in paragraph at lines 146--146
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 144--144
 []\OT1/cmr/m/n/10.95 TinyOS| 
  []
 
 
-Overfull \hbox (3.69981pt too wide) in paragraph at lines 114--152
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[]\OT1/cmr/m/n/10.95 Crypto
+ []
+
+
+Overfull \hbox (0.9734pt too wide) in paragraph at lines 150--150
+[]\OT1/cmr/m/n/10.95 TinyOS| 
+ []
+
+
+Overfull \hbox (3.69981pt too wide) in paragraph at lines 118--157
 \OT1/cmr/m/n/12 tion/deletion/update in-side and out-side loops, and the con-tr
 ol flow in-ser-tion/deletion/update.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
 []\OT1/cmr/m/n/10.95 Update
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 183--183
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 188--188
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 186--186
-[]\OT1/cmr/m/n/10.95 Medium| 
- []
-
-
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 189--189
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 190--190
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
@@ -1218,32 +1230,37 @@ Overfull \hbox (3.10257pt too wide) in paragraph at lines 192--192
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 195--195
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 194--194
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
 
-Underfull \hbox (badness 5260) in paragraph at lines 195--195
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 196--196
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+
+Underfull \hbox (badness 5260) in paragraph at lines 196--196
 []\OT1/cmr/m/n/10.95 Add an else branch for an if state-ment in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--197
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
 []\OT1/cmr/m/n/10.95 CntToRfms
  []
 
 
-Underfull \hbox (badness 3219) in paragraph at lines 197--197
+Underfull \hbox (badness 3219) in paragraph at lines 198--198
 \OMS/cmsy/m/n/10.95 )$ \OT1/cmr/m/n/10.95 Cnt-ToLed-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
 []\OT1/cmr/m/n/10.95 CntToLeds$\OMS/cmsy/m/n/10.95 )$
  []
 
 
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 201--201
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 202--202
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
@@ -1253,255 +1270,262 @@ Overfull \hbox (3.10257pt too wide) in paragraph at lines 203--203
  []
 
 
+Overfull \hbox (3.10257pt too wide) in paragraph at lines 205--205
+[]\OT1/cmr/m/n/10.95 Medium| 
+ []
+
+
 Overfull \hbox (3.10257pt too wide) in paragraph at lines 206--206
 []\OT1/cmr/m/n/10.95 Medium| 
  []
 
-
-Overfull \hbox (3.10257pt too wide) in paragraph at lines 207--207
-[]\OT1/cmr/m/n/10.95 Medium| 
- []
-
-[87]
-Overfull \hbox (1.9889pt too wide) in paragraph at lines 246--246
+[83]
+Overfull \hbox (1.9889pt too wide) in paragraph at lines 245--245
 []\OT1/cmr/m/n/10.95 matrix1.c| 
  []
 
 
-Overfull \hbox (1.9889pt too wide) in paragraph at lines 250--250
+Overfull \hbox (1.9889pt too wide) in paragraph at lines 249--249
 []\OT1/cmr/m/n/10.95 matrix1.c| 
  []
 
 
-Overfull \hbox (1.4112pt too wide) in paragraph at lines 230--255
+Overfull \hbox (1.4112pt too wide) in paragraph at lines 230--254
  [] 
  []
 
 
 Underfull \vbox (badness 3942) has occurred while \output is active []
 
- [88]
-[89] [90] [91] [92]
+ [84]
+[85] [86] [87] [88]
 File: figures/upd.eps Graphic file (type eps)
- <figures/upd.eps> [93]
+ <figures/upd.eps> [89]
 File: figures/prof.eps Graphic file (type eps)
- <figures/prof.eps> [94] [95]
+ <figures/prof.eps> [90] [91]
 File: figures/energy.eps Graphic file (type eps)
 
-<figures/energy.eps> [96]
+<figures/energy.eps> [92]
 File: figures/inst-cons.eps Graphic file (type eps)
  <figures/inst-cons.eps>
 File: figures/iter_linear.eps Graphic file (type eps)
  <figures/iter_linear.eps>
 
 Class pittetd Warning: The caption of Figure 53 is longer than one line on inpu
-t line 549.
+t line 555.
 
 File: figures/time_linear.eps Graphic file (type eps)
 <figures/time_linear.eps>
 
 Class pittetd Warning: The caption of Figure 54 is longer than one line on inpu
-t line 584.
+t line 590.
 
-[97] [98] [99]
-Overfull \hbox (28.82625pt too wide) in paragraph at lines 639--644
+[93] [94] [95]
+Overfull \hbox (28.82625pt too wide) in paragraph at lines 645--650
 []\OT1/cmr/m/n/12 The up-date bench-marks are cre-ated based on the AES ap-pli-
 ca-tion, shown in Fig-ure fbench.chg1
  []
 
-[100]
+[96]
 File: ./figures/da-upd.eps Graphic file (type eps)
  <./figures/da-upd.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [101]
+ [97]
 File: ./figures/stacksize.eps Graphic file (type eps)
 
 <./figures/stacksize.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [102]
+ [98]
 File: ./figures/spacetradeoff.eps Graphic file (type eps)
 
-<./figures/spacetradeoff.eps> [103]
+<./figures/spacetradeoff.eps> [99]
 File: ./figures/inte-upd.eps Graphic file (type eps)
  <./figures/inte-upd.eps>
 Underfull \vbox (badness 5771) has occurred while \output is active []
 
- [104]
-Underfull \hbox (badness 10000) in paragraph at lines 787--787
+ [100]
+Underfull \hbox (badness 10000) in paragraph at lines 796--796
 []\OT1/cmr/m/n/10.95 GCC
  []
 
 
-Overfull \hbox (1.15918pt too wide) in paragraph at lines 787--787
+Overfull \hbox (1.15918pt too wide) in paragraph at lines 796--796
 \OT1/cmr/m/n/10.95 Script
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--787
+Underfull \hbox (badness 10000) in paragraph at lines 796--796
 \OT1/cmr/m/n/10.95 Size
  []
 
 
-Overfull \hbox (6.05627pt too wide) in paragraph at lines 787--787
+Overfull \hbox (6.05627pt too wide) in paragraph at lines 796--796
 \OT1/cmr/m/n/10.95 (bytes)| 
  []
 
 
-Overfull \hbox (6.49747pt too wide) in paragraph at lines 787--787
+Overfull \hbox (6.49747pt too wide) in paragraph at lines 796--796
 []\OT1/cmr/m/n/10.95 #A| 
  []
 
 
-Overfull \hbox (6.34538pt too wide) in paragraph at lines 787--787
+Overfull \hbox (6.34538pt too wide) in paragraph at lines 796--796
 []\OT1/cmr/m/n/10.95 #R| 
  []
 
 
-Overfull \hbox (2.12334pt too wide) in paragraph at lines 787--787
+Overfull \hbox (2.12334pt too wide) in paragraph at lines 796--796
 []\OT1/cmr/m/n/10.95 #P| 
  []
 
 
-Overfull \hbox (2.57959pt too wide) in paragraph at lines 787--787
+Overfull \hbox (2.57959pt too wide) in paragraph at lines 796--796
 []\OT1/cmr/m/n/10.95 #C| 
  []
 
 
-Overfull \hbox (5.12872pt too wide) in paragraph at lines 787--787
+Overfull \hbox (5.12872pt too wide) in paragraph at lines 796--796
 []\OT1/cmr/m/n/10.95 #L| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 788--788
+Underfull \hbox (badness 10000) in paragraph at lines 797--797
 []\OT1/cmr/m/n/10.95 UCC
  []
 
 
-Overfull \hbox (1.15918pt too wide) in paragraph at lines 788--788
+Overfull \hbox (1.15918pt too wide) in paragraph at lines 797--797
 \OT1/cmr/m/n/10.95 Script
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 788--788
+Underfull \hbox (badness 10000) in paragraph at lines 797--797
 \OT1/cmr/m/n/10.95 Size
  []
 
 
-Overfull \hbox (6.05627pt too wide) in paragraph at lines 788--788
+Overfull \hbox (6.05627pt too wide) in paragraph at lines 797--797
 \OT1/cmr/m/n/10.95 (bytes)| 
  []
 
 
-Overfull \hbox (6.49747pt too wide) in paragraph at lines 788--788
+Overfull \hbox (6.49747pt too wide) in paragraph at lines 797--797
 []\OT1/cmr/m/n/10.95 #A| 
  []
 
 
-Overfull \hbox (6.34538pt too wide) in paragraph at lines 788--788
+Overfull \hbox (6.34538pt too wide) in paragraph at lines 797--797
 []\OT1/cmr/m/n/10.95 #R| 
  []
 
 
-Overfull \hbox (2.12334pt too wide) in paragraph at lines 788--788
+Overfull \hbox (2.12334pt too wide) in paragraph at lines 797--797
 []\OT1/cmr/m/n/10.95 #P| 
  []
 
 
-Overfull \hbox (2.57959pt too wide) in paragraph at lines 788--788
+Overfull \hbox (2.57959pt too wide) in paragraph at lines 797--797
 []\OT1/cmr/m/n/10.95 #C| 
  []
 
 
-Overfull \hbox (5.12872pt too wide) in paragraph at lines 788--788
+Overfull \hbox (5.12872pt too wide) in paragraph at lines 797--797
 []\OT1/cmr/m/n/10.95 #L| 
  []
 
 
-Overfull \hbox (1.97125pt too wide) in paragraph at lines 795--795
+Overfull \hbox (1.97125pt too wide) in paragraph at lines 804--804
 []\OT1/cmr/m/n/10.95 143| 
  []
 
 
-Overfull \hbox (1.97125pt too wide) in paragraph at lines 795--795
+Overfull \hbox (1.97125pt too wide) in paragraph at lines 804--804
 []\OT1/cmr/m/n/10.95 162| 
  []
 
 
 Class pittetd Warning: The caption of Figure 59 is longer than one line on inpu
-t line 800.
+t line 810.
 
 
 Underfull \vbox (badness 2326) has occurred while \output is active []
 
- [105]
-[106] [107]
+ [101]
+[102] [103]
 File: ./figures/update1.eps Graphic file (type eps)
  <./figures/update1.eps>
 File: ./figures/updatem.eps Graphic file (type eps)
- <./figures/updatem.eps> [108]
+ <./figures/updatem.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [104]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105]
 File: ./figures/da-exe1.eps Graphic file (type eps)
 
 <./figures/da-exe1.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [109]
-[110]
+ [106]
 File: ./figures/exe_ar.eps Graphic file (type eps)
- <./figures/exe_ar.eps>
+
+<./figures/exe_ar.eps>
 File: ./figures/da-energy.eps Graphic file (type eps)
- <./figures/da-energy.eps> [111] [112]
+ <./figures/da-energy.eps> [107] [108]
 File: ./figures/upd_rand_bar.eps Graphic file (type eps)
 
-<./figures/upd_rand_bar.eps>
+<./figures/upd_rand_bar.eps> [109]
 File: ./figures/exe_rand_bar.eps Graphic file (type eps)
- <./figures/exe_rand_bar.eps> [113]
+ <./figures/exe_rand_bar.eps>
 Underfull \vbox (badness 7344) has occurred while \output is active []
 
- [114]
+ [110]
 File: ./figures/update2.eps Graphic file (type eps)
 
-<./figures/update2.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<./figures/update2.eps> [111]
+Underfull \vbox (badness 1189) has occurred while \output is active []
 
- [115]
-Underfull \vbox (badness 4013) has occurred while \output is active []
-
- [116]
+ [112]
 File: ./figures/updatem2.eps Graphic file (type eps)
 
 <./figures/updatem2.eps>
 File: figures/da-exe2.eps Graphic file (type eps)
- <figures/da-exe2.eps> [117]
+ <figures/da-exe2.eps> [113] [114]
 File: figures/fsizes.eps Graphic file (type eps)
- <figures/fsizes.eps>
-[118] [119]
+
+<figures/fsizes.eps> [115]
 File: figures/ftime.eps Graphic file (type eps)
  <figures/ftime.eps>
 File: figures/fdist1.eps Graphic file (type eps)
  <figures/fdist1.eps>
 File: figures/fdist3.eps Graphic file (type eps)
- <figures/fdist3.eps>
-[120] [121]
+
+<figures/fdist3.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [116]
+[117]
 File: figures/fdist2.eps Graphic file (type eps)
  <figures/fdist2.eps>
 File: figures/fcache.eps Graphic file (type eps)
- <figures/fcache.eps>) [122] [123]
+ <figures/fcache.eps> [118] [119]) [120]
 \openout2 = `conclusion.aux'.
 
 
 (./conclusion.tex
 Chapter 7
-[124
+[121
 
 
 
 ]
 Underfull \vbox (badness 4647) has occurred while \output is active []
 
- [125]
-[126]) [127]
+ [122]
+[123]) [124]
 BIBLIOGRAPHY
 (./thesis1.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 7--10
@@ -1509,7 +1533,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-[128
+[125
 
 
 ]
@@ -1543,11 +1567,11 @@ Underfull \hbox (badness 6625) in paragraph at lines 158--161
 um-bers, 2010.
  []
 
-[129] [130]
+[126] [127]
 Missing character: There is no ^^ef in font cmr12!
 Missing character: There is no ^^bf in font cmr12!
 Missing character: There is no ^^bd in font cmr12!
- [131]
+ [128]
 Overfull \hbox (23.2848pt too wide) in paragraph at lines 360--363
 []\OT1/cmr/m/n/12 J. Regehr.  Tinyos stack anal-y-sis, 2009.  [][][][][][]. 
  []
@@ -1558,7 +1582,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 373--376
 , 1998.
  []
 
-[132]
+[129]
 Underfull \hbox (badness 10000) in paragraph at lines 450--453
 []\OT1/cmr/m/n/12 Wikipedia.  Al-ka-line tech-ni-cal in-for-ma-tion, 2007.
  []
@@ -1566,15 +1590,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--453
 )
 \openout3 = `thesis1.etd'.
 
- [133] (./thesis1.aux (./intro.aux) (./related.aux) (./compiler.aux)
+
+
+Package natbib Warning: There were undefined citations.
+
+[130] (./thesis1.aux (./intro.aux) (./related.aux) (./compiler.aux)
 (./patch.aux) (./protocol.aux) (./experiment.aux) (./conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 4229 strings out of 95847
- 54372 string characters out of 1195947
- 159461 words of memory out of 1000001
- 7001 multiletter control sequences out of 10000+50000
+ 4228 strings out of 95847
+ 54375 string characters out of 1195947
+ 159130 words of memory out of 1000001
+ 7000 multiletter control sequences out of 10000+50000
  12899 words of font info for 47 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
- 31i,16n,38p,1189b,807s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 31i,16n,38p,320b,807s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on thesis1.dvi (144 pages, 670440 bytes).
+Output written on thesis1.dvi (141 pages, 656620 bytes).
