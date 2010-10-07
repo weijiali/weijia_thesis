@@ -2,7 +2,6 @@ This is BibTeX, Version 0.99c (Web2C 7.4.5)
 The top-level auxiliary file: thesis1.aux
 A level-1 auxiliary file: intro.aux
 A level-1 auxiliary file: related.aux
-A level-1 auxiliary file: goals.aux
 A level-1 auxiliary file: compiler.aux
 A level-1 auxiliary file: patch.aux
 A level-1 auxiliary file: protocol.aux
@@ -18,45 +17,45 @@ Warning--to sort, need author or key in offsetstone
 Warning--to sort, need author or key in tossim
 Warning--empty year in lpsolve
 Warning--empty year in diff
-You've used 67 entries,
+You've used 65 entries,
             2633 wiz_defined-function locations,
-            964 strings with 16840 characters,
-and the built_in function-call counts, 33814 in all, are:
-= -- 3413
-> -- 1442
-< -- 70
-+ -- 536
-- -- 459
-* -- 2308
-:= -- 5133
-add.period$ -- 254
-call.type$ -- 67
-change.case$ -- 418
-chr.to.int$ -- 64
-cite$ -- 81
-duplicate$ -- 1627
-empty$ -- 2811
-format.name$ -- 566
-if$ -- 7424
+            955 strings with 16511 characters,
+and the built_in function-call counts, 32635 in all, are:
+= -- 3304
+> -- 1372
+< -- 69
++ -- 510
+- -- 435
+* -- 2224
+:= -- 4947
+add.period$ -- 245
+call.type$ -- 65
+change.case$ -- 402
+chr.to.int$ -- 62
+cite$ -- 79
+duplicate$ -- 1575
+empty$ -- 2718
+format.name$ -- 542
+if$ -- 7170
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 50
-newline$ -- 369
-num.names$ -- 244
-pop$ -- 813
+missing$ -- 49
+newline$ -- 357
+num.names$ -- 236
+pop$ -- 778
 preamble$ -- 1
-purify$ -- 354
+purify$ -- 340
 quote$ -- 0
-skip$ -- 1316
+skip$ -- 1279
 stack$ -- 0
-substring$ -- 1613
-swap$ -- 351
-text.length$ -- 34
+substring$ -- 1569
+swap$ -- 339
+text.length$ -- 33
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 727
+type$ -- 705
 warning$ -- 8
-while$ -- 296
+while$ -- 287
 width$ -- 0
-write$ -- 960
+write$ -- 930
 (There were 8 warnings)

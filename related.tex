@@ -1,7 +1,7 @@
 \chapter{Background and related work}\label{chap:related}
 
-In this section, I will first give some brief introduction to the related research about software update in WSNs, and 
-then I will describe some background research that is related to the major components of my proposed framework.
+In this section, I will first give a brief introduction to the related research about software update in WSNs, and 
+then I will describe the background research that is related to the major components of my proposed framework.
 
 %\section{Control Logic}
 
@@ -10,7 +10,7 @@ then I will describe some background research that is related to the major compo
 The existing WSN software update designs can be categorized according to {\em what} is to be transmitted over the 
 network. 
 
-The simplest solution is to transmit the complete new binary image to replace the old one on the sensors, e.g., Deluge 
+The naive solution is to transmit the complete new binary image to replace the old one on the sensors, e.g., Deluge 
 (the default code distribution scheme in TinyOS~\cite{tinyos}).
 The proposed schemes in this category mainly focus on how to package the new binary image and route the packets to the 
 sensors under WSN constraints.
@@ -62,9 +62,9 @@ because if the source code level difference is minor and local, when translating
 difference will also be localized, assuming a one-one mapping can be created between the source code and IR code. 
 However, transforming the IR code to the target binary code may propagate such local differences into global 
 differences, by applying data allocation, code placement, register allocation, etc. Thus, my update-conscious 
-compiler (UCC) design will focus on the code generation pass. The goal is to let the compiler preserve the semantic 
-meaning of the source program while generating a similar code image with a given code image. Two key problems in code 
-generation, register allocation and data allocation are studied in this research.
+compiler (UCC) design will focus on the code generation phase. The goal is to let the compiler preserve the semantic 
+meaning of the source program while generating a code image similar to a given one. Two key problems in code 
+generation, register allocation and data allocation, are studied in this research.
 
 \subsection{Register allocation}
 
@@ -79,8 +79,8 @@ years, the register allocation problem has been extensively studied with great s
 \textbf{Traditional register allocation schemes.} 
 Graph coloring algorithms construct the variable interference graph and solve the global register allocation as a graph 
 coloring 
-problem~\cite{related:graph-color,related:graph-color-improvements,related:graph-color-iterated,related:graph-color-prio
-rity}. To achieve fast compilation, linear-scan algorithms assign variables to available registers through a simple 
+problem~\cite{related:graph-color,related:graph-color-improvements,related:graph-color-iterated,related:graph-color-priority}.
+To achieve fast compilation, linear-scan algorithms assign variables to available registers through a simple 
 scan of the program, instead of constructing the interference 
 graph~\cite{related:linear-scan,related:linear-scan-fast}. It was reported that linear-scan allocators generate similar 
 performance level code as the graph coloring-based allocators, with a shorter compilation time required. Recently, the 
@@ -89,7 +89,8 @@ programming~\cite{related:ilp,related:ilp-cisc,related:ilp-fast} or multi-commod
 flows~\cite{related:ilp-progressive}.
 
 However, all these register allocation algorithms listed above, target at generating code with better performance, in 
-terms of less register spills. In the WSN software update management concept, we want to design an UCC technique in 
+terms of less register spills, i.e., memory load and stores. 
+In the WSN software update management concept, we want to design an UCC technique in 
 order to reduce the size of the update between different versions of one program or two programs that share common 
 components. Clearly, these traditional register allocation schemes do not fit in our requirement.
 
@@ -98,7 +99,7 @@ Bivens and Soffa proposed the incremental register allocation (IRA) scheme~\cite
 graph coloring algorithm. While the software is update incrementally based on a previous version, the scheme only 
 reallocates registers for the changed code, but preserves the assignment for unchanged code. 
 
-Though it is designed for incremental compilation, its goal is to save compilation time, when minor software update 
+Because it is designed for incremental compilation, its goal is to save compilation time, when minor software update 
 occurs. It may generate similar register allocation results as the previous version unintentionally, yet it always 
 follows the original register allocation for the unchanged code, which may lose the code performance when the source 
 code update is relatively large. Thus, even though such code similarity may cause energy saving in code distribution 
@@ -172,8 +173,8 @@ the other hand, the memory layout has to be optimal in order to achieve the best
 problem of assigning variables in memory was formulated by Bartley~\cite{related:bartley} and Liao \textit{et 
 al.}~\cite{related:liao} as the simple offset assignment (SOA) problem, where there is only one AR, and general offset 
 assignment (GOA) problem, where there are multiple ARs. A variety of heuristic algorithms have been proposed 
-later~\cite{related:atri,related:choi,related:leupers-1996,related:leupers-1998,related:ottoni,related:rao,related:sudar
-sanam,related:zhuang}.
+later~\cite{related:atri,related:choi,related:leupers-1996,related:leupers-1998,related:ottoni,related:rao,
+related:sudarsanam,related:zhuang,zhuangtoplas}.
 
 The general solution of SOA is equivalent to finding the maximum weight Hamiltonian path\footnote{A Hamiltonian path in 
 a graph is a path that visits every vertex exactly once.} in the access graph~\cite{related:bartley, related:liao}, 
@@ -186,12 +187,12 @@ number.
 Since many variables have short live ranges, variables that do not interfere with each other can be allocated in the 
 same memory location, to furthermore reduce data memory size and improve code performance. An efficient offset 
 assignment heuristic using variable coalescing is proposed by Ottoni \textit{et al.}~\cite{related:ottoni} and Zhuang 
-\textit{et al.} ~\cite{related:zhuang}. In each iteration, either an unselected edge is selected to be on the 
+\textit{et al.} ~\cite{related:zhuang, zhuangtoplas}. In each iteration, either an unselected edge is selected to be on the 
 Hamiltonian path, or two vertices are chosen to be coalesced until no more vertices can be coalesced and the 
 Hamiltonian path is built.
 
 \textbf{Prior work and UCC-DA.}
-The design goal of the current offset assignment schemes is to generate efficient code with compact code size and 
+The design goal of the current offset assignment schemes is to generate efficient code with compact code size and/or 
 improved performance.  When the program is slightly updated, the compiler might generate a different coalesced offset 
 assignment compared to the original version. Even though the memory layout difference is very simple, e.g. when there 
 is a simple switch of two variables' memory addresses, all the instructions that access these two variable or the 
@@ -210,12 +211,6 @@ performance.
 After the code compilation is finished, the sink node generates the patch code based on the binary code. There are 
 several ways to prepare the patches.
 
-\textbf{Compression.}
-Compression algorithms, such as bzip2, compress, LZO, PPMd and zlib, can be used on the generated binary code to reduce 
-the patch size. Simply using these existing compression algorithms on the binary code can reduce the patch size by 
-20\%~70\%. Even though it can help reduce the transmission power consumption, these high compression ratio algorithms 
-also require a lot of computation to generate the original code. Experiment results~\cite{related:barr-energy} show 
-that bzip2 requires to run 31 instructions to restore 1 bit, which makes the code decompression very expensive.
 
 \textbf{Differential patching.}
 When an update is an incremental improvement on a deployed function, such as bug fixing or parameter changing, the new 
@@ -241,6 +236,17 @@ systems~\cite{related:dynamic1}. Koshy \textit{et al.} proposed to relocated mod
 remote linker~\cite{related:dynamic2}.
 A drawback of releasing code not in the binary format but the higher level language is that it requires extra runtime 
 overhead, which might be not acceptable for tightly resource-constrained embedded system.
+
+\textbf{Compression.}
+Compression algorithms, such as bzip2, compress, LZO, PPMd and zlib, can be used on the generated binary code to reduce 
+the patch size. Simply using these existing compression algorithms on the binary code can reduce the patch size by 
+20\%$\sim$70\%. 
+Further evaluations can be done to compare the overhead and performance of these compression algorithms running in the
+sensor environment.
+Selecting a high compression ratio algorithm that can work under the sensor constraints, 
+will further diminish the patch size. However, this dissertation does not focus on the compression algorithm
+comparison and selection.
+
 
 \textbf{Prior work and this work.}
 Because the sensors are running with limited energy supplies, I chose the least energy consuming patch generation 
@@ -283,14 +289,14 @@ The distance between the requester and the source can be over one hop.
 
 \textbf{MA-WSN code distribution protocol.}
  Melete~\cite{melete} protocol is proposed to solve the code distribution problem in MA-WSNs.
-It is a multi-cast based protocol that only sends the code image to the sensors that request it instead of broadcasting 
+It is a multicast-based protocol that only sends the code image to the sensors that request it instead of broadcasting 
 it to all the sensors. Besides that, multi-hop code dissemination is also supported. The weakness of this scheme is 
 that it is a stateless protocol, that does not store the routing to the source on site but relies on the REQ message to 
 discover the routing, which may cause REQ message flooding in the network.
 
 
 \textbf{Prior work and MCP.}
-This dissertation proposes a multi-cast based code redistribution protocol (MCP).
+This dissertation proposes a multicast-based code redistribution protocol (MCP).
 It solves the code distribution problem for both SA-WSNs and WA-WSNs.
 Different from Melete, each sensor stores the routing information on site, thus
 it can save the energy and time used to discover the route to the source.

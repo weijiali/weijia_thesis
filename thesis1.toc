@@ -1,7 +1,7 @@
 \contentsline {chapter}{{\bfseries \numberline {1.0}INTRODUCTION}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Overview of this research}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Assumptions}{9}{section.1.2}
-\contentsline {section}{\numberline {1.3}Organization of this dissertation}{10}{section.1.3}
+\contentsline {section}{\numberline {1.2}Assumptions}{8}{section.1.2}
+\contentsline {section}{\numberline {1.3}Organization of this dissertation}{9}{section.1.3}
 \contentsline {chapter}{{\bfseries \numberline {2.0}BACKGROUND AND RELATED WORK}}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Software update in WSNs}{11}{section.2.1}
 \contentsline {section}{\numberline {2.2}Compiler}{12}{section.2.2}
@@ -45,7 +45,7 @@
 \contentsline {section}{\numberline {5.1}Broadcast based code distribution protocol (Deluge)}{71}{section.5.1}
 \contentsline {section}{\numberline {5.2}Multicast-based code redistribution protocol (MCP)}{72}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}The software switch problem in MA-WSNs}{72}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}A multi-cast based code redistribution protocol (MCP)}{73}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}A multicast-based code redistribution protocol (MCP)}{73}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}ADV message and application information table (AIT)}{74}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Request multicasting}{76}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Caching}{78}{subsection.5.2.5}

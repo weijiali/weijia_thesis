@@ -2,8 +2,8 @@
 
 
 Wireless sensor networks (WSNs) have recently emerged as a promising computing platform for many nontraditional 
-applications, such as monitoring for wildfires, monitoring oceanic life, and battlefield surveillance. A WSN usually 
-consists of hundreds of sensor nodes that are equipped with the sensors to measure the physical phenomena, such as 
+applications, such as monitoring wildfires, monitoring oceanic life, and battlefield surveillance. A WSN usually 
+consists of hundreds of sensor nodes that are equipped with the sensing devices to measure the physical phenomena, such as 
 temperature, humidity, pressure, or movement of objects. Sensing results are constructed into data packets and routed 
 back to sink nodes, which are typically more powerful, user accessible and have fewer energy constraints.
 
@@ -16,7 +16,7 @@ back to sink nodes, which are typically more powerful, user accessible and have 
 \end{figure}
 
 The sensor nodes are mainly equipped with processors, sensing devices and communication transceivers. Because they have 
-limited power supply from their batteries, sensor nodes~\cite{mica2-power, micaz-power,telos,telosb} are equipped with 
+limited power supply from their batteries, sensor nodes~\cite{mica2-power, micaz-power,telos,telosb} are often equipped with 
 a single low power consumption processor. 
 For example, a Mica2~\cite{mica2-power} mote shown in Figure~\ref{fig:mica2}, is equipped with an 8MHz ATmega128L 
 processor to process the sensed data.
@@ -40,7 +40,7 @@ The availability of multi-chip sensors poses various design challenges. The high
 nodes makes it economically less appealing to let the whole network run just one application. Recently, researchers 
 have envisioned the wide adoption of multi-application wireless sensor networks (MA-WSNs), which can support 
 application concurrency in one network infrastructure~\cite{melete,ma-wsns}. Furthermore, MA-WSNs are able to 
-interleave different applications on one sensor node.
+execute different applications interleavingly on one sensor node.
 
 Compared to single-application wireless sensor networks (SA-WSNs), MA-WSNs have many advantages in efficiency and 
 flexibility.
@@ -140,7 +140,7 @@ number of sensor nodes with resource limitations in energy, memory size, network
 
 \begin{figure}[htbp]
 	\centering
-		\includegraphics[scale=0.45]{figures/model.eps}
+		\includegraphics[scale=0.4]{figures/model.eps}
 	\caption{Software update framework overview.}
 	\vspace{-0.2in}
 	\label{fig:overview}
@@ -220,44 +220,44 @@ little traffic as possible.
 %\section{Challenges}
 %
 %In this research, I focus on the WSNs, that are built with low-power sensors such as the Mica2 
-sensors~\cite{mica2-power}. They consist of a 8 MHz ATmega128L processor, 128KB of program memory, 512KB EEPROM, 4KB of 
-data memory, and a multi-channel radio capable of transmitting at 38.4 Kbps with an outdoor transmission range of 
-approximately 500 feet. The device measures 2.25 inch $\times$ 1.25 inch $\times$ 0.25 inch and is typically powered by 
-two AA batteries.
+%sensors~\cite{mica2-power}. They consist of a 8 MHz ATmega128L processor, 128KB of program memory, 512KB EEPROM, 4KB of 
+%data memory, and a multi-channel radio capable of transmitting at 38.4 Kbps with an outdoor transmission range of 
+%approximately 500 feet. The device measures 2.25 inch $\times$ 1.25 inch $\times$ 0.25 inch and is typically powered by 
+%two AA batteries.
 %
 %The major constraints of designing an energy-efficient software update management framework for such kind of sensor 
-networks are addressed as below.
+%networks are addressed as below.
 %
 %\textbf{Energy constraints.}
 %The environment usually makes it hard to physically access the sensors after deployment, so it is difficult to replace 
-the batteries for the sensors. Recharging the batteries using natural energy sources is not trivial, because the 
-network might be set up in the area, such as the deep ocean, where it is hard to get access of sun light or other 
-natural energy sources. 
+%the batteries for the sensors. Recharging the batteries using natural energy sources is not trivial, because the 
+%network might be set up in the area, such as the deep ocean, where it is hard to get access of sun light or other 
+%natural energy sources. 
 %
 %Take the Mica2 sensor as an example. The energy contained in each AA battery is 15,390 Joule~\cite{battery-energy}. 
-The experiment results in the recent study~\cite{power-tossim} showed that the energy consumption of the selected 
-applications running on the sensors varies from 153.7 to 3,689 J/day, which makes the life time of the sensors to be 8 
-days to 200 days. Thus, developing an energy-efficient software update method is very important for energy limited WSNs.
+%The experiment results in the recent study~\cite{power-tossim} showed that the energy consumption of the selected 
+%applications running on the sensors varies from 153.7 to 3,689 J/day, which makes the life time of the sensors to be 8 
+%days to 200 days. Thus, developing an energy-efficient software update method is very important for energy limited WSNs.
 %
 %
 %\textbf{Memory constraints.}
 %The active program is stored in the program memory of a sensor node, while the other inactive programs are stored in 
-the external flash memory. Sensor nodes will load the code image from the external flash to the program memory when 
-they need to switch the running application from one to another.
+%the external flash memory. Sensor nodes will load the code image from the external flash to the program memory when 
+%they need to switch the running application from one to another.
 %
 %However, due to the limited size of the external flash memory, the sensor node may not be able to store the complete 
-code images of all the applications that it needs to run. This requires the sensor node to download the unavailable 
-code image from the sink node or the other neighboring nodes during software switch. How to design an energy-efficient 
-code fetching scheme is a problem that we need to solve.
+%code images of all the applications that it needs to run. This requires the sensor node to download the unavailable 
+%code image from the sink node or the other neighboring nodes during software switch. How to design an energy-efficient 
+%code fetching scheme is a problem that we need to solve.
 %
 %Although the sensors can fetch the wanted code image upon request, the limited sensor memory still needs to be divided 
-wisely to store multiple code images. When the memory is not big enough to hold all the code images, an eviction scheme 
-will be needed.
+%wisely to store multiple code images. When the memory is not big enough to hold all the code images, an eviction scheme 
+%will be needed.
 %
 %
 %\textbf{Computation constraints.}
 %A sensor node is typically equipped with MHz (instead of GHz) micro-controller(s), which limits the complexity of  
-applications running on it. Therefore, the software update application that runs on the sensors has to be lightweight.
+%applications running on it. Therefore, the software update application that runs on the sensors has to be lightweight.
 
 
 

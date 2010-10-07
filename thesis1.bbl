@@ -1,4 +1,4 @@
-\begin{thebibliography}{67}
+\begin{thebibliography}{65}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -25,15 +25,14 @@ Tinyos, 2004.
 \newblock \url{http://www.tinyos.net}.
 
 \bibitem[atm(2008)]{atmega128L}
-Atmel atmega128{L} microcontroller, 2008.\\
+Atmel atmega128{L} microcontroller, 2008.
 \newblock \url{http://www.atmel.com/dyn/resources/prod_documents/doc2467.pdf}.
 
-\bibitem[Aho et~al.(1986)Aho, Sethi, and Ullman]{compiler}
+\bibitem[Aho et~al.(2006)Aho, Sethi, and Ullman]{compiler}
 A.~V. Aho, R.~Sethi, and J.~D. Ullman.
-\newblock {\em Compilers: principles, techniques, and tools}.
-\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1986.
-\newblock ISBN 0201100886.
-\newblock URL \url{http://portal.acm.org/citation.cfm?id=6448}.
+\newblock {\em Compilers: principles, techniques, and tools, second edition}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 2006.
+\newblock ISBN 0-321-48681-1.
 
 \bibitem[Appel and George(2000)]{related:ilp-cisc}
 A.~W. Appel and L.~George.
@@ -118,19 +117,19 @@ Coin-or.
 
 \bibitem[Corporation(2010)]{iphone}
 A.~Corporation.
-\newblock iphone user guide, 2010.\\
+\newblock iphone user guide, 2010.
 \newblock \url{http://manuals.info.apple.com/en/iphone_user_guide.pdf}.
 
 \bibitem[Crossbow(2004{\natexlab{a}})]{mica2-power}
 Crossbow.
-\newblock Mica2 data sheet, 2004{\natexlab{a}}.\\
+\newblock Mica2 data sheet, 2004{\natexlab{a}}.
 \newblock
   \url{http://www.xbow.com/Products/Product_pdf_files/Wireless_pdf/MICA2_Datas%
 heet.pdf}.
 
 \bibitem[Crossbow(2004{\natexlab{b}})]{micaz-power}
 Crossbow.
-\newblock Micaz data sheet, 2004{\natexlab{b}}.\\
+\newblock Micaz data sheet, 2004{\natexlab{b}}.
 \newblock
   \url{http://www.xbow.com/Products/Product_pdf_files/Wireless_pdf/MICAZ_Datas%
 heet.pdf}.
@@ -142,14 +141,14 @@ Crossbow.
 
 \bibitem[Crossbow(2004{\natexlab{d}})]{telosb}
 Crossbow.
-\newblock Telosb data sheet, 2004{\natexlab{d}}.\\
+\newblock Telosb data sheet, 2004{\natexlab{d}}.
 \newblock
   \url{http://www.xbow.com/Products/Product_pdf_files/Wireless_pdf/TelosB_Data%
 sheet.pdf}.
 
 \bibitem[CrossBow(2009)]{imote2}
 CrossBow.
-\newblock Imote2 data sheet, 2009.\\
+\newblock Imote2 data sheet, 2009.
 \newblock
   \url{http://www.xbow.com/Products/Product_pdf_files/Wireless_pdf/Imote2_Data%
 sheet.pdf}.
@@ -334,12 +333,6 @@ R.~Panta, I.~Khalil, and S.~Bagchi.
 \newblock In {\em INFOCOM' 07: Proceedings of the 26th IEEE international
   conference on computer communications.}, pages 928--936, May 2007.
 
-\bibitem[Polastre et~al.(2004)Polastre, Szewczyk, Sharp, and
-  Culler]{moterevolution}
-J.~Polastre, R.~Szewczyk, C.~Sharp, and D.~Culler.
-\newblock The mote revolution: Low power wireless sensor network devices.
-\newblock In {\em Hot Chips 16: A symposium on high performance chips}, 2004.
-
 \bibitem[Poletto and Sarkar(1999)]{related:linear-scan}
 M.~Poletto and V.~Sarkar.
 \newblock Linear scan register allocation.
@@ -391,16 +384,6 @@ M.~Ros and P.~Sutton.
   97--104, New York, NY, USA, 2005. ACM.
 \newblock ISBN 1-59593-149-X.
 
-\bibitem[Shnayder et~al.(2004)Shnayder, Hempstead, Chen, Allen, and
-  Welsh]{power-tossim}
-V.~Shnayder, M.~Hempstead, B.-r. Chen, G.~W. Allen, and M.~Welsh.
-\newblock Simulating the power consumption of large-scale sensor network
-  applications.
-\newblock In {\em SenSys '04: Proceedings of the 2nd international conference
-  on embedded networked sensor systems}, pages 188--200, New York, NY, USA,
-  2004. ACM.
-\newblock ISBN 1-58113-879-2.
-
 \bibitem[Steffan et~al.(2005)Steffan, Fiege, Cilia, and Buchmann]{ma-wsns}
 J.~Steffan, L.~Fiege, M.~Cilia, and A.~Buchmann.
 \newblock Towards multi-purpose wireless sensor networks.
@@ -446,11 +429,6 @@ L.~Wang.
   2004. ACM.
 \newblock ISBN 1-58113-879-2.
 
-\bibitem[Wikipedia(2007)]{battery-energy}
-Wikipedia.
-\newblock Alkaline technical information, 2007.
-\newblock \url{http://en.wikipedia.org/wiki/Battery_(electricity)}.
-
 \bibitem[Yu et~al.(2006)Yu, Rittle, Bhandari, and LeBrun]{melete}
 Y.~Yu, L.~J. Rittle, V.~Bhandari, and J.~B. LeBrun.
 \newblock Supporting concurrent applications in wireless sensor networks.
@@ -467,5 +445,12 @@ X.~Zhuang, C.~Lau, and S.~Pande.
   language, compiler, and tool support for embedded systems}, 38\penalty0
   (7):\penalty0 220--231, 2003.
 \newblock ISSN 0362-1340.
+
+\bibitem[Zhuang and Pande(2010)]{zhuangtoplas}
+X.~Zhuang and S.~Pande.
+\newblock An optimization framework for embedded processors with
+  auto-addressing mode.
+\newblock {\em TOPLAS' 10: ACM Transactions on Programming Languages and
+  Systems}, 32\penalty0 (11), 2010.
 
 \end{thebibliography}

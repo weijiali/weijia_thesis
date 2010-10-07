@@ -1,4 +1,4 @@
-This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2007.11.21)  6 OCT 2010 01:12
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2007.11.21)  7 OCT 2010 15:41
 **thesis1
 (./thesis1.tex
 LaTeX2e <2001/06/01>
@@ -783,9 +783,13 @@ ge it.
 
 ]
 Abstract
-(./abstract.tex [3
+(./abstract.tex
+Underfull \vbox (badness 1275) has occurred while \output is active []
 
-]) [4]
+ [3
+
+])
+[4]
 Table of Contents
 (./thesis1.toc [5
 
@@ -846,16 +850,7 @@ Underfull \vbox (badness 1675) has occurred while \output is active []
  [4]
 [5]
 File: figures/model.eps Graphic file (type eps)
- <figures/model.eps>
-Overfull \hbox (40.19673pt too wide) in paragraph at lines 143--144
- [][] 
- []
-
-[6] [7]
-Underfull \vbox (badness 1675) has occurred while \output is active []
-
- [8]
-[9]) [10]
+ <figures/model.eps> [6] [7] [8]) [9] [10]
 \openout2 = `related.aux'.
 
  (./related.tex
@@ -866,12 +861,7 @@ Chapter 2
 
 ]
 File: figures/compiler.eps Graphic file (type eps)
- <figures/compiler.eps> [12]
-
-Package natbib Warning: Citation `related:graph-color-prio rity' on page 13 und
-efined on input line 83.
-
-[13]
+ <figures/compiler.eps> [12] [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
@@ -880,11 +870,7 @@ File: figures/agu.eps Graphic file (type eps)
 <figures/agu.eps>
 
 Class pittetd Warning: The caption of Figure 7 is longer than one line on input
- line 158.
-
-
-Package natbib Warning: Citation `related:sudar sanam' on page 15 undefined on 
-input line 176.
+ line 159.
 
 
 Underfull \vbox (badness 4995) has occurred while \output is active []
@@ -1533,36 +1519,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
+
+Overfull \hbox (119.84088pt too wide) in paragraph at lines 28--30
+[]\OT1/cmr/m/n/12 Atmel at-mega128L mi-cro-con-troller, 2008.  [][][][][][]. 
+ []
+
 [125
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 115--118
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
 []\OT1/cmr/m/n/12 Coin-or.  Non-lin-ear mixed in-te-ger pro-gram-ming, 2006.
  []
 
 
-Overfull \hbox (10.93279pt too wide) in paragraph at lines 125--130
-[][][][][][]\OT1/cmr/m/n/12 . 
+Overfull \hbox (74.1005pt too wide) in paragraph at lines 119--122
+[]\OT1/cmr/m/n/12 A. Cor-po-ra-tion.  iphone user guide, 2010.  [][][][][][]. 
  []
 
 
-Overfull \hbox (10.93279pt too wide) in paragraph at lines 132--137
-[][][][][][]\OT1/cmr/m/n/12 . 
+Overfull \hbox (187.59439pt too wide) in paragraph at lines 124--129
+[]\OT1/cmr/m/n/12 Crossbow.  Mica2 data sheet, 2004.  [][][][][][]. 
  []
 
 
-Overfull \hbox (16.68147pt too wide) in paragraph at lines 144--149
-[][][][][][]\OT1/cmr/m/n/12 . 
+Overfull \hbox (186.94162pt too wide) in paragraph at lines 131--136
+[]\OT1/cmr/m/n/12 Crossbow.  Mi-caz data sheet, 2004.  [][][][][][]. 
  []
 
 
-Overfull \hbox (16.68147pt too wide) in paragraph at lines 151--156
-[][][][][][]\OT1/cmr/m/n/12 . 
+Overfull \hbox (195.37083pt too wide) in paragraph at lines 143--148
+[]\OT1/cmr/m/n/12 Crossbow.  Telosb data sheet, 2004.  [][][][][][]. 
  []
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 158--161
+Overfull \hbox (199.37914pt too wide) in paragraph at lines 150--155
+[]\OT1/cmr/m/n/12 CrossBow.  Imote2 data sheet, 2009.  [][][][][][]. 
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 157--160
 []\OT1/cmr/m/n/12 T. Crunchies.  Tech crunchies -- in-ter-net statis-tics and n
 um-bers, 2010.
  []
@@ -1572,37 +1568,28 @@ Missing character: There is no ^^ef in font cmr12!
 Missing character: There is no ^^bf in font cmr12!
 Missing character: There is no ^^bd in font cmr12!
  [128]
-Overfull \hbox (23.2848pt too wide) in paragraph at lines 360--363
+Overfull \hbox (23.2848pt too wide) in paragraph at lines 353--356
 []\OT1/cmr/m/n/12 J. Regehr.  Tinyos stack anal-y-sis, 2009.  [][][][][][]. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--376
+Underfull \hbox (badness 10000) in paragraph at lines 366--369
 []\OT1/cmr/m/n/12 V. Ri-j-men and J. Dae-men.  Ad-vanced en-cryp-tion stan-dard
 , 1998.
  []
 
-[129]
-Underfull \hbox (badness 10000) in paragraph at lines 450--453
-[]\OT1/cmr/m/n/12 Wikipedia.  Al-ka-line tech-ni-cal in-for-ma-tion, 2007.
- []
-
-)
+[129])
 \openout3 = `thesis1.etd'.
 
-
-
-Package natbib Warning: There were undefined citations.
-
-[130] (./thesis1.aux (./intro.aux) (./related.aux) (./compiler.aux)
+ [130] (./thesis1.aux (./intro.aux) (./related.aux) (./compiler.aux)
 (./patch.aux) (./protocol.aux) (./experiment.aux) (./conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 4228 strings out of 95847
- 54375 string characters out of 1195947
- 159130 words of memory out of 1000001
- 7000 multiletter control sequences out of 10000+50000
+ 4224 strings out of 95847
+ 54291 string characters out of 1195947
+ 158986 words of memory out of 1000001
+ 6996 multiletter control sequences out of 10000+50000
  12899 words of font info for 47 fonts, out of 500000 for 1000
  14 hyphenation exceptions out of 1000
  31i,16n,38p,320b,807s stack positions out of 1500i,500n,5000p,200000b,5000s
 
-Output written on thesis1.dvi (141 pages, 656620 bytes).
+Output written on thesis1.dvi (141 pages, 653996 bytes).
